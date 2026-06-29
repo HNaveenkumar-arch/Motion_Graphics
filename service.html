@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+    <nav class="navbar" id="myNavbar">
+        <div class="logo">
+            <a href="index.html"><img src="./asset/stackly-logo (1).webp" alt="logo"></a>
+        </div>
+
+        <button class="hamburger" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="service.html" class="nav-link active"><i class="fas fa-layer-group"></i> Services</a></li>
+            <li><a href="" class="nav-link"><i class="fas fa-clapperboard"></i> Portfolio</a></li>
+            <li><a href="" class="nav-link"><i class="fas fa-pen-nib"></i> Blog</a></li>
+            <li><a href="" class="nav-link"><i class="fas fa-paper-plane"></i> Contact</a></li>
+
+            <li class="mobile-actions">
+                <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="register.html" class="get-started-btn"><i class="fas fa-user-plus"></i> Register</a>
+            </li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="register.html" class="get-started-btn"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+    </nav>
+
+
+    <section class="services-hero">
+
+        <div class="hero-bg-image"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="particle p-1"></div>
+        <div class="particle p-2"></div>
+        <div class="particle p-3"></div>
+        <div class="particle p-4"></div>
+
+        <div class="hero-content">
+
+            <nav class="breadcrumb hero-animate" style="transition-delay: 0.1s;">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <span class="separator">»</span>
+                <span class="current">Services</span>
+            </nav>
+
+            <h1 class="hero-title hero-animate" style="transition-delay: 0.3s;">
+                Creative Motion Services That Bring <span>Every Story To Life</span>
+            </h1>
+
+            <p class="hero-subtitle hero-animate" style="transition-delay: 0.5s;">
+                We combine strategy, creativity, and cutting-edge animation techniques to create visually stunning
+                experiences that engage audiences and elevate brands.
+            </p>
+
+            <div class="hero-buttons hero-animate" style="transition-delay: 0.7s;">
+                <a href="#all-services" class="btn btn-primary">
+                    Explore Services <span class="arrow">➔</span>
+                </a>
+                <a href="#quote" class="btn btn-secondary">
+                    Request a Quote
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="services-wrapper" id="all-services">
+
+        <div class="sticky-nav-container" id="sticky-nav">
+            <nav class="services-nav">
+                <a href="#service-2d" class="service-nav-link active">
+                    <i class="fa-solid fa-pen-nib"></i> <span>2D Animation</span>
+                </a>
+
+                <a href="#service-3d" class="service-nav-link">
+                    <i class="fa-solid fa-cube"></i> <span>3D Motion</span>
+                </a>
+
+                <a href="#service-vfx" class="service-nav-link">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>VFX & Compositing</span>
+                </a>
+
+                <a href="#service-ui" class="service-nav-link">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <span>UI Motion</span>
+                </a>
+
+                <div class="nav-indicator"></div>
+            </nav>
+            <div class="scroll-progress-bar" id="scroll-progress"></div>
+        </div>
+
+        <div class="services-content-area">
+
+            <section id="service-2d" class="service-section scroll-reveal">
+                <div class="service-card">
+                    <div class="service-img-wrap">
+                        <img src="./asset/a4.webp" alt="2D Animation">
+                        <div class="service-badge">01</div>
+                    </div>
+                    <div class="service-info">
+                        <h2 class="service-title">2D Animation & Explainers</h2>
+                        <p class="service-desc">We craft compelling 2D animated stories that simplify complex ideas.
+                            From vector-based character animation to kinetic typography, we make your message
+                            unforgettable.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> Storyboarding & Concept Art</li>
+                            <li><i class="fa-solid fa-check"></i> Character Animation</li>
+                            <li><i class="fa-solid fa-check"></i> Infographics & Typography</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="service-3d" class="service-section scroll-reveal">
+                <div class="service-card reverse">
+                    <div class="service-img-wrap">
+                        <img src="./asset/a11.webp" alt="3D Motion">
+                        <div class="service-badge">02</div>
+                    </div>
+                    <div class="service-info">
+                        <h2 class="service-title">3D Motion & Product Visualization</h2>
+                        <p class="service-desc">Elevate your product launches with hyper-realistic 3D rendering and
+                            dynamic simulations. We build immersive worlds that captivate your audience.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> 3D Product Modeling</li>
+                            <li><i class="fa-solid fa-check"></i> Abstract 3D Loops</li>
+                            <li><i class="fa-solid fa-check"></i> Fluid & Dynamic Simulations</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="service-vfx" class="service-section scroll-reveal">
+                <div class="service-card">
+                    <div class="service-img-wrap">
+                        <img src="./asset/a30.webp" alt="VFX">
+                        <div class="service-badge">03</div>
+                    </div>
+                    <div class="service-info">
+                        <h2 class="service-title">VFX & Compositing</h2>
+                        <p class="service-desc">Seamlessly integrate CGI with live-action footage. Our VFX pipeline
+                            delivers Hollywood-grade visual effects, rotoscoping, and flawless green screen extraction.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> CGI Integration</li>
+                            <li><i class="fa-solid fa-check"></i> Rotoscoping & Tracking</li>
+                            <li><i class="fa-solid fa-check"></i> Color Grading</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="service-ui" class="service-section scroll-reveal">
+                <div class="service-card reverse">
+                    <div class="service-img-wrap">
+                        <img src="./asset/a31.webp" alt="UI Motion">
+                        <div class="service-badge">04</div>
+                    </div>
+                    <div class="service-info">
+                        <h2 class="service-title">UI/UX Motion Prototyping</h2>
+                        <p class="service-desc">Bring your digital products to life before they are built. We animate
+                            interfaces, micro-interactions, and transitions to enhance the user experience.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> App Concept Animation</li>
+                            <li><i class="fa-solid fa-check"></i> Micro-interactions</li>
+                            <li><i class="fa-solid fa-check"></i> Lottie Animations</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+
+    <section class="marquee-section scroll-reveal">
+        <div class="section-header">
+            <h2 class="title">Our Expertise</h2>
+            <p class="subtitle">End-to-End Creative Solutions</p>
+        </div>
+
+        <div class="marquee-container">
+            <div class="marquee-track">
+
+                <div class="marquee-card">
+                    <div class="card-img-wrap">
+                        <img src="./asset/a1.webp" alt="Motion Graphics">
+                        <div class="card-icon-badge"><i class="fa-solid fa-film"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Motion Graphics</h3>
+                        <p class="card-desc">Dynamic visuals and typography that tell your brand's unique story.</p>
+                        <a href="#" class="card-btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="marquee-card">
+                    <div class="card-img-wrap">
+                        <img src="./asset/a2.webp" alt="2D Animation">
+                        <div class="card-icon-badge"><i class="fa-solid fa-pen-nib"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">2D Animation</h3>
+                        <p class="card-desc">Engaging flat-design animations for explainers and social media.</p>
+                        <a href="#" class="card-btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="marquee-card">
+                    <div class="card-img-wrap">
+                        <img src="./asset/a10.webp" alt="3D Animation">
+                        <div class="card-icon-badge"><i class="fa-solid fa-cube"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">3D Animation</h3>
+                        <p class="card-desc">Immersive worlds, simulations, and hyper-realistic renders.</p>
+                        <a href="#" class="card-btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="marquee-card">
+                    <div class="card-img-wrap">
+                        <img src="./asset/a30.webp" alt="VFX">
+                        <div class="card-icon-badge"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">VFX & Compositing</h3>
+                        <p class="card-desc">Hollywood-grade visual effects, tracking, and seamless integration.</p>
+                        <a href="#" class="card-btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="marquee-card">
+                    <div class="card-img-wrap">
+                        <img src="./asset/a31.webp" alt="UI Animation">
+                        <div class="card-icon-badge"><i class="fa-solid fa-mobile-screen"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">UI/UX Animation</h3>
+                        <p class="card-desc">Smooth app prototypes, transitions, and user micro-interactions.</p>
+                        <a href="#" class="card-btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="marquee-card">
+                    <div class="card-img-wrap">
+                        <img src="./asset/a32.webp" alt="Video Editing">
+                        <div class="card-icon-badge"><i class="fa-solid fa-scissors"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Video Editing</h3>
+                        <p class="card-desc">Crisp cuts, color grading, and professional post-production.</p>
+                        <a href="#" class="card-btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="marquee-card">
+                    <div class="card-img-wrap">
+                        <img src="./asset/a1.webp" alt="Motion Graphics">
+                        <div class="card-icon-badge"><i class="fa-solid fa-film"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Motion Graphics</h3>
+                        <p class="card-desc">Dynamic visuals and typography that tell your brand's unique story.</p>
+                        <a href="#" class="card-btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="marquee-card">
+                    <div class="card-img-wrap">
+                        <img src="./asset/a2.webp" alt="2D Animation">
+                        <div class="card-icon-badge"><i class="fa-solid fa-pen-nib"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">2D Animation</h3>
+                        <p class="card-desc">Engaging flat-design animations for explainers and social media.</p>
+                        <a href="#" class="card-btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="marquee-card">
+                    <div class="card-img-wrap">
+                        <img src="./asset/a10.webp" alt="3D Animation">
+                        <div class="card-icon-badge"><i class="fa-solid fa-cube"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">3D Animation</h3>
+                        <p class="card-desc">Immersive worlds, simulations, and hyper-realistic renders.</p>
+                        <a href="#" class="card-btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="marquee-card">
+                    <div class="card-img-wrap">
+                        <img src="./asset/a30.webp" alt="VFX">
+                        <div class="card-icon-badge"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">VFX & Compositing</h3>
+                        <p class="card-desc">Hollywood-grade visual effects, tracking, and seamless integration.</p>
+                        <a href="#" class="card-btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="marquee-card">
+                    <div class="card-img-wrap">
+                        <img src="./asset/a31.webp" alt="UI Animation">
+                        <div class="card-icon-badge"><i class="fa-solid fa-mobile-screen"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">UI/UX Animation</h3>
+                        <p class="card-desc">Smooth app prototypes, transitions, and user micro-interactions.</p>
+                        <a href="#" class="card-btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="marquee-card">
+                    <div class="card-img-wrap">
+                        <img src="./asset/a32.webp" alt="Video Editing">
+                        <div class="card-icon-badge"><i class="fa-solid fa-scissors"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Video Editing</h3>
+                        <p class="card-desc">Crisp cuts, color grading, and professional post-production.</p>
+                        <a href="#" class="card-btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="detailed-services" class="expandable-services scroll-reveal">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="title">Deep Dive Into Services</h2>
+                <p class="subtitle">What we do & How we do it</p>
+            </div>
+
+            <div class="expand-grid">
+
+                <div class="expand-card">
+                    <div class="card-bg" style="background-image: url('./asset/a3.webp');"></div>
+                    <div class="card-overlay"></div>
+
+                    <div class="card-content-wrap">
+                        <div class="card-header">
+                            <h3 class="card-title">3D Motion & Product VIZ</h3>
+                            <p class="card-desc">Hyper-realistic 3D rendering and dynamic simulations that build
+                                immersive worlds.</p>
+                            <div class="expand-hint">View Details <i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+
+                        <div class="card-expanded-body">
+                            <div class="expanded-inner">
+                                <div class="details-grid">
+                                    <div class="detail-box">
+                                        <i class="fa-solid fa-list-check"></i>
+                                        <span><strong>Features:</strong> Modeling, Texturing, Lighting</span>
+                                    </div>
+                                    <div class="detail-box">
+                                        <i class="fa-solid fa-microchip"></i>
+                                        <span><strong>Tech:</strong> Cinema 4D, Octane, Blender</span>
+                                    </div>
+                                    <div class="detail-box">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span><strong>Timeline:</strong> 4 - 8 Weeks</span>
+                                    </div>
+                                    <div class="detail-box">
+                                        <i class="fa-solid fa-tag"></i>
+                                        <span><strong>Pricing:</strong> Custom Quote</span>
+                                    </div>
+                                </div>
+                                <a href="#contact" class="btn expand-btn">Start Project <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expand-card">
+                    <div class="card-bg" style="background-image: url('./asset/a11.webp');"></div>
+                    <div class="card-overlay"></div>
+
+                    <div class="card-content-wrap">
+                        <div class="card-header">
+                            <h3 class="card-title">2D Explainers</h3>
+                            <p class="card-desc">Compelling storytelling with vector motion that simplifies complex
+                                ideas seamlessly.</p>
+                            <div class="expand-hint">View Details <i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+
+                        <div class="card-expanded-body">
+                            <div class="expanded-inner">
+                                <div class="details-grid">
+                                    <div class="detail-box">
+                                        <i class="fa-solid fa-list-check"></i>
+                                        <span><strong>Features:</strong> Storyboarding, Rigging, VO</span>
+                                    </div>
+                                    <div class="detail-box">
+                                        <i class="fa-solid fa-microchip"></i>
+                                        <span><strong>Tech:</strong> After Effects, Illustrator</span>
+                                    </div>
+                                    <div class="detail-box">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span><strong>Timeline:</strong> 2 - 4 Weeks</span>
+                                    </div>
+                                    <div class="detail-box">
+                                        <i class="fa-solid fa-tag"></i>
+                                        <span><strong>Pricing:</strong> From $1,500</span>
+                                    </div>
+                                </div>
+                                <a href="#contact" class="btn expand-btn">Start Project <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expand-card">
+                    <div class="card-bg" style="background-image: url('./asset/a30.webp');"></div>
+                    <div class="card-overlay"></div>
+
+                    <div class="card-content-wrap">
+                        <div class="card-header">
+                            <h3 class="card-title">VFX & Compositing</h3>
+                            <p class="card-desc">Hollywood-grade visual effects, rotoscoping, tracking, and seamless
+                                live-action integration.</p>
+                            <div class="expand-hint">View Details <i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+
+                        <div class="card-expanded-body">
+                            <div class="expanded-inner">
+                                <div class="details-grid">
+                                    <div class="detail-box">
+                                        <i class="fa-solid fa-list-check"></i>
+                                        <span><strong>Features:</strong> Tracking, CGI Comp, Rotoscoping</span>
+                                    </div>
+                                    <div class="detail-box">
+                                        <i class="fa-solid fa-microchip"></i>
+                                        <span><strong>Tech:</strong> Nuke, After Effects, Mocha</span>
+                                    </div>
+                                    <div class="detail-box">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span><strong>Timeline:</strong> 3 - 6 Weeks</span>
+                                    </div>
+                                    <div class="detail-box">
+                                        <i class="fa-solid fa-tag"></i>
+                                        <span><strong>Pricing:</strong> From $2,000</span>
+                                    </div>
+                                </div>
+                                <a href="#contact" class="btn expand-btn">Start Project <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expand-card">
+                    <div class="card-bg" style="background-image: url('./asset/a31.webp');"></div>
+                    <div class="card-overlay"></div>
+
+                    <div class="card-content-wrap">
+                        <div class="card-header">
+                            <h3 class="card-title">UI/UX Micro-Interactions</h3>
+                            <p class="card-desc">Bring your app concepts to life with fluid transitions, prototypes, and
+                                interactive motion.</p>
+                            <div class="expand-hint">View Details <i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+
+                        <div class="card-expanded-body">
+                            <div class="expanded-inner">
+                                <div class="details-grid">
+                                    <div class="detail-box">
+                                        <i class="fa-solid fa-list-check"></i>
+                                        <span><strong>Features:</strong> App Prototypes, Lottie Files</span>
+                                    </div>
+                                    <div class="detail-box">
+                                        <i class="fa-solid fa-microchip"></i>
+                                        <span><strong>Tech:</strong> Figma, Protopie, Bodymovin</span>
+                                    </div>
+                                    <div class="detail-box">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span><strong>Timeline:</strong> 1 - 3 Weeks</span>
+                                    </div>
+                                    <div class="detail-box">
+                                        <i class="fa-solid fa-tag"></i>
+                                        <span><strong>Pricing:</strong> From $800</span>
+                                    </div>
+                                </div>
+                                <a href="#contact" class="btn expand-btn">Start Project <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="work-showcase" class="split-showcase">
+
+        <div class="split-left">
+            <div class="sticky-media-container">
+
+                <img src="./asset/a1.webp" id="showcase-img" class="showcase-img" alt="Showcase Preview">
+                <div class="media-overlay"></div>
+            </div>
+        </div>
+
+        <div class="split-right">
+
+            <div class="showcase-block scroll-reveal" data-img="./asset/a1.webp">
+                <span class="block-number">01</span>
+                <h2 class="block-title">Motion Graphics</h2>
+                <p class="block-desc">We blend art and technology to create dynamic kinetic typography and abstract
+                    visuals that make your brand stand out from the noise.</p>
+                <ul class="block-list">
+                    <li><i class="fa-solid fa-check"></i> Title Sequences</li>
+                    <li><i class="fa-solid fa-check"></i> Broadcast Design</li>
+                </ul>
+                <a href="#" class="showcase-btn">Explore Work <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="showcase-block scroll-reveal" data-img="./asset/a9.webp">
+                <span class="block-number">02</span>
+                <h2 class="block-title">Explainer Videos</h2>
+                <p class="block-desc">Translate complex ideas into simple, engaging, and easy-to-understand animated
+                    stories that drive conversions and educate your audience.</p>
+                <ul class="block-list">
+                    <li><i class="fa-solid fa-check"></i> 2D Vector Animation</li>
+                    <li><i class="fa-solid fa-check"></i> Whiteboard Animation</li>
+                </ul>
+                <a href="#" class="showcase-btn">Explore Work <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="showcase-block scroll-reveal" data-img="./asset/a10.webp">
+                <span class="block-number">03</span>
+                <h2 class="block-title">Product Animation</h2>
+                <p class="block-desc">Showcase your products from every angle with hyper-realistic 3D rendering,
+                    highlighting key features and technical mechanisms beautifully.</p>
+                <ul class="block-list">
+                    <li><i class="fa-solid fa-check"></i> 3D Product Modeling</li>
+                    <li><i class="fa-solid fa-check"></i> Technical Simulations</li>
+                </ul>
+                <a href="#" class="showcase-btn">Explore Work <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="showcase-block scroll-reveal" data-img="./asset/a32.webp">
+                <span class="block-number">04</span>
+                <h2 class="block-title">Brand Promotion</h2>
+                <p class="block-desc">Launch campaigns that leave a lasting impact. We create high-energy promotional
+                    videos tailored for product launches and brand awareness.</p>
+                <ul class="block-list">
+                    <li><i class="fa-solid fa-check"></i> Teasers & Trailers</li>
+                    <li><i class="fa-solid fa-check"></i> Event Promos</li>
+                </ul>
+                <a href="#" class="showcase-btn">Explore Work <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="showcase-block scroll-reveal" data-img="./asset/a13.webp">
+                <span class="block-number">05</span>
+                <h2 class="block-title">Corporate Videos</h2>
+                <p class="block-desc">Communicate your company's vision, culture, and achievements with premium
+                    corporate films, enhanced with professional motion graphics.</p>
+                <ul class="block-list">
+                    <li><i class="fa-solid fa-check"></i> Company Culture Films</li>
+                    <li><i class="fa-solid fa-check"></i> Financial & Data Visualization</li>
+                </ul>
+                <a href="#" class="showcase-btn">Explore Work <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="showcase-block scroll-reveal" data-img="./asset/a31.webp">
+                <span class="block-number">06</span>
+                <h2 class="block-title">Social Media Animation</h2>
+                <p class="block-desc">Thumb-stopping, vertical-optimized short-form content designed specifically for
+                    Instagram, TikTok, and LinkedIn to maximize engagement.</p>
+                <ul class="block-list">
+                    <li><i class="fa-solid fa-check"></i> Micro-Animations</li>
+                    <li><i class="fa-solid fa-check"></i> Loopable GIFs & Ads</li>
+                </ul>
+                <a href="#" class="showcase-btn">Explore Work <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col footer-fade-in">
+                <div class="logo">
+                    <a href="index.html"><img src="./asset/stackly-logo (1).webp" alt="logo"></a>
+                </div>
+                <p class="footer-desc">
+                    Stackly Education empowers learners worldwide with future-ready programs, expert mentorship, and a
+                    vibrant community. Your journey to excellence starts here.
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col footer-fade-in" style="transition-delay: 0.1s;">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Programs</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Resources</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Campus Life</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Student Portal</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-fade-in" style="transition-delay: 0.2s;">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Career Hub</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Alumni Network</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Learning Blog</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Scholarship Guide</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ & Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-fade-in" style="transition-delay: 0.3s;">
+                <h4>Connect</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-envelope"></i> hello@stackly.education</li>
+                    <li><i class="fas fa-phone-alt"></i> +1 (888) 555-STACK</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 500 Learning Ave, Suite 101<br>San Francisco, CA 94105
+                    </li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9AM – 6PM (EST)<br>24/7 Online Portal Access</li>
+                </ul>
+
+
+            </div>
+        </div>
+
+        <div class="footer-bottom footer-fade-in" style="transition-delay: 0.4s;">
+            <p>&copy; 2026 Stackly Education. All rights reserved. Empowering minds worldwide.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            setTimeout(() => {
+                const heroElements = document.querySelectorAll('.hero-animate');
+                heroElements.forEach(el => {
+                    el.classList.add('show');
+                });
+            }, 150);
+        });
+
+
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const revealElements = document.querySelectorAll(".scroll-reveal");
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+
+            const navLinks = document.querySelectorAll(".service-nav-link");
+            const sections = document.querySelectorAll(".service-section");
+            const indicator = document.querySelector(".nav-indicator");
+            const navContainer = document.querySelector(".sticky-nav-container");
+            const progressBar = document.getElementById("scroll-progress");
+            const wrapper = document.querySelector(".services-wrapper");
+
+
+            function updateIndicator(link) {
+
+                if (!link || !indicator) return;
+
+                indicator.style.width = link.offsetWidth + "px";
+                indicator.style.left = link.offsetLeft + "px";
+            }
+
+            if (navLinks.length) {
+                setTimeout(() => {
+                    updateIndicator(navLinks[0]);
+                }, 100);
+            }
+
+
+            navLinks.forEach(link => {
+
+                link.addEventListener("click", function (e) {
+
+                    e.preventDefault();
+
+                    const targetSection = document.querySelector(this.getAttribute("href"));
+
+                    if (!targetSection) return;
+
+                    const navHeight = navContainer.offsetHeight;
+
+                    const targetPosition =
+                        targetSection.getBoundingClientRect().top +
+                        window.pageYOffset -
+                        navHeight -
+                        20;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: "smooth"
+                    });
+
+                });
+
+            });
+
+
+            function updateActiveLink() {
+
+                let current = "";
+
+                const navHeight = navContainer.offsetHeight;
+
+                sections.forEach(section => {
+
+                    const sectionTop =
+                        section.getBoundingClientRect().top +
+                        window.pageYOffset;
+
+                    if (window.pageYOffset >= sectionTop - navHeight - 150) {
+
+                        current = section.id;
+
+                    }
+
+                });
+
+                navLinks.forEach(link => {
+
+                    link.classList.remove("active");
+
+                    if (link.getAttribute("href") === "#" + current) {
+
+                        link.classList.add("active");
+
+                        updateIndicator(link);
+
+                    }
+
+                });
+
+            }
+
+
+            function updateProgressBar() {
+
+                if (!wrapper || !progressBar) return;
+
+                const wrapperTop =
+                    wrapper.getBoundingClientRect().top +
+                    window.pageYOffset;
+
+                const wrapperHeight = wrapper.offsetHeight;
+
+                const scrollPercent =
+                    ((window.pageYOffset - wrapperTop) /
+                        (wrapperHeight - window.innerHeight)) * 100;
+
+                progressBar.style.width =
+                    Math.max(0, Math.min(100, scrollPercent)) + "%";
+
+            }
+
+
+            window.addEventListener("scroll", () => {
+
+                updateActiveLink();
+
+                updateProgressBar();
+
+            });
+
+
+            updateActiveLink();
+            updateProgressBar();
+
+        });
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            const expandCards = document.querySelectorAll('.expand-card');
+
+            expandCards.forEach(card => {
+                card.addEventListener('click', function (e) {
+                    if (e.target.closest('.expand-btn')) return;
+
+                    const isActive = this.classList.contains('active');
+
+                    expandCards.forEach(c => c.classList.remove('active'));
+
+                    if (!isActive) {
+                        this.classList.add('active');
+                    }
+                });
+            });
+        });
+
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            const showcaseBlocks = document.querySelectorAll('.showcase-block');
+            const showcaseImg = document.getElementById('showcase-img');
+
+            const imageSwapObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const newImgSrc = entry.target.getAttribute('data-img');
+
+                        if (showcaseImg.getAttribute('src') !== newImgSrc) {
+
+                            showcaseImg.classList.add('fade');
+
+                            setTimeout(() => {
+                                showcaseImg.setAttribute('src', newImgSrc);
+                                showcaseImg.classList.remove('fade');
+                            }, 300);
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.5,
+
+                rootMargin: "-10% 0px -10% 0px"
+            });
+
+            showcaseBlocks.forEach(block => imageSwapObserver.observe(block));
+        });
+    </script>
+
+
+</body>
+
+</html>
