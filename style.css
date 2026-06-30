@@ -1,4 +1,3 @@
-/* --- Google Fonts --- */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 * {
@@ -8,18 +7,10 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Update your :root to ensure valid rgba syntax for compatibility */
 :root {
-  /* Deep Navy Blue Theme */
   --bg-color: #0a192f;
-  --glass-bg: rgba(
-    10,
-    25,
-    47,
-    0.6
-  ); /* Slightly adjusted for better blend over video */
+  --glass-bg: rgba(10, 25, 47, 0.6);
 
-  /* Vibrant Orange Accent */
   --primary-orange: #ff7300;
   --orange-glow: rgba(255, 115, 0, 0.4);
 
@@ -28,7 +19,6 @@
   --transition-speed: 0.3s;
 }
 
-/* --- Hero Section Base --- */
 .hero-section {
   position: relative;
   width: 100%;
@@ -42,7 +32,6 @@
   z-index: 1;
 }
 
-/* --- Video Background & Overlay --- */
 .hero-video {
   position: absolute;
   top: 0;
@@ -59,7 +48,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* Gradient overlay: dark at bottom for stats, clear at center */
   background: linear-gradient(
     to bottom,
     rgba(10, 25, 47, 0.7) 0%,
@@ -69,7 +57,6 @@
   z-index: -1;
 }
 
-/* --- Hero Content Layout --- */
 .hero-content {
   text-align: center;
   max-width: 900px;
@@ -77,7 +64,6 @@
   z-index: 2;
 }
 
-/* Rating Badge */
 .rating-badge {
   display: inline-flex;
   align-items: center;
@@ -102,7 +88,6 @@
   font-weight: 500;
 }
 
-/* Typography */
 .hero-title {
   font-size: 4rem;
   font-weight: 700;
@@ -126,7 +111,6 @@
   margin-right: auto;
 }
 
-/* Buttons */
 .hero-buttons {
   display: flex;
   gap: 20px;
@@ -175,7 +159,6 @@
   transform: translateY(-3px);
 }
 
-/* --- Hero Stats Update --- */
 .stat-card {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
@@ -184,10 +167,9 @@
   padding: 25px 20px;
   border-radius: 12px;
   text-align: center;
-  transition: all 0.4s ease; /* 'all' potruken for smooth background color change */
+  transition: all 0.4s ease;
 }
 
-/* --- Hero Stats (Glassmorphism Cards) --- */
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -200,12 +182,11 @@
 
 .stat-card:hover {
   transform: translateY(-10px);
-  background-color: var(--primary-orange); /* Solid Orange Background */
+  background-color: var(--primary-orange);
   border-color: var(--primary-orange);
   box-shadow: 0 10px 20px var(--orange-glow);
 }
 
-/* Hover aagum pothu text color black-ku maaranum, appo thaan orange background-la nalla theriyum */
 .stat-card:hover h3,
 .stat-card:hover p,
 .stat-card:hover h3 i {
@@ -234,7 +215,6 @@
   font-weight: 500;
 }
 
-/* --- Scroll Indicator --- */
 .scroll-indicator {
   position: absolute;
   bottom: 30px;
@@ -261,7 +241,6 @@
   animation: scroll 1.5s infinite;
 }
 
-/* --- Floating 3D Shapes (CSS Orbs) --- */
 .floating-shape {
   position: absolute;
   border-radius: 50%;
@@ -282,7 +261,7 @@
 .shape-2 {
   width: 200px;
   height: 200px;
-  background: #00e5ff; /* Cyan contrast for a cool motion vibe */
+  background: #ff3300;
   bottom: 20%;
   left: -50px;
   animation-delay: 2s;
@@ -291,13 +270,12 @@
 .shape-3 {
   width: 150px;
   height: 150px;
-  background: #ff007f; /* Pink contrast */
+  background: #ff3c00;
   top: 40%;
   right: 20%;
   animation-delay: 4s;
 }
 
-/* --- Keyframe Animations --- */
 @keyframes scroll {
   0% {
     transform: translateY(0);
@@ -319,7 +297,6 @@
   }
 }
 
-/* Initial state for Load-in Animation */
 .fade-in-up {
   opacity: 0;
   transform: translateY(30px);
@@ -333,7 +310,6 @@
   }
 }
 
-/* --- Media Queries (Mobile & Tab Responsive) --- */
 @media screen and (max-width: 1024px) {
   .hero-title {
     font-size: 3rem;
@@ -379,7 +355,7 @@
   }
   .scroll-indicator {
     display: none;
-  } /* Hide on very small screens to save space */
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -388,7 +364,6 @@
   }
 }
 
-/* --- Brands Section --- */
 .brands-section {
   padding: 60px 5%;
   text-align: center;
@@ -402,7 +377,6 @@
   margin-bottom: 40px;
 }
 
-/* Marquee Infinite Scroll Setup */
 .marquee-container {
   position: relative;
   display: flex;
@@ -410,7 +384,6 @@
   overflow: hidden;
 }
 
-/* Edge Fading Effect */
 .marquee-container::before,
 .marquee-container::after {
   content: "";
@@ -429,7 +402,6 @@
   background: linear-gradient(to left, var(--bg-color), transparent);
 }
 
-/* Animation Track */
 .marquee-track {
   display: flex;
   gap: 80px;
@@ -438,9 +410,8 @@
 }
 .marquee-track:hover {
   animation-play-state: paused;
-} /* Pauses scroll when user hovers */
+}
 
-/* Logo Styling & Hover Effect */
 .brand-logo {
   font-size: 3rem;
   color: #8892b0;
@@ -454,7 +425,6 @@
   transform: scale(1.2);
 }
 
-/* Scroll Keyframes (-50% scrolls exactly half, matching the duplicate set) */
 @keyframes scrollMarquee {
   0% {
     transform: translateX(0);
@@ -464,7 +434,6 @@
   }
 }
 
-/* Responsive */
 @media screen and (max-width: 768px) {
   .brands-section {
     padding: 40px 5%;
@@ -484,7 +453,6 @@
   }
 }
 
-/* --- Services Section --- */
 .services-section {
   padding: 50px 5%;
   background: var(--bg-color);
@@ -501,27 +469,24 @@
   color: var(--primary-orange);
 }
 
-/* Auto-fit Grid (100% Mobile & Tab Responsive) */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
-/* Glassmorphism Card Wrapper */
 .service-card {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 16px;
-  overflow: hidden; /* Ensures image stays within rounded corners */
+  overflow: hidden;
   transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
 }
 
-/* Hover Effects on Card */
 .service-card:hover {
   transform: translateY(-12px);
   border-color: var(--primary-orange);
@@ -529,7 +494,6 @@
   background: rgba(255, 115, 0, 0.05);
 }
 
-/* Image Styling & Zoom Effect */
 .card-image {
   width: 100%;
   height: 200px;
@@ -543,9 +507,8 @@
 }
 .service-card:hover .card-image img {
   transform: scale(1.1);
-} /* Zooms in on hover */
+}
 
-/* Card Content Area */
 .card-content {
   padding: 25px;
   display: flex;
@@ -565,7 +528,6 @@
   flex-grow: 1;
 }
 
-/* Features List */
 .features-list {
   list-style: none;
   margin-bottom: 25px;
@@ -583,7 +545,6 @@
   font-size: 0.8rem;
 }
 
-/* Learn More Button */
 .learn-more {
   color: var(--text-white);
   text-decoration: none;
@@ -605,7 +566,6 @@
   transform: translateX(5px);
 }
 
-/* Responsive Header Tweaks */
 @media screen and (max-width: 768px) {
   .section-header h2 {
     font-size: 2rem;
@@ -615,19 +575,17 @@
   }
 }
 
-/* --- Featured Projects (Bento Grid) --- */
 .portfolio-section {
   padding: 60px 5%;
   background: var(--bg-color);
 }
 .bento-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 Columns Desktop */
-  grid-auto-rows: 250px; /* Fixed row height */
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 250px;
   gap: 20px;
 }
 
-/* Card Base */
 .bento-card {
   position: relative;
   border-radius: 16px;
@@ -640,21 +598,19 @@
   padding: 25px;
 }
 
-/* Bento Sizing Classes */
 .card-large {
   grid-column: span 2;
   grid-row: span 2;
-} /* 2x2 Big */
+}
 .card-wide {
   grid-column: span 2;
   grid-row: span 1;
-} /* 2x1 Wide */
+}
 .card-standard {
   grid-column: span 1;
   grid-row: span 1;
-} /* 1x1 Normal */
+}
 
-/* Background Image & Overlay */
 .bento-bg {
   position: absolute;
   inset: 0;
@@ -676,7 +632,6 @@
   transition: background 0.4s ease;
 }
 
-/* Hover Effects */
 .bento-card:hover {
   border-color: var(--primary-orange);
   box-shadow: 0 10px 30px var(--orange-glow);
@@ -691,9 +646,8 @@
     rgba(10, 25, 47, 1) 10%,
     rgba(255, 115, 0, 0.3) 100%
   );
-} /* Orange tint on hover */
+}
 
-/* Badges (Top) */
 .bento-badges {
   position: absolute;
   top: 20px;
@@ -718,7 +672,6 @@
   font-weight: 500;
 }
 
-/* Content (Bottom) */
 .bento-content {
   position: relative;
   z-index: 3;
@@ -751,9 +704,8 @@
   transform: translateX(5px);
 }
 
-/* --- Video & Extra Text Tweak for Bento Card --- */
 video.bento-bg {
-  pointer-events: none; /* Prevents user from accidentally clicking/pausing the video */
+  pointer-events: none;
 }
 
 .bento-content .extra-text {
@@ -763,18 +715,15 @@ video.bento-bg {
   line-height: 1.5;
 }
 
-/* Make sure mobile responsiveness stays perfect for the extra text */
 @media screen and (max-width: 768px) {
   .bento-content .extra-text {
     font-size: 0.8rem;
     margin-bottom: 15px;
-    display: none; /* Optional: If mobile screen is too small, you can hide this extra line. Remove this line if you want to keep it visible on mobile */
+    display: none;
   }
 }
 
-/* --- Mobile & Tablet Responsive --- */
 @media screen and (max-width: 1024px) {
-  /* Tablet: 2 Columns */
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -790,7 +739,6 @@ video.bento-bg {
 }
 
 @media screen and (max-width: 768px) {
-  /* Mobile: 1 Column */
   .bento-grid {
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(300px, auto);
@@ -800,13 +748,12 @@ video.bento-bg {
   .card-standard {
     grid-column: span 1;
     grid-row: span 1;
-  } /* Everything stacks vertically */
+  }
   .bento-content h3 {
     font-size: 1.3rem;
   }
 }
 
-/* --- Process Timeline Section --- */
 .process-section {
   padding: 60px 5%;
   background: var(--bg-color);
@@ -819,7 +766,6 @@ video.bento-bg {
   padding: 40px 0;
 }
 
-/* Animated Center Line */
 .timeline-container::before {
   content: "";
   position: absolute;
@@ -832,7 +778,6 @@ video.bento-bg {
   z-index: 1;
 }
 
-/* Timeline Item Layout */
 .timeline-item {
   position: relative;
   width: 50%;
@@ -872,7 +817,6 @@ video.bento-bg {
   left: -22px;
 }
 
-/* Glassmorphism Content Card */
 .timeline-content {
   position: relative;
   background: var(--glass-bg);
@@ -884,15 +828,14 @@ video.bento-bg {
   transition: all 0.4s ease;
   display: inline-block;
   width: 100%;
-  text-align: left; /* Keep text left aligned inside card always */
-  overflow: hidden; /* FIX: Prevents the big number from spilling out */
+  text-align: left;
+  overflow: hidden;
 }
 
-/* FIX: Step Number perfectly positioned inside the card watermark style */
 .step-num {
   position: absolute;
   top: -10px;
-  right: 15px; /* Locked to the right inside the card */
+  right: 15px;
   font-size: 5rem;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.03);
@@ -901,7 +844,6 @@ video.bento-bg {
   transition: color 0.4s ease;
 }
 
-/* Assure text is above the watermark */
 .timeline-content h3,
 .timeline-content .step-desc,
 .timeline-content .process-list {
@@ -921,7 +863,6 @@ video.bento-bg {
   font-weight: 500;
 }
 
-/* 6-Line List Styling */
 .process-list {
   list-style: none;
   padding: 0;
@@ -942,7 +883,6 @@ video.bento-bg {
   margin-top: 4px;
 }
 
-/* Hover Effects */
 .timeline-item:hover .timeline-content {
   transform: translateY(-8px);
   border-color: var(--primary-orange);
@@ -956,17 +896,15 @@ video.bento-bg {
   transform: scale(1.1);
 }
 .timeline-item:hover .step-num {
-  color: rgba(255, 115, 0, 0.1); /* Number glows orange on hover */
+  color: rgba(255, 115, 0, 0.1);
 }
 
-/* Scroll Animation Keyframes */
 .fade-in-up {
   opacity: 0;
   transform: translateY(40px);
   animation: fadeInUp 0.8s ease forwards;
 }
 
-/* --- Timeline Button Styling --- */
 .btn-timeline {
   display: inline-flex;
   align-items: center;
@@ -988,7 +926,6 @@ video.bento-bg {
   transition: transform 0.3s ease;
 }
 
-/* Timeline Button Hover Effect */
 .btn-timeline:hover {
   background: var(--primary-orange);
   color: #000;
@@ -1007,15 +944,12 @@ video.bento-bg {
   }
 }
 
-/* --- Mobile & Tablet Responsive --- */
 @media screen and (max-width: 900px) {
-  /* Move line to the left edge */
   .timeline-container::before {
     left: 30px;
     transform: none;
   }
 
-  /* Make all items full width */
   .timeline-item {
     width: 100%;
     padding: 20px 0 20px 70px;
@@ -1023,7 +957,6 @@ video.bento-bg {
     margin-bottom: 15px;
   }
 
-  /* Position all dots on the left line */
   .timeline-dot {
     left: 8px !important;
     right: auto !important;
@@ -1053,10 +986,6 @@ video.bento-bg {
   }
 }
 
-/* =========================================
-   6. WHY CHOOSE US SECTION 
-========================================= */
-
 .why-choose-us {
   padding: 60px 5%;
   background: var(--bg-color);
@@ -1065,13 +994,12 @@ video.bento-bg {
 
 .why-container {
   display: flex;
-  align-items: flex-start; /* Better for expanding accordions */
+  align-items: flex-start;
   gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* --- Left Side: Illustration --- */
 .why-left {
   flex: 1;
   position: relative;
@@ -1098,7 +1026,6 @@ video.bento-bg {
   box-shadow: 0 20px 50px var(--orange-glow);
 }
 
-/* Decorative Floating Blobs */
 .floating-element {
   position: absolute;
   border-radius: 50%;
@@ -1126,7 +1053,6 @@ video.bento-bg {
   animation-delay: 2s;
 }
 
-/* --- Right Side: Content & Headings --- */
 .why-right {
   flex: 1.2;
 }
@@ -1148,7 +1074,6 @@ video.bento-bg {
   margin-bottom: 40px;
 }
 
-/* --- Expandable Reasons (Accordion Grid) --- */
 .reasons-accordion {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1165,7 +1090,6 @@ video.bento-bg {
   transition: all 0.3s ease;
 }
 
-/* Accordion Header */
 .reason-header {
   display: flex;
   justify-content: space-between;
@@ -1200,7 +1124,6 @@ video.bento-bg {
   transition: transform 0.4s ease;
 }
 
-/* Accordion Header Hover */
 .reason-header:hover {
   background: rgba(255, 115, 0, 0.05);
 }
@@ -1214,7 +1137,6 @@ video.bento-bg {
   color: var(--primary-orange);
 }
 
-/* Accordion Body (Hidden by default) */
 .reason-body {
   max-height: 0;
   opacity: 0;
@@ -1235,7 +1157,6 @@ video.bento-bg {
   padding-top: 15px;
 }
 
-/* Accordion Inner Button */
 .btn-reason {
   display: inline-flex;
   align-items: center;
@@ -1261,7 +1182,6 @@ video.bento-bg {
   transform: translateX(5px);
 }
 
-/* --- ACTIVE STATE (When Expanded) --- */
 .reason-card.active {
   border-color: var(--primary-orange);
   background: rgba(255, 115, 0, 0.02);
@@ -1283,7 +1203,6 @@ video.bento-bg {
   padding-bottom: 5px;
 }
 
-/* --- Statistics Grid (4 Items) --- */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1313,17 +1232,12 @@ video.bento-bg {
   font-weight: 500;
 }
 
-/* Stats Box Hover */
 .stat-box:hover {
   transform: translateY(-8px);
   border-color: var(--primary-orange);
   box-shadow: 0 10px 25px var(--orange-glow);
   background: rgba(255, 115, 0, 0.05);
 }
-
-/* =========================================
-   MOBILE & TABLET RESPONSIVENESS 
-========================================= */
 
 @media screen and (max-width: 1024px) {
   .why-container {
@@ -1339,7 +1253,7 @@ video.bento-bg {
   }
   .shape-a,
   .shape-b {
-    display: none; /* Hide blobs on tablet/mobile for performance */
+    display: none;
   }
 }
 
@@ -1348,11 +1262,11 @@ video.bento-bg {
     padding: 60px 5%;
   }
   .reasons-accordion {
-    grid-template-columns: 1fr; /* 1 Column for Accordion on Mobile */
+    grid-template-columns: 1fr;
     gap: 10px;
   }
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 Columns for Stats on Mobile */
+    grid-template-columns: repeat(2, 1fr);
   }
   .stat-box h4 {
     font-size: 1.8rem;
@@ -1361,16 +1275,12 @@ video.bento-bg {
 
 @media screen and (max-width: 480px) {
   .stats-grid {
-    grid-template-columns: 1fr; /* 1 Column for Stats on tiny screens */
+    grid-template-columns: 1fr;
   }
   .why-img {
     border-width: 1px;
   }
 }
-
-/* =========================================
-   7. OUR CREATIVE TEAM SECTION 
-========================================= */
 
 .team-section {
   padding: 60px 5%;
@@ -1379,15 +1289,11 @@ video.bento-bg {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(280px, 1fr)
-  ); /* Slightly wider for the extra text */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   margin-top: 40px;
 }
 
-/* Glassmorphism Card Wrapper */
 .team-card {
   background: var(--glass-bg);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -1397,7 +1303,7 @@ video.bento-bg {
   -webkit-backdrop-filter: blur(12px);
   transition: all 0.4s ease;
   display: flex;
-  flex-direction: column; /* Allows content to stretch */
+  flex-direction: column;
 }
 
 .team-card:hover {
@@ -1407,7 +1313,6 @@ video.bento-bg {
   background: rgba(255, 115, 0, 0.03);
 }
 
-/* Image & Socials */
 .team-img-wrapper {
   position: relative;
   width: 100%;
@@ -1466,13 +1371,12 @@ video.bento-bg {
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
 }
 
-/* Card Content Area */
 .team-content {
   padding: 25px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Fills remaining space so buttons align at bottom */
+  flex-grow: 1;
 }
 
 .team-content h3 {
@@ -1499,14 +1403,13 @@ video.bento-bg {
   color: var(--text-white);
 }
 
-/* Skills Badges */
 .team-skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Added bottom border to separate from bio */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   padding: 15px 0;
 }
 
@@ -1526,22 +1429,19 @@ video.bento-bg {
   color: var(--text-white);
 }
 
-/* 3-Line Bio Text */
 .team-bio {
   color: #8892b0;
   font-size: 0.85rem;
   line-height: 1.6;
   margin: 15px 0 20px;
-  /* Forces text to truncate exactly at 3 lines if it gets too long */
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-/* View Profile Button */
 .btn-team {
-  margin-top: auto; /* Pushes the button to the absolute bottom of the card */
+  margin-top: auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1574,7 +1474,6 @@ video.bento-bg {
   transform: translateX(5px);
 }
 
-/* Mobile Tweak */
 @media screen and (max-width: 480px) {
   .team-img-wrapper {
     height: 260px;
@@ -1584,7 +1483,6 @@ video.bento-bg {
   }
 }
 
-/* ==================== TESTIMONIALS STYLING ==================== */
 .agency-testimonials {
   background-color: var(--bg-color);
   padding: 60px 20px;
@@ -1606,7 +1504,6 @@ video.bento-bg {
   position: relative;
 }
 
-/* Section Header */
 .agency-testimonials .section-header {
   text-align: center;
   margin-bottom: 60px;
@@ -1629,7 +1526,6 @@ video.bento-bg {
   margin: 0;
 }
 
-/* Carousel Layout Area */
 .carousel-wrapper {
   position: relative;
   display: flex;
@@ -1645,22 +1541,15 @@ video.bento-bg {
   scroll-behavior: smooth;
   padding: 30px 10px;
   width: 100%;
-  scrollbar-width: none; /* Firefox invisible scroll */
+  scrollbar-width: none;
 }
 
 .carousel-track::-webkit-scrollbar {
-  display: none; /* Chrome/Safari invisible scroll */
+  display: none;
 }
 
-/* Continuous Scroll Snap Override Class */
-/* .carousel-track.continuous-scrolling {
-  scroll-snap-type: none !important;
-  scroll-behavior: auto !important;
-} */
-
-/* Premium Glassmorphism Card Design */
 .testimonial-card {
-  flex: 0 0 100%; /* Mobile default: 1 full card */
+  flex: 0 0 100%;
   scroll-snap-align: center;
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
@@ -1677,14 +1566,12 @@ video.bento-bg {
     box-shadow var(--transition-speed) ease;
 }
 
-/* Hover Effects */
 .testimonial-card:hover {
   transform: translateY(-10px);
   border-color: var(--primary-orange);
   box-shadow: 0 15px 35px var(--orange-glow);
 }
 
-/* Card Content Details */
 .stars {
   color: var(--primary-orange);
   font-size: 1.1rem;
@@ -1707,7 +1594,6 @@ video.bento-bg {
   flex-grow: 1;
 }
 
-/* Client Block Info */
 .client-info {
   display: flex;
   align-items: center;
@@ -1748,7 +1634,6 @@ video.bento-bg {
   margin-top: 4px;
 }
 
-/* Side Controller Navigation Buttons */
 .carousel-btn {
   background: var(--glass-bg);
   border: 1px solid rgba(255, 115, 0, 0.4);
@@ -1786,8 +1671,6 @@ video.bento-bg {
   right: -25px;
 }
 
-/* --- 100% Mobile & Tablet Responsive Breakdown --- */
-/* --- 100% Mobile & Tablet Responsive Breakdown --- */
 @media (max-width: 767px) {
   .agency-testimonials {
     padding: 60px 15px;
@@ -1796,16 +1679,14 @@ video.bento-bg {
     font-size: 2.1rem;
   }
 
-  /* Mobile-la buttons display aaga intha styling */
   .carousel-btn {
-    display: flex; /* Hidden-ah irunthatha veliya kondu varom */
-    width: 40px; /* Mobile-ku konjam chinna size */
+    display: flex;
+    width: 40px;
     height: 40px;
     font-size: 1rem;
-    background: var(--bg-color); /* Contrast-kaga background dark aakurom */
+    background: var(--bg-color);
   }
 
-  /* Buttons card mela over-ah overlap aagama iruka positioning */
   .prev-btn {
     left: -5px;
   }
@@ -1813,7 +1694,6 @@ video.bento-bg {
     right: -5px;
   }
 
-  /* Mobile-la card padding konjam kuraikkurom */
   .testimonial-card {
     padding: 25px 20px;
   }
@@ -1828,7 +1708,7 @@ video.bento-bg {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .testimonial-card {
-    flex: 0 0 calc(50% - 12px); /* Tablet: Exactly 2 Cards */
+    flex: 0 0 calc(50% - 12px);
   }
   .prev-btn {
     left: -15px;
@@ -1840,7 +1720,7 @@ video.bento-bg {
 
 @media (min-width: 1024px) {
   .testimonial-card {
-    flex: 0 0 calc(33.333% - 16px); /* Desktop: Exactly 3 Cards */
+    flex: 0 0 calc(33.333% - 16px);
   }
   .prev-btn {
     left: -25px;
@@ -1849,7 +1729,6 @@ video.bento-bg {
     right: -25px;
   }
 }
-/* --- Scroll Animation Base Setup --- */
 .scroll-reveal {
   opacity: 0;
   transform: translateY(60px);
@@ -1863,7 +1742,6 @@ video.bento-bg {
   transform: translateY(0);
 }
 
-/* ==================== SECTION 10: BLOG & INSIGHTS ==================== */
 .agency-blog {
   background-color: var(--bg-color);
   padding: 50px 20px;
@@ -1875,7 +1753,6 @@ video.bento-bg {
   margin: 0 auto;
 }
 
-/* Header Resets (if needed) */
 .agency-blog .section-header {
   text-align: center;
   margin-bottom: 60px;
@@ -1892,7 +1769,6 @@ video.bento-bg {
   letter-spacing: 2px;
 }
 
-/* Auto-Responsive Grid (Mobile: 1, Tab: 2, Desk: 3) */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1900,7 +1776,6 @@ video.bento-bg {
   align-items: stretch;
 }
 
-/* Glassmorphism Blog Card */
 .blog-card {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
@@ -1916,14 +1791,12 @@ video.bento-bg {
     box-shadow 0.4s ease;
 }
 
-/* Hover Effects on Card */
 .blog-card:hover {
   transform: translateY(-12px);
   border-color: var(--primary-orange);
   box-shadow: 0 15px 40px var(--orange-glow);
 }
 
-/* Image Wrapper & Zoom Effect */
 .blog-img-wrapper {
   position: relative;
   width: 100%;
@@ -1939,10 +1812,9 @@ video.bento-bg {
 }
 
 .blog-card:hover .blog-thumbnail {
-  transform: scale(1.1); /* Zoom effect on hover */
+  transform: scale(1.1);
 }
 
-/* Floating Category Badge */
 .category-badge {
   position: absolute;
   top: 15px;
@@ -1958,12 +1830,11 @@ video.bento-bg {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Card Content Area */
 .blog-content {
   padding: 25px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Pushes footer to bottom */
+  flex-grow: 1;
 }
 
 .blog-meta {
@@ -1990,7 +1861,6 @@ video.bento-bg {
   flex-grow: 1;
 }
 
-/* Footer & Author Layout */
 .blog-footer {
   display: flex;
   justify-content: space-between;
@@ -2019,7 +1889,6 @@ video.bento-bg {
   font-weight: 500;
 }
 
-/* Read More Button Interaction */
 .read-more {
   color: var(--primary-orange);
   text-decoration: none;
@@ -2036,10 +1905,9 @@ video.bento-bg {
 }
 
 .blog-card:hover .read-more .arrow {
-  transform: translateX(5px); /* Arrow moves right on hover */
+  transform: translateX(5px);
 }
 
-/* Scroll Animation Styles */
 .scroll-reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -2050,37 +1918,28 @@ video.bento-bg {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Responsive specific adjustments */
-/* Responsive specific adjustments */
 @media (max-width: 767px) {
-  /* Section padding-ah kuraikurom */
   .agency-blog {
     padding: 50px 15px;
   }
 
-  /* Heading size-ah chinnathu panrom */
   .agency-blog .title {
     font-size: 2rem;
   }
 
-  /* Card ulla iruka spacing-ah kuraikurom */
   .blog-content {
     padding: 20px 15px;
   }
 
-  /* Image height-ah mobile-ku yetha mathiri kuraikurom */
   .blog-img-wrapper {
     height: 180px;
   }
 
-  /* Title in card */
   .blog-title {
     font-size: 1.25rem;
   }
 }
 
-/* ==================== SECTION 11: FAQ STYLING ==================== */
 .agency-faq {
   background-color: var(--bg-color);
   padding: 60px 20px;
@@ -2088,11 +1947,10 @@ video.bento-bg {
 }
 
 .faq-container {
-  max-width: 800px; /* Kept narrower for better readability */
+  max-width: 800px;
   margin: 0 auto;
 }
 
-/* Section Header */
 .agency-faq .section-header {
   text-align: center;
   margin-bottom: 50px;
@@ -2111,7 +1969,6 @@ video.bento-bg {
   letter-spacing: 2px;
 }
 
-/* FAQ List & Items */
 .faq-list {
   display: flex;
   flex-direction: column;
@@ -2134,13 +1991,11 @@ video.bento-bg {
   border-color: rgba(255, 115, 0, 0.4);
 }
 
-/* Active State for FAQ Item */
 .faq-item.active {
   border-color: var(--primary-orange);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Question Button */
 .faq-question {
   width: 100%;
   background: transparent;
@@ -2161,7 +2016,6 @@ video.bento-bg {
   color: var(--primary-orange);
 }
 
-/* Plus/Minus Icon using CSS */
 .faq-icon {
   position: relative;
   width: 20px;
@@ -2180,7 +2034,6 @@ video.bento-bg {
     background-color 0.3s ease;
 }
 
-/* Horizontal line */
 .faq-icon::before {
   top: 9px;
   left: 0;
@@ -2188,7 +2041,6 @@ video.bento-bg {
   height: 2px;
 }
 
-/* Vertical line */
 .faq-icon::after {
   top: 0;
   left: 9px;
@@ -2196,32 +2048,29 @@ video.bento-bg {
   height: 100%;
 }
 
-/* Animate Icon on Active */
 .faq-item.active .faq-icon::before,
 .faq-item.active .faq-icon::after {
   background-color: var(--primary-orange);
 }
 
 .faq-item.active .faq-icon::after {
-  transform: rotate(90deg); /* Turns Plus into Minus */
+  transform: rotate(90deg);
 }
 
-/* Answer Content Area */
 .faq-answer {
-  max-height: 0; /* Hidden by default */
+  max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .faq-answer p {
-  padding: 0 30px 25px 30px; /* Padding only shows when open */
+  padding: 0 30px 25px 30px;
   color: var(--text-light);
   font-size: 1rem;
   line-height: 1.7;
   margin: 0;
 }
 
-/* Scroll Animation Base */
 .scroll-reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -2233,7 +2082,6 @@ video.bento-bg {
   transform: translateY(0);
 }
 
-/* 100% Mobile Responsive */
 @media (max-width: 767px) {
   .agency-faq {
     padding: 60px 15px;
@@ -2251,7 +2099,6 @@ video.bento-bg {
   }
 }
 
-/* ==================== SECTION 12: CTA STYLING ==================== */
 .agency-cta {
   position: relative;
   padding: 60px 20px;
@@ -2261,7 +2108,6 @@ video.bento-bg {
   width: 100%;
 }
 
-/* Premium Background Glow Effects */
 .cta-glow {
   position: absolute;
   width: 600px;
@@ -2286,7 +2132,6 @@ video.bento-bg {
   right: -200px;
 }
 
-/* Content Container */
 .cta-container {
   position: relative;
   z-index: 2;
@@ -2294,7 +2139,6 @@ video.bento-bg {
   margin: 0 auto;
 }
 
-/* Heading Styling */
 .cta-title {
   color: var(--text-white);
   font-size: 3.5rem;
@@ -2304,7 +2148,6 @@ video.bento-bg {
   line-height: 1.2;
 }
 
-/* Text Styling */
 .cta-text {
   color: var(--text-light);
   font-size: 1.25rem;
@@ -2313,7 +2156,6 @@ video.bento-bg {
   max-width: 700px;
 }
 
-/* Button Layout */
 .cta-buttons {
   display: flex;
   justify-content: center;
@@ -2321,7 +2163,6 @@ video.bento-bg {
   gap: 20px;
 }
 
-/* Common Button Styles */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -2329,12 +2170,11 @@ video.bento-bg {
   padding: 18px 36px;
   font-size: 1.1rem;
   font-weight: 600;
-  border-radius: 50px; /* Pill shape for premium look */
+  border-radius: 50px;
   text-decoration: none;
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Primary Button (Solid Orange) */
 .cta-btn-primary {
   background-color: var(--primary-orange);
   color: var(--bg-color);
@@ -2356,7 +2196,6 @@ video.bento-bg {
   transform: translateX(5px);
 }
 
-/* Secondary Button (Outline Glass) */
 .cta-btn-secondary {
   background-color: transparent;
   color: var(--primary-orange);
@@ -2370,7 +2209,6 @@ video.bento-bg {
   box-shadow: 0 15px 30px rgba(255, 115, 0, 0.2);
 }
 
-/* --- Scroll Reveal Animation --- */
 .scroll-reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -2384,7 +2222,6 @@ video.bento-bg {
   transform: translateY(0);
 }
 
-/* --- 100% Mobile & Tablet Responsive --- */
 @media (max-width: 767px) {
   .agency-cta {
     padding: 80px 15px;
@@ -2397,12 +2234,12 @@ video.bento-bg {
     margin-bottom: 35px;
   }
   .cta-buttons {
-    flex-direction: column; /* Stack buttons on mobile */
+    flex-direction: column;
     gap: 15px;
     width: 100%;
   }
   .btn {
-    width: 100%; /* Full width buttons for easy mobile tapping */
+    width: 100%;
     padding: 16px 20px;
   }
 }

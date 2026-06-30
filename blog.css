@@ -1,11 +1,10 @@
-/* --- Blog Hero Section Base --- */
 :root {
   --bg-color: #0a0a0a;
-  --glass-bg: rgba(18, 18, 20, 0.75); /* Darker, sleeker glass effect */
+  --glass-bg: rgba(18, 18, 20, 0.75);
   --primary-orange: #ff7300;
   --orange-glow: rgba(255, 115, 0, 0.4);
   --text-white: #ffffff;
-  --text-light: #a3a3a3; /* Softer grey for paragraphs */
+  --text-light: #a3a3a3;
   --transition-speed: 0.3s;
 }
 
@@ -16,13 +15,10 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-white);
 }
-
-
-
 
 .blog-hero-section {
   position: relative;
@@ -30,21 +26,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Background Image (Replace URL with your own if needed) */
-  background-image: url('./asset/a4.webp');
+  background-image: url("./asset/a4.webp");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Parallax effect */
+  background-attachment: fixed;
   overflow: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 80px 20px;
 }
 
-/* Dark overlay so the glass card pops out */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.95));
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 25, 47, 0.7),
+    rgba(10, 25, 47, 0.95)
+  );
   z-index: 1;
 }
 
@@ -56,7 +54,6 @@ body {
   justify-content: center;
 }
 
-/* --- Floating Motion Graphic Elements --- */
 .float-shape {
   position: absolute;
   z-index: 2;
@@ -66,35 +63,44 @@ body {
 }
 
 .shape-circle {
-  width: 100px; height: 100px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background: linear-gradient(45deg, var(--primary-orange), transparent);
-  top: 15%; left: 10%;
+  top: 15%;
+  left: 10%;
 }
 
 .shape-square {
-  width: 80px; height: 80px;
+  width: 80px;
+  height: 80px;
   background: linear-gradient(135deg, transparent, #ff2600);
-  bottom: 20%; right: 10%;
+  bottom: 20%;
+  right: 10%;
   transform: rotate(45deg);
   animation-delay: 2s;
 }
 
 .shape-triangle {
-  width: 0; height: 0;
+  width: 0;
+  height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-bottom: 80px solid rgba(255, 51, 0, 0.4);
-  top: 30%; right: 20%;
+  top: 30%;
+  right: 20%;
   animation-delay: 4s;
 }
 
 @keyframes float-shapes {
-  0% { transform: translateY(0) rotate(0deg); }
-  100% { transform: translateY(-40px) rotate(25deg); }
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-40px) rotate(25deg);
+  }
 }
 
-/* --- Glassmorphism Title Card --- */
 .blog-glass-card {
   background: rgba(18, 18, 18, 0.55);
   backdrop-filter: blur(20px);
@@ -104,10 +110,11 @@ body {
   padding: 60px 50px;
   max-width: 900px;
   text-align: center;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 115, 0, 0.05);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(255, 115, 0, 0.05);
 }
 
-/* --- Breadcrumb Inside Card --- */
 .breadcrumb {
   display: inline-flex;
   align-items: center;
@@ -141,7 +148,6 @@ body {
   text-shadow: 0 0 10px rgba(255, 115, 0, 0.5);
 }
 
-/* --- Gradient Typography --- */
 .hero-title {
   font-size: 3.5rem;
   color: var(--text-white);
@@ -151,7 +157,12 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, var(--primary-orange), #ff2600, #ff5e00);
+  background: linear-gradient(
+    to right,
+    var(--primary-orange),
+    #ff2600,
+    #ff5e00
+  );
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -159,8 +170,12 @@ body {
 }
 
 @keyframes gradient-flow {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .hero-desc {
@@ -173,7 +188,6 @@ body {
   margin-right: auto;
 }
 
-/* --- Premium Search Bar --- */
 .hero-search-form {
   display: flex;
   max-width: 600px;
@@ -182,7 +196,9 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50px;
   overflow: hidden;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .hero-search-form:focus-within {
@@ -211,22 +227,23 @@ body {
   padding: 0 30px;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
+  transition:
+    background 0.3s,
+    transform 0.3s;
 }
 
 .search-btn:hover {
   background: #ff8c33;
 }
 
-/* --- CTA Buttons (Using previous style structure) --- */
 .hero-actions {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-/* Primary/Secondary button classes if you want to explicitly define them here */
-.primary-btn, .secondary-btn {
+.primary-btn,
+.secondary-btn {
   padding: 12px 35px;
   border-radius: 50px;
   text-decoration: none;
@@ -255,7 +272,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* --- Scroll Indicator --- */
 .scroll-indicator {
   position: absolute;
   bottom: 30px;
@@ -296,21 +312,31 @@ body {
 }
 
 @keyframes scroll-wheel {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(15px); opacity: 0; }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
 }
 
 @keyframes fade-text {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
-/* --- Mobile Responsiveness --- */
 @media screen and (max-width: 768px) {
   .blog-hero-section {
     padding: 100px 15px;
   }
-  
+
   .blog-glass-card {
     padding: 40px 20px;
   }
@@ -327,7 +353,7 @@ body {
   .hero-search-form {
     flex-direction: column;
     border-radius: 15px;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 115, 0, 0.3);
   }
 
@@ -344,31 +370,27 @@ body {
     flex-direction: column;
     gap: 15px;
   }
-  
+
   .scroll-indicator {
-    display: none; /* Hide scroll indicator on very small screens to save space */
+    display: none;
   }
 }
 
-
-/* --- Search Container wrapper to align error message properly --- */
 .search-container {
   max-width: 600px;
   margin: 0 auto 40px auto;
   position: relative;
 }
 
-/* Base search form spacing fix to work with wrapper */
 .hero-search-form {
-  margin-bottom: 0; /* Removed bottom margin since container handles it */
+  margin-bottom: 0;
 }
 
-/* --- Error Message Box Styling --- */
 .error-msg {
-  display: none; /* Hidden by default */
-  background: rgba(255, 77, 77, 0.15); /* Light red glass background */
+  display: none;
+  background: rgba(255, 77, 77, 0.15);
   border: 1px solid rgba(255, 77, 77, 0.4);
-  color: #ff4d4d; /* Red text */
+  color: #ff4d4d;
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 0.9rem;
@@ -383,27 +405,43 @@ body {
   display: block;
 }
 
-/* --- Shake Animation for empty submit --- */
 .shake-error {
-  animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+  animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   border-color: #ff4d4d !important;
   box-shadow: 0 0 15px rgba(255, 77, 77, 0.3) !important;
 }
 
-/* Animations */
 @keyframes shake {
-  10%, 90% { transform: translate3d(-1px, 0, 0); }
-  20%, 80% { transform: translate3d(2px, 0, 0); }
-  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
-  40%, 60% { transform: translate3d(4px, 0, 0); }
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* --- Mobile Responsiveness --- */
 @media screen and (max-width: 768px) {
   .error-msg {
     text-align: center;
@@ -412,30 +450,26 @@ body {
   }
 }
 
-
-/* --- Featured Story Section Base --- */
 .featured-section {
   background-color: var(--bg-color);
   padding: 100px 20px;
   color: var(--text-light);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   position: relative;
 }
 
-/* --- Layout Grid (Sticky Concept) --- */
 .featured-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: start; /* Crucial for sticky layout */
+  align-items: start;
 }
 
-/* --- Left Column: Sticky Media --- */
 .sticky-column {
   position: sticky;
-  top: 100px; /* Sticks 100px from the top of the viewport */
+  top: 100px;
   height: calc(100vh - 150px);
   min-height: 500px;
   max-height: 700px;
@@ -448,7 +482,7 @@ body {
   overflow: hidden;
   position: relative;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  padding: 0; /* Override glassmorphism default padding if any */
+  padding: 0;
 }
 
 .featured-video {
@@ -460,7 +494,11 @@ body {
 .media-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(10, 25, 47, 0.2), rgba(255, 115, 0, 0.3));
+  background: linear-gradient(
+    135deg,
+    rgba(10, 25, 47, 0.2),
+    rgba(255, 115, 0, 0.3)
+  );
   pointer-events: none;
 }
 
@@ -480,7 +518,6 @@ body {
   box-shadow: 0 5px 15px var(--orange-glow);
 }
 
-/* --- Reading Progress Circle --- */
 .progress-container {
   position: absolute;
   bottom: 25px;
@@ -494,15 +531,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .progress-svg {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  transform: rotate(-90deg); /* Start at 12 o'clock */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
 }
 
 .progress-bg {
@@ -516,8 +555,8 @@ body {
   stroke: var(--primary-orange);
   stroke-width: 5;
   stroke-linecap: round;
-  stroke-dasharray: 283; /* 2 * pi * r (45) */
-  stroke-dashoffset: 283; /* Hidden by default */
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
   transition: stroke-dashoffset 0.1s linear;
 }
 
@@ -528,7 +567,6 @@ body {
   z-index: 2;
 }
 
-/* --- Right Column: Scrollable Content --- */
 .scroll-column {
   padding: 20px 0;
 }
@@ -577,7 +615,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* --- Story Typography --- */
 .story-title {
   font-size: 2.8rem;
   color: var(--text-white);
@@ -624,7 +661,6 @@ body {
   color: var(--text-white);
 }
 
-/* --- Large CTA Button --- */
 .large-cta-btn {
   display: flex;
   align-items: center;
@@ -657,28 +693,27 @@ body {
   transform: translateX(10px);
 }
 
-/* --- Mobile Responsiveness --- */
 @media screen and (max-width: 992px) {
   .featured-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .sticky-column {
-    position: relative; /* Disable sticky on mobile */
+    position: relative;
     top: 0;
-    height: 400px; /* Fixed height for video on mobile */
+    height: 400px;
     min-height: auto;
   }
-  
+
   .progress-container {
-    display: none; /* Hide progress circle on mobile to save space */
+    display: none;
   }
 
   .story-title {
     font-size: 2.2rem;
   }
-  
+
   .meta-info {
     flex-direction: column;
     align-items: flex-start;
@@ -690,25 +725,24 @@ body {
   .featured-section {
     padding: 60px 15px;
   }
-  
+
   .story-title {
     font-size: 1.8rem;
   }
-  
+
   .premium-quote {
     font-size: 1.1rem;
     padding: 20px;
   }
-  
+
   .large-cta-btn {
     padding: 15px 25px;
     font-size: 1rem;
   }
 }
 
-/* --- Section Header Styling --- */
 .section-header {
-  text-align: center; /* Center aligns the heading and text */
+  text-align: center;
   margin-bottom: 60px;
 }
 
@@ -719,7 +753,6 @@ body {
   font-weight: 800;
 }
 
-/* This adds the Orange color and Glow effect to the Spotlight text */
 .section-header .highlight {
   color: var(--primary-orange);
   text-shadow: 0 0 15px var(--orange-glow);
@@ -732,7 +765,6 @@ body {
   margin: 0 auto;
 }
 
-/* Mobile Responsiveness for Header */
 @media screen and (max-width: 768px) {
   .section-header h2 {
     font-size: 2rem;
@@ -742,14 +774,12 @@ body {
   }
 }
 
-
-/* --- Trending Articles Base --- */
 .trending-section {
   background-color: var(--bg-color);
-  padding: 60px 0; /* Left and right 0 so the track spans full width */
+  padding: 60px 0;
   color: var(--text-light);
-  overflow: hidden; /* Prevents horizontal scrollbar */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .trending-section .container {
@@ -758,7 +788,6 @@ body {
   padding: 0 20px;
 }
 
-/* --- Infinite Scrolling Engine --- */
 .scrolling-wrapper {
   width: 100%;
   overflow: hidden;
@@ -767,7 +796,6 @@ body {
   padding: 20px 0;
 }
 
-/* Faded edges to make it look premium */
 .scrolling-wrapper::before,
 .scrolling-wrapper::after {
   content: "";
@@ -791,26 +819,27 @@ body {
 
 .scrolling-track {
   display: flex;
-  gap: 30px; /* Space between cards */
+  gap: 30px;
   width: max-content;
-  /* Animation moves 50% (exactly 1 full set of 6 cards) over 35 seconds */
   animation: scroll-left 35s linear infinite;
 }
 
-/* PAUSE ON HOVER */
 .scrolling-wrapper:hover .scrolling-track {
   animation-play-state: paused;
 }
 
 @keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-50% - 15px)); } /* -15px accounts for half the gap */
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 15px));
+  }
 }
 
-/* --- Glassmorphism Card with Gradient Border --- */
 .trending-card {
   position: relative;
-  width: 320px; /* Fixed width for consistency */
+  width: 320px;
   flex-shrink: 0;
   background: var(--glass-bg);
   border-radius: 20px;
@@ -824,15 +853,16 @@ body {
   z-index: 1;
 }
 
-/* Advanced CSS trick to create a pure Gradient Border on a Glass card */
 .trending-card::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 20px;
-  padding: 2px; /* Border thickness */
+  padding: 2px;
   background: linear-gradient(135deg, var(--primary-orange), #ff2600, #ff9100);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
@@ -845,10 +875,9 @@ body {
 }
 
 .trending-card:hover::before {
-  opacity: 1; /* Glow intensifies on hover */
+  opacity: 1;
 }
 
-/* --- Card Image --- */
 .card-img {
   width: 100%;
   height: 180px;
@@ -861,12 +890,11 @@ body {
   transform: scale(1.05);
 }
 
-/* --- Card Content & Button --- */
 .card-contenta {
   padding: 25px 20px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Pushes button to bottom */
+  flex-grow: 1;
 }
 
 .card-contenta h3 {
@@ -892,7 +920,7 @@ body {
 }
 
 .card-btn {
-  margin-top: auto; /* Aligns button to the bottom */
+  margin-top: auto;
   display: inline-block;
   text-decoration: none;
   text-align: center;
@@ -912,41 +940,36 @@ body {
   box-shadow: 0 0 15px var(--primary-orange);
 }
 
-/* --- Mobile Responsiveness --- */
 @media screen and (max-width: 768px) {
   .trending-section {
     padding: 70px 0;
   }
-  
+
   .trending-card {
-    width: 280px; /* Slightly smaller cards on mobile */
+    width: 280px;
   }
 
   .scrolling-wrapper::before,
   .scrolling-wrapper::after {
-    width: 40px; /* Reduce fade edge size on small screens */
+    width: 40px;
   }
 }
 
-
-/* --- Bento Section Base --- */
 .bento-section {
   background-color: var(--bg-color);
   padding: 60px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* --- Bento Grid Layout Engine --- */
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 260px; /* Slightly increased height to fit the new paragraph perfectly */
+  grid-auto-rows: 260px;
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Specific Sizes for Bento Look */
 .span-2x2 {
   grid-column: span 2;
   grid-row: span 2;
@@ -957,14 +980,16 @@ body {
   grid-row: span 1;
 }
 
-/* --- Glassmorphism Bento Card --- */
 .bento-card {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
   background: var(--glass-bg);
   border: 1px solid rgba(255, 115, 0, 0.2);
-  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease;
+  transition:
+    transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease,
+    border-color var(--transition-speed) ease;
   cursor: pointer;
 }
 
@@ -974,7 +999,6 @@ body {
   box-shadow: 0 15px 35px var(--orange-glow);
 }
 
-/* Background Image inside Card */
 .bento-img {
   position: absolute;
   inset: 0;
@@ -986,14 +1010,18 @@ body {
 }
 
 .bento-card:hover .bento-img {
-  transform: scale(1.1); /* Zoom effect on hover */
+  transform: scale(1.1);
 }
 
-/* Overlay to ensure text readability (Using strict Navy to Transparent) */
 .bento-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(10, 25, 47, 0.98) 0%, rgba(10, 25, 47, 0.7) 60%, rgba(10, 25, 47, 0.2) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(10, 25, 47, 0.98) 0%,
+    rgba(10, 25, 47, 0.7) 60%,
+    rgba(10, 25, 47, 0.2) 100%
+  );
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -1001,7 +1029,6 @@ body {
   padding: 25px;
 }
 
-/* --- Card Floating Icon --- */
 .floating-icon {
   align-self: flex-end;
   background: rgba(10, 25, 47, 0.7);
@@ -1023,7 +1050,6 @@ body {
   transform: scale(1.1) rotate(10deg);
 }
 
-/* --- Card Content & Typography --- */
 .bento-content {
   display: flex;
   flex-direction: column;
@@ -1033,25 +1059,22 @@ body {
 .bento-content h3 {
   color: var(--text-white);
   font-size: 1.4rem;
-  margin: 0 0 8px 0; /* Reduced margin to make space for para */
+  margin: 0 0 8px 0;
   font-weight: 700;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* New Paragraph Styling */
 .category-desc {
   color: var(--text-light);
   font-size: 0.9rem;
   line-height: 1.4;
   margin-bottom: 15px;
-  /* Smart text truncation to prevent overflow */
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-/* Adjust sizes for the large feature card */
 .span-2x2 .bento-content h3 {
   font-size: 2.2rem;
   margin-bottom: 12px;
@@ -1063,7 +1086,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Standard CTA Button Style */
 .bento-content .card-btn {
   display: inline-block;
   text-decoration: none;
@@ -1083,31 +1105,29 @@ body {
   box-shadow: 0 0 20px var(--orange-glow);
 }
 
-/* --- Mobile Responsiveness --- */
 @media screen and (max-width: 992px) {
-  /* Tablet: Switch to 2 columns */
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
-  .span-2x2, .span-2x1 {
+
+  .span-2x2,
+  .span-2x1 {
     grid-column: span 2;
   }
 }
 
 @media screen and (max-width: 768px) {
-  /* Mobile: Single Column */
   .bento-grid {
     grid-template-columns: 1fr;
-    grid-auto-rows: 280px; /* Increased height on mobile to ensure all text fits nicely */
+    grid-auto-rows: 280px;
   }
 
-  /* Reset all spans to 1 column for mobile */
-  .span-2x2, .span-2x1 {
+  .span-2x2,
+  .span-2x1 {
     grid-column: span 1;
     grid-row: span 1;
   }
-  
+
   .span-2x2 .bento-content h3 {
     font-size: 1.6rem;
   }
@@ -1115,19 +1135,17 @@ body {
   .span-2x2 .category-desc {
     font-size: 0.95rem;
   }
-  
+
   .bento-overlay {
     padding: 20px;
   }
 }
 
-
-/* --- Journey Section Base --- */
 .journey-section {
   background-color: var(--bg-color);
   padding: 70px 20px;
   color: var(--text-light);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .journey-layout {
@@ -1139,10 +1157,9 @@ body {
   align-items: start;
 }
 
-/* --- Left Column: Sticky Image --- */
 .journey-sticky-col {
   position: sticky;
-  top: 120px; /* Sticks just below the header */
+  top: 120px;
   height: calc(100vh - 200px);
   min-height: 400px;
   max-height: 650px;
@@ -1162,10 +1179,11 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.4s ease-in-out, transform 0.8s ease;
+  transition:
+    opacity 0.4s ease-in-out,
+    transform 0.8s ease;
 }
 
-/* Class added by JS to create a fade-in effect when image changes */
 .journey-img.fade {
   opacity: 0.5;
   transform: scale(1.05);
@@ -1174,17 +1192,19 @@ body {
 .media-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(10, 25, 47, 0.3), rgba(255, 115, 0, 0.2));
+  background: linear-gradient(
+    135deg,
+    rgba(10, 25, 47, 0.3),
+    rgba(255, 115, 0, 0.2)
+  );
   pointer-events: none;
 }
 
-/* --- Right Column: Scrolling Timeline --- */
 .journey-scroll-col {
   position: relative;
   padding: 20px 0 100px 0;
 }
 
-/* Vertical Line Background */
 .timeline-line {
   position: absolute;
   top: 0;
@@ -1195,22 +1215,20 @@ body {
   z-index: 1;
 }
 
-/* Vertical Line Fill (Animated by JS) */
 .timeline-fill {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 0%; /* JS will update this */
+  height: 0%;
   background: var(--primary-orange);
   box-shadow: 0 0 10px var(--orange-glow);
   transition: height 0.1s ease-out;
 }
 
-/* --- Journey Steps (Cards) --- */
 .journey-step {
   position: relative;
-  padding-left: 70px; /* Space for the timeline line */
+  padding-left: 70px;
   margin-bottom: 80px;
 }
 
@@ -1218,10 +1236,9 @@ body {
   margin-bottom: 0;
 }
 
-/* The Dot on the timeline */
 .step-dot {
   position: absolute;
-  left: 15px; /* Aligned over the line */
+  left: 15px;
   top: 30px;
   width: 20px;
   height: 20px;
@@ -1232,7 +1249,6 @@ body {
   transition: all 0.4s ease;
 }
 
-/* When a step is active (in view), light up the dot */
 .journey-step.active .step-dot {
   border-color: var(--primary-orange);
   background: var(--primary-orange);
@@ -1240,13 +1256,14 @@ body {
   transform: scale(1.2);
 }
 
-/* --- Content Card inside Step --- */
 .step-content {
   padding: 40px 30px;
   border-radius: 20px;
   background: var(--glass-bg);
   border: 1px solid rgba(255, 115, 0, 0.1);
-  transition: transform var(--transition-speed) ease, border-color var(--transition-speed) ease;
+  transition:
+    transform var(--transition-speed) ease,
+    border-color var(--transition-speed) ease;
 }
 
 .journey-step:hover .step-content {
@@ -1278,7 +1295,6 @@ body {
   color: var(--text-light);
 }
 
-/* Standard Premium Button */
 .step-content .card-btn {
   display: inline-block;
   text-decoration: none;
@@ -1298,14 +1314,12 @@ body {
   box-shadow: 0 0 20px var(--orange-glow);
 }
 
-/* --- Mobile Responsiveness --- */
 @media screen and (max-width: 992px) {
   .journey-layout {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  /* Un-stick the image on mobile */
   .journey-sticky-col {
     position: relative;
     top: 0;
@@ -1313,7 +1327,6 @@ body {
     min-height: auto;
   }
 
-  /* Adjust line position */
   .timeline-line {
     left: 20px;
   }
@@ -1333,7 +1346,7 @@ body {
   }
 
   .journey-sticky-col {
-    height: 250px; /* Smaller image on phones */
+    height: 250px;
   }
 
   .step-content {
@@ -1343,17 +1356,12 @@ body {
   .step-content h3 {
     font-size: 1.5rem;
   }
-  
+
   .step-content p {
     font-size: 0.95rem;
   }
 }
 
-
-
-/* =========================================
-   VIDEO LEARNING HUB (GRID REDESIGN)
-========================================= */
 .video-hub-section {
   background-color: var(--bg-color);
   padding: 60px 20px;
@@ -1365,14 +1373,12 @@ body {
   margin: 0 auto;
 }
 
-/* Grid Layout */
 .video-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-/* Base Card Style */
 .video-card {
   background: rgba(18, 18, 20, 0.6);
   backdrop-filter: blur(12px);
@@ -1387,12 +1393,11 @@ body {
 }
 
 .video-card:hover {
-  transform: translateY(-10px); /* Lifts up on hover */
+  transform: translateY(-10px);
   border-color: rgba(255, 115, 0, 0.3);
   box-shadow: 0 20px 40px rgba(255, 115, 0, 0.15);
 }
 
-/* Thumbnail Section */
 .video-thumb-wrapper {
   width: 100%;
   height: 220px;
@@ -1405,15 +1410,14 @@ body {
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;
-  filter: brightness(0.85); /* Slightly dark to look premium */
+  filter: brightness(0.85);
 }
 
 .video-card:hover .video-thumb-wrapper img {
-  transform: scale(1.08); /* Zoom effect on hover */
+  transform: scale(1.08);
   filter: brightness(1);
 }
 
-/* Content Section */
 .video-card-content {
   padding: 2rem;
   display: flex;
@@ -1438,22 +1442,20 @@ body {
   margin-bottom: 12px;
 }
 
-/* Restricts text to exactly 2 lines */
 .video-desc {
   color: #b3b3b3;
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 25px;
-  flex-grow: 1; /* Pushes button to bottom */
-  
+  flex-grow: 1;
+
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Forces exactly 2 lines */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* Button Styling */
 .btn-outline {
   display: inline-flex;
   align-items: center;
@@ -1481,15 +1483,12 @@ body {
 }
 
 .video-card:hover .btn-outline span {
-  transform: translateX(5px); /* Arrow moves slightly */
+  transform: translateX(5px);
 }
 
-/* =========================================
-   MOBILE RESPONSIVENESS
-========================================= */
 @media (max-width: 1024px) {
   .video-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1497,9 +1496,9 @@ body {
   .video-hub-section {
     padding: 80px 15px;
   }
-  
+
   .video-grid {
-    grid-template-columns: 1fr; /* 1 column on mobile */
+    grid-template-columns: 1fr;
     gap: 25px;
   }
 
@@ -1516,14 +1515,10 @@ body {
   }
 
   .btn-outline {
-    width: 100%; /* Full width button on mobile */
+    width: 100%;
   }
 }
 
-
-/* =========================================
-   COMMUNITY DISCUSSIONS (MASONRY)
-========================================= */
 .community-section {
   background-color: var(--bg-color);
   padding: 60px 20px;
@@ -1535,16 +1530,14 @@ body {
   margin: 0 auto;
 }
 
-/* CSS Masonry Layout Setup */
 .masonry-grid {
   column-count: 3;
   column-gap: 30px;
   width: 100%;
 }
 
-/* Base Card Style */
 .discussion-card {
-  break-inside: avoid; /* Prevents cards from breaking across columns */
+  break-inside: avoid;
   margin-bottom: 30px;
   background: rgba(18, 18, 20, 0.6);
   backdrop-filter: blur(12px);
@@ -1565,7 +1558,6 @@ body {
   background: rgba(25, 25, 28, 0.8);
 }
 
-/* Header & Avatar */
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -1614,7 +1606,6 @@ body {
   border: 1px solid rgba(255, 115, 0, 0.2);
 }
 
-/* Discussion Content */
 .discussion-title {
   color: var(--text-white);
   font-size: 1.3rem;
@@ -1631,7 +1622,6 @@ body {
   transition: margin-bottom 0.4s ease;
 }
 
-/* Expandable Replies (Hidden by default) */
 .expandable-replies {
   max-height: 0;
   opacity: 0;
@@ -1640,7 +1630,7 @@ body {
 }
 
 .discussion-card:hover .discussion-text {
-  margin-bottom: 15px; /* Adds space when replies open */
+  margin-bottom: 15px;
 }
 
 .discussion-card:hover .expandable-replies {
@@ -1649,7 +1639,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* Comment Bubbles */
 .reply-bubble {
   background: rgba(255, 255, 255, 0.03);
   border-left: 3px solid var(--primary-orange);
@@ -1665,14 +1654,13 @@ body {
   color: var(--text-white);
 }
 
-/* Footer (Stats & Button) */
 .card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding-top: 1.5rem;
-  margin-top: auto; /* Pushes footer to the bottom */
+  margin-top: auto;
 }
 
 .interaction-stats {
@@ -1699,19 +1687,15 @@ body {
   font-size: 1rem;
 }
 
-/* Small Button Specific for cards */
 .btn-sm {
   padding: 8px 16px;
   font-size: 0.85rem;
   border-radius: 50px;
 }
 
-/* =========================================
-   MOBILE RESPONSIVENESS
-========================================= */
 @media (max-width: 1024px) {
   .masonry-grid {
-    column-count: 2; /* 2 Columns on Tablet */
+    column-count: 2;
   }
 }
 
@@ -1719,49 +1703,46 @@ body {
   .community-section {
     padding: 80px 15px;
   }
-  
+
   .masonry-grid {
-    column-count: 1; /* Single column on Mobile */
+    column-count: 1;
     column-gap: 0;
   }
-  
+
   .discussion-card {
     padding: 1.5rem;
   }
-  
-  /* On mobile, keep replies slightly visible or auto-expanded 
-     since hover is difficult on touch screens */
+
   .expandable-replies {
     max-height: 500px;
     opacity: 1;
     margin-top: 15px;
     margin-bottom: 15px;
   }
-  
+
   .discussion-title {
     font-size: 1.2rem;
   }
-  
+
   .card-footer {
     flex-direction: column;
     align-items: stretch;
     gap: 15px;
   }
-  
+
   .interaction-stats {
     justify-content: space-between;
   }
-  
+
   .btn-sm {
     text-align: center;
     width: 100%;
   }
 }
 
-/* --- Fix for Join Thread Button --- */
 .discussion-card .btn {
   display: inline-block;
-  text-decoration: none; /* Removes the blue underline */
+  text-decoration: none;
   font-weight: 600;
   text-align: center;
   transition: all 0.3s ease;
@@ -1769,7 +1750,7 @@ body {
 
 .discussion-card .btn-primary {
   background: var(--primary-orange);
-  color: var(--text-white); /* Forces text to be white */
+  color: var(--text-white);
   border: 2px solid var(--primary-orange);
   box-shadow: 0 4px 15px var(--orange-glow);
 }
@@ -1786,11 +1767,6 @@ body {
   border-radius: 50px;
 }
 
-
-
-/* =========================================
-   POPULAR TAGS & RESOURCES
-========================================= */
 .resources-section {
   background-color: var(--bg-color);
   padding: 60px 20px;
@@ -1805,12 +1781,11 @@ body {
   align-items: center;
 }
 
-/* --- Search Filter --- */
 .search-wrapper {
   width: 100%;
   max-width: 700px;
   margin-bottom: 3.5rem;
-  position: relative; /* FIX: Important for error message alignment */
+  position: relative;
 }
 
 .search-glass-box {
@@ -1823,7 +1798,9 @@ body {
   border-radius: 50px;
   padding: 8px 8px 8px 25px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .search-glass-box:focus-within {
@@ -1845,7 +1822,7 @@ body {
   font-size: 1rem;
   outline: none;
   font-family: inherit;
-  min-width: 0; /* FIX: Prevents input from blowing out flexbox */
+  min-width: 0;
 }
 
 .search-input::placeholder {
@@ -1854,13 +1831,12 @@ body {
 
 .search-btn {
   padding: 12px 30px;
-  border-radius: 50px; 
-  white-space: nowrap; /* FIX: Prevents button text from breaking into 2 lines on mobile */
+  border-radius: 50px;
+  white-space: nowrap;
 }
 
-/* --- Search Error Styles --- */
 .search-error-msg {
-  color: #ff854d; 
+  color: #ff854d;
   font-size: 0.85rem;
   font-weight: 500;
   margin-top: 10px;
@@ -1870,8 +1846,8 @@ body {
   transform: translateY(-10px);
   transition: all 0.3s ease;
   visibility: hidden;
-  position: absolute; /* Keeps layout stable */
-  left: 0; /* FIX: Aligns strictly to the wrapper */
+  position: absolute;
+  left: 0;
 }
 
 .search-error-msg.show-error {
@@ -1885,7 +1861,6 @@ body {
   box-shadow: 0 5px 20px rgba(255, 77, 77, 0.2) !important;
 }
 
-/* --- Animated Tag Cloud --- */
 .tag-cloud {
   display: flex;
   flex-wrap: wrap;
@@ -1903,7 +1878,11 @@ body {
   font-size: 0.95rem;
   padding: 12px 24px;
   border-radius: 50px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
@@ -1911,13 +1890,16 @@ body {
 
 .gradient-chip:hover {
   transform: translateY(-5px) scale(1.05);
-  background: linear-gradient(135deg, rgba(255, 115, 0, 0.8) 0%, rgba(255, 94, 0, 0.8) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 115, 0, 0.8) 0%,
+    rgba(255, 94, 0, 0.8) 100%
+  );
   border-color: transparent;
   box-shadow: 0 10px 25px rgba(255, 115, 0, 0.4);
   color: #fff;
 }
 
-/* --- Download Resource Cards --- */
 .resource-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1963,9 +1945,23 @@ body {
   background: var(--primary-orange);
 }
 
-.resource-icon { font-size: 1.8rem; }
-.resource-title { color: var(--text-white); font-size: 1.3rem; font-weight: 800; margin-bottom: 12px; line-height: 1.3; }
-.resource-desc { color: #b3b3b3; font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem; flex-grow: 1; }
+.resource-icon {
+  font-size: 1.8rem;
+}
+.resource-title {
+  color: var(--text-white);
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.resource-desc {
+  color: #b3b3b3;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
 
 .btn-download {
   display: inline-flex;
@@ -1984,42 +1980,49 @@ body {
   transition: all 0.3s ease;
 }
 
-.btn-download span { transition: transform 0.3s ease; font-weight: bold; }
-.resource-card:hover .btn-download { background: var(--primary-orange); border-color: var(--primary-orange); color: var(--text-white); }
-.resource-card:hover .btn-download span { transform: translateY(3px); }
+.btn-download span {
+  transition: transform 0.3s ease;
+  font-weight: bold;
+}
+.resource-card:hover .btn-download {
+  background: var(--primary-orange);
+  border-color: var(--primary-orange);
+  color: var(--text-white);
+}
+.resource-card:hover .btn-download span {
+  transform: translateY(3px);
+}
 
-
-/* =========================================
-   MOBILE RESPONSIVENESS FIXES
-========================================= */
 @media (max-width: 1024px) {
-  .resource-grid { grid-template-columns: repeat(2, 1fr); }
+  .resource-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
   .resources-section {
-    padding: 60px 15px; /* Reduced section padding */
+    padding: 60px 15px;
   }
-  
+
   .search-wrapper {
     margin-bottom: 3rem;
   }
-  
+
   .search-glass-box {
-    padding: 6px 6px 6px 15px; /* Tighter padding */
+    padding: 6px 6px 6px 15px;
   }
-  
+
   .search-input {
     font-size: 0.9rem;
   }
-  
+
   .search-btn {
-    padding: 12px 18px; /* Slightly smaller button padding */
+    padding: 12px 18px;
     font-size: 0.85rem;
   }
-  
+
   .search-error-msg {
-    margin-left: 10px; /* Better alignment on mobile */
+    margin-left: 10px;
     font-size: 0.8rem;
   }
 
@@ -2027,41 +2030,36 @@ body {
     gap: 8px;
     margin-bottom: 3rem;
   }
-  
+
   .gradient-chip {
-    padding: 8px 16px; /* Smaller chips for mobile */
+    padding: 8px 16px;
     font-size: 0.85rem;
   }
 
   .resource-grid {
-    grid-template-columns: 1fr; /* Single column */
+    grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .resource-card {
-    padding: 1.5rem; /* Reduced inner padding on cards */
+    padding: 1.5rem;
   }
 }
 
-/* Fix for extremely small screens (like iPhone SE) */
 @media (max-width: 400px) {
   .search-icon {
-    display: none; /* Hide icon to give input more space */
+    display: none;
   }
-  
+
   .search-glass-box {
     padding-left: 15px;
   }
-  
+
   .search-btn {
     padding: 10px 15px;
   }
 }
 
-
-/* =========================================
-   PREMIUM CTA SECTION
-========================================= */
 .cta-premium-section {
   position: relative;
   background-color: var(--bg-color);
@@ -2074,33 +2072,46 @@ body {
   min-height: 80vh;
 }
 
-/* --- Animated Aurora Background --- */
 .aurora-bg {
   position: absolute;
   top: -50%;
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 115, 0, 0.08), rgba(0, 229, 255, 0.05), transparent 60%);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 115, 0, 0.08),
+    rgba(0, 229, 255, 0.05),
+    transparent 60%
+  );
   animation: auroraRotate 20s linear infinite;
   z-index: 0;
   pointer-events: none;
 }
 
 @keyframes auroraRotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .particles-overlay {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px
+  );
   background-size: 30px 30px;
   z-index: 1;
 }
 
-/* --- Floating 3D Shapes (Behind Glass) --- */
 .floating-shape {
   position: absolute;
   border-radius: 50%;
@@ -2111,31 +2122,41 @@ body {
 }
 
 .shape-1 {
-  width: 300px; height: 300px;
+  width: 300px;
+  height: 300px;
   background: var(--primary-orange);
-  top: 10%; left: 15%;
+  top: 10%;
+  left: 15%;
 }
 
 .shape-2 {
-  width: 250px; height: 250px;
-  background: #00e5ff; /* Cyan contrast */
-  bottom: 10%; right: 15%;
+  width: 250px;
+  height: 250px;
+  background: #00e5ff;
+  bottom: 10%;
+  right: 15%;
   animation-delay: -3s;
 }
 
 .shape-3 {
-  width: 200px; height: 200px;
-  background: #ff5100; /* Pinkish-red accent */
-  top: 40%; right: 40%;
+  width: 200px;
+  height: 200px;
+  background: #ff5100;
+  top: 40%;
+  right: 40%;
   animation-delay: -6s;
 }
 
 @keyframes floatCTA {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-40px) scale(1.1); }
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-40px) scale(1.1);
+  }
 }
 
-/* --- Glassmorphism Panel --- */
 .cta-container {
   max-width: 1000px;
   width: 100%;
@@ -2153,27 +2174,34 @@ body {
   padding: 4rem 3rem;
   text-align: center;
   overflow: hidden;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-  transition: transform 0.4s ease, border-color 0.4s ease;
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
 }
 
 .cta-glass-panel:hover {
   transform: translateY(-5px);
   border-color: rgba(255, 115, 0, 0.4);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(255, 115, 0, 0.15);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(255, 115, 0, 0.15);
 }
 
-/* Spotlight controlled by JS */
 .cta-spotlight {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 1;
   transition: opacity 0.3s ease;
   opacity: 0;
 }
 
-/* --- CTA Content Typography --- */
 .cta-content {
   position: relative;
   z-index: 2;
@@ -2195,7 +2223,6 @@ body {
   margin: 0 auto 3rem auto;
 }
 
-/* --- Morphing Gradient Buttons --- */
 .cta-buttons {
   display: flex;
   justify-content: center;
@@ -2212,26 +2239,29 @@ body {
   font-weight: 700;
   text-decoration: none;
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  background-size: 200% auto; /* Needed for gradient morphing */
+  background-size: 200% auto;
   color: #fff;
   border: none;
   position: relative;
   overflow: hidden;
 }
 
-/* Primary Button (Orange/Pink Morph) */
 .primary-morph {
-  background-image: linear-gradient(45deg, #ff7300 0%, #ff5100 50%, #ff7300 100%);
+  background-image: linear-gradient(
+    45deg,
+    #ff7300 0%,
+    #ff5100 50%,
+    #ff7300 100%
+  );
   box-shadow: 0 10px 20px rgba(255, 115, 0, 0.3);
 }
 
 .primary-morph:hover {
-  background-position: right center; /* Morphs the gradient */
+  background-position: right center;
   transform: translateY(-3px);
   box-shadow: 0 15px 30px rgba(255, 115, 0, 0.5);
 }
 
-/* Secondary Button (Dark Glass with Cyan glow on hover) */
 .secondary-morph {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -2251,12 +2281,10 @@ body {
   z-index: 2;
 }
 
-
-/* =========================================
-   MOBILE RESPONSIVENESS
-========================================= */
 @media (max-width: 900px) {
-  .cta-heading { font-size: 2.8rem; }
+  .cta-heading {
+    font-size: 2.8rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2281,18 +2309,29 @@ body {
   }
 
   .cta-buttons {
-    flex-direction: column; /* Stack buttons vertically */
+    flex-direction: column;
     gap: 15px;
   }
 
   .btn-morph {
-    width: 100%; /* Full width buttons */
+    width: 100%;
     padding: 16px 20px;
   }
-  
-  /* Reduce shape size on mobile to prevent overflow */
-  .floating-shape { filter: blur(40px); }
-  .shape-1 { width: 150px; height: 150px; top: -5%; }
-  .shape-2 { width: 150px; height: 150px; bottom: -5%; }
-  .shape-3 { display: none; } /* Hide one shape for cleaner mobile view */
+
+  .floating-shape {
+    filter: blur(40px);
+  }
+  .shape-1 {
+    width: 150px;
+    height: 150px;
+    top: -5%;
+  }
+  .shape-2 {
+    width: 150px;
+    height: 150px;
+    bottom: -5%;
+  }
+  .shape-3 {
+    display: none;
+  }
 }

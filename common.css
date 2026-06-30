@@ -9,16 +9,14 @@
 }
 
 :root {
-  /* Deep Navy Blue Theme */
   --bg-color: #0a192f;
-  --glass-bg: rgba(18 18 18 / 59%); /* Glassmorphism Base */
+  --glass-bg: rgba(18 18 18 / 59%);
 
-  /* Vibrant Orange Accent */
   --primary-orange: #ff7300;
   --orange-glow: rgba(255, 115, 0, 0.4);
 
   --text-white: #ffffff;
-  --text-light: #ccd6f6; /* Slightly tinted for better contrast on navy */
+  --text-light: #ccd6f6;
   --transition-speed: 0.3s;
 }
 
@@ -30,7 +28,6 @@ body.no-scroll {
   overflow: hidden;
 }
 
-/* --- Navbar Base & Glassmorphism --- */
 .navbar {
   position: fixed;
   top: 0;
@@ -41,7 +38,6 @@ body.no-scroll {
   align-items: center;
   padding: 25px 5%;
 
-  /* Glassmorphism Effects */
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -53,17 +49,15 @@ body.no-scroll {
 
 .navbar.scrolled {
   padding: 15px 5%;
-  background: rgba(10, 25, 47, 0.85); /* Scrolled Navy Base */
+  background: rgba(10, 25, 47, 0.85);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid rgba(255, 115, 0, 0.15);
 }
 
-/* --- Logo Layout --- */
 .logo img {
   width: 138px;
 }
 
-/* --- Center Nav Links --- */
 .nav-menu {
   display: flex;
   list-style: none;
@@ -112,7 +106,6 @@ body.no-scroll {
   width: 100%;
 }
 
-/* --- Right Actions (Buttons) --- */
 .nav-actions {
   display: flex;
   gap: 15px;
@@ -160,7 +153,6 @@ body.no-scroll {
   transform: translateY(-2px);
 }
 
-/* --- Mobile Responsiveness --- */
 .hamburger {
   display: none;
   background: transparent;
@@ -179,7 +171,6 @@ body.no-scroll {
   display: none;
 }
 
-/* --- Tweaks for 1024px & Small Laptops --- */
 @media screen and (max-width: 1050px) {
   .navbar {
     padding: 20px 2%;
@@ -204,7 +195,6 @@ body.no-scroll {
   }
 }
 
-/* --- Hamburger Menu (Mobile & Tablets) --- */
 @media screen and (max-width: 850px) {
   .hamburger {
     display: block;
@@ -222,7 +212,6 @@ body.no-scroll {
     width: 100%;
     height: 100vh;
 
-    /* Mobile Menu Glassmorphism Navy */
     background: rgba(10, 25, 47, 0.95);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -255,7 +244,6 @@ body.no-scroll {
   }
 }
 
-/* --- Footer Styles --- */
 .footer {
   background-color: var(--bg-color);
   color: var(--text-light);
@@ -274,10 +262,9 @@ body.no-scroll {
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 25px;
-  color: #8892b0; /* Adapted for Navy */
+  color: #8892b0;
 }
 
-/* Social Icons */
 .social-icons {
   display: flex;
   gap: 15px;
@@ -305,7 +292,6 @@ body.no-scroll {
   transform: translateY(-3px);
 }
 
-/* Footer Columns Headers */
 .footer-col h4 {
   color: var(--primary-orange);
   font-size: 18px;
@@ -313,7 +299,6 @@ body.no-scroll {
   margin-bottom: 25px;
 }
 
-/* Footer Links */
 .footer-links {
   list-style: none;
 }
@@ -343,7 +328,6 @@ body.no-scroll {
   transform: translateX(5px);
 }
 
-/* Contact Info */
 .footer-contact {
   list-style: none;
 }
@@ -363,7 +347,6 @@ body.no-scroll {
   margin-top: 4px;
 }
 
-/* Footer Bottom */
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -391,7 +374,6 @@ body.no-scroll {
   color: var(--primary-orange);
 }
 
-/* --- Footer Responsive Design --- */
 @media screen and (max-width: 1024px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
@@ -413,7 +395,6 @@ body.no-scroll {
   }
 }
 
-/* --- Scroll Animation Styles --- */
 .footer-fade-in {
   opacity: 0;
   transform: translateY(40px);

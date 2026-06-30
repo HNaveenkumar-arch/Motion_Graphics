@@ -1,4 +1,3 @@
-/* --- Root Variables --- */
 :root {
   --bg-color: #0a192f;
   --glass-bg: rgba(18, 18, 18, 0.59);
@@ -9,7 +8,6 @@
   --transition-speed: 0.3s;
 }
 
-/* --- Base & Reset --- */
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +21,6 @@ body {
   overflow-x: hidden;
 }
 
-/* --- Hero Section --- */
 .hero-contact {
   position: relative;
   width: 100%;
@@ -42,7 +39,6 @@ body {
   width: 100%;
 }
 
-/* --- Aurora Background --- */
 .aurora-bg {
   position: absolute;
   top: 0;
@@ -84,7 +80,6 @@ body {
   animation-delay: -10s;
 }
 
-/* --- Floating 3D Elements --- */
 .floating-shape {
   position: absolute;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent);
@@ -110,7 +105,6 @@ body {
   animation-delay: -3s;
 }
 
-/* --- Particles Container --- */
 #particles-container {
   position: absolute;
   width: 100%;
@@ -125,7 +119,6 @@ body {
   animation: rise linear infinite;
 }
 
-/* --- Cursor Spotlight --- */
 .cursor-spotlight {
   position: fixed;
   top: 0;
@@ -142,7 +135,6 @@ body {
   mix-blend-mode: screen;
 }
 
-/* --- Breadcrumb --- */
 .breadcrumb {
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
@@ -167,7 +159,6 @@ body {
   font-weight: 600;
 }
 
-/* --- Glassmorphism Card --- */
 .glass-card {
   background: var(--glass-bg);
   backdrop-filter: blur(16px);
@@ -199,7 +190,6 @@ body {
   animation: shine 8s infinite;
 }
 
-/* --- Typography --- */
 .gradient-text {
   font-size: 3.2rem;
   font-weight: 800;
@@ -220,7 +210,6 @@ body {
   color: var(--text-light);
 }
 
-/* --- Buttons --- */
 .btn-group {
   display: flex;
   gap: 1.5rem;
@@ -262,7 +251,6 @@ body {
   box-shadow: 0 4px 15px var(--orange-glow);
 }
 
-/* --- Scroll Indicator --- */
 .scroll-indicator {
   position: absolute;
   bottom: 2rem;
@@ -297,7 +285,6 @@ body {
   animation: scrollWheel 1.5s infinite;
 }
 
-/* --- Animations --- */
 @keyframes floatBg {
   0% {
     transform: translate(0, 0) scale(1);
@@ -349,7 +336,6 @@ body {
   }
 }
 
-/* Fade Up */
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
@@ -368,7 +354,6 @@ body {
   transition-delay: 0.4s;
 }
 
-/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
   .hero-contact {
     padding: 1.5rem;
@@ -398,18 +383,16 @@ body {
   }
   .floating-shape {
     display: none;
-  } /* Hide for cleaner mobile view */
+  }
 }
 
-/* --- Section 2: Contact Info --- */
 .contact-info-section {
   padding: 4rem 2rem;
-  background-color: var(--bg-color, #0a0b10); /* Deep Navy/Dark Base */
+  background-color: var(--bg-color, #0a0b10);
   position: relative;
   overflow: hidden;
 }
 
-/* Container */
 .container {
   position: relative;
   z-index: 10;
@@ -418,7 +401,6 @@ body {
   margin: 0 auto;
 }
 
-/* --- Section Header --- */
 .section-header {
   text-align: center;
   max-width: 700px;
@@ -448,27 +430,24 @@ body {
   line-height: 1.6;
 }
 
-/* --- 3D Flip Card Container (Centered using Flexbox) --- */
 .contact-cards-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Ensures everything is perfectly centered */
+  justify-content: center;
   align-items: center;
   gap: 2rem;
-  max-width: 1000px; /* Keeps the grouping tight and clean */
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-/* --- 3D Flip Card Mechanics --- */
 .flip-card {
-  width: 280px; /* Fixed width gives a uniform look */
+  width: 280px;
   height: 240px;
   background-color: transparent;
-  perspective: 1000px; /* Enables the 3D space */
+  perspective: 1000px;
   z-index: 1;
 }
 
-/* Hover or Tap triggers the flip */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
@@ -478,16 +457,15 @@ body {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy flip effect */
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-style: preserve-3d;
 }
 
-/* Shared Glass Panel styles for Front & Back */
 .glass-panel {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari Support */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background: var(--glass-bg, rgba(25, 27, 38, 0.6));
   backdrop-filter: blur(15px);
@@ -502,12 +480,10 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* --- Front Face Specifics --- */
 .flip-card-front {
   color: white;
 }
 
-/* Gradient Icon Circles */
 .icon-circle {
   width: 70px;
   height: 70px;
@@ -531,15 +507,13 @@ body {
   margin-bottom: 0;
 }
 
-/* --- Back Face Specifics --- */
 .flip-card-back {
   color: white;
-  transform: rotateY(180deg); /* Pre-flipped so it faces back */
+  transform: rotateY(180deg);
   border-color: rgba(255, 115, 0, 0.3);
   box-shadow: 0 15px 35px var(--orange-glow, rgba(255, 115, 0, 0.2));
 }
 
-/* Hover Elements inside Back Face */
 .action-text {
   margin-top: 15px;
   font-size: 0.85rem;
@@ -566,7 +540,6 @@ body {
   color: var(--primary-orange, #ff7300);
 }
 
-/* Animated Glow Border on the back */
 .glow-border {
   position: absolute;
   top: 0;
@@ -587,10 +560,9 @@ body {
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
-  opacity: 1; /* Always glowing on the back */
+  opacity: 1;
 }
 
-/* --- Scroll Animations (Initial State) --- */
 .fade-up-scroll {
   opacity: 0;
   transform: translateY(40px);
@@ -604,7 +576,6 @@ body {
   transform: translateY(0);
 }
 
-/* Transition delays for stagger effect */
 .delay-1 {
   transition-delay: 0.1s;
 }
@@ -621,7 +592,6 @@ body {
   transition-delay: 0.5s;
 }
 
-/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
   .contact-info-section {
     padding: 4rem 1.5rem;
@@ -636,19 +606,17 @@ body {
   }
 
   .flip-card {
-    width: 100%; /* Makes cards take full width on smaller phones */
-    max-width: 320px; /* Prevents cards from looking too stretched out */
+    width: 100%;
+    max-width: 320px;
   }
 }
 
-/* --- Section 3: Premium Form --- */
 .contact-form-section {
   padding: 4rem 2rem;
   position: relative;
   overflow: hidden;
 }
 
-/* Background floating shapes for form */
 .shape-form-1 {
   width: 300px;
   height: 300px;
@@ -693,7 +661,6 @@ body {
   grid-column: 1 / -1;
 }
 
-/* Input Styles */
 .input-group {
   position: relative;
   display: flex;
@@ -719,7 +686,6 @@ body {
   min-height: 120px;
 }
 
-/* Floating Labels Magic */
 .input-group label:not(.file-label) {
   position: absolute;
   top: 1.1rem;
@@ -730,7 +696,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Trigger floating label on focus OR when not empty */
 .input-group input:focus ~ label,
 .input-group input:not(:placeholder-shown) ~ label,
 .input-group textarea:focus ~ label,
@@ -748,7 +713,6 @@ body {
   color: var(--primary-orange) !important;
 }
 
-/* Gradient Focus Border */
 .input-border {
   position: absolute;
   bottom: 0;
@@ -766,7 +730,6 @@ body {
   width: 100%;
 }
 
-/* File Upload Custom UI */
 .file-upload-group {
   justify-content: center;
 }
@@ -791,7 +754,6 @@ body {
   background: rgba(255, 115, 0, 0.05);
 }
 
-/* Checkbox */
 .checkbox-group {
   display: flex;
   align-items: flex-start;
@@ -807,7 +769,6 @@ body {
   cursor: pointer;
 }
 
-/* Buttons */
 .form-actions {
   display: flex;
   gap: 1.5rem;
@@ -818,7 +779,6 @@ body {
   min-width: 180px;
 }
 
-/* --- Validation Error Styles --- */
 .error-msg {
   color: #ff4d4d;
   font-size: 0.8rem;
@@ -832,7 +792,6 @@ body {
     height 0.3s ease;
 }
 
-/* When input has 'invalid' class (Added via JS) */
 .input-group.invalid input,
 .input-group.invalid select,
 .input-group.invalid textarea {
@@ -852,7 +811,6 @@ body {
   color: #ff4d4d;
 }
 
-/* Shake Animation on Error */
 @keyframes shake {
   0%,
   100% {
@@ -872,7 +830,6 @@ body {
   animation: shake 0.4s ease-in-out;
 }
 
-/* Success Message */
 .success-message {
   display: none;
   background: rgba(46, 213, 115, 0.1);
@@ -900,7 +857,6 @@ body {
   }
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .form-grid {
     grid-template-columns: 1fr;
@@ -917,27 +873,23 @@ body {
   }
 }
 
-/* Fix Dropdown Options Color in Dark Mode */
 .input-group select option {
-  background-color: var(--bg-color); /* Deep Navy Blue */
+  background-color: var(--bg-color);
   color: var(--text-white);
   padding: 10px;
 }
 
-/* Fix Date Picker Calendar Theme */
 .input-group input[type="date"] {
-  color-scheme: dark; /* Native calendar-a dark mode-ku maathum */
+  color-scheme: dark;
 }
 
-/* --- Section 4: Interactive Location Map --- */
 .location-map-section {
   position: relative;
   padding: 100px 0;
-  background-color: #0b0c10; /* Dark background matching premium look */
+  background-color: #0b0c10;
   overflow: hidden;
 }
 
-/* Background Shapes */
 .floating-shape {
   position: absolute;
   border-radius: 50%;
@@ -955,7 +907,7 @@ body {
 .shape-map-2 {
   width: 400px;
   height: 400px;
-  background: #00f2fe; /* Cyber cyan highlight */
+  background: #00f2fe;
   bottom: -5%;
   left: -5%;
 }
@@ -977,12 +929,11 @@ body {
   line-height: 1.6;
 }
 
-/* Map Wrapper and Container */
 .map-wrapper {
   position: relative;
   margin-top: 50px;
   border-radius: 24px;
-  padding: 4px; /* Space for gradient border */
+  padding: 4px;
   background: linear-gradient(
     135deg,
     rgba(255, 107, 0, 0.3) 0%,
@@ -1010,15 +961,14 @@ body {
 .cm-iframe {
   width: 100%;
   height: 100%;
-  filter: grayscale(20%) invert(90%) contrast(100%); /* Premium dark mode map style */
+  filter: grayscale(20%) invert(90%) contrast(100%);
   transition: filter 0.3s ease;
 }
 
 .map-wrapper:hover .cm-iframe {
-  filter: grayscale(0%) invert(0%) contrast(100%); /* Hover pannumpothu normal color-ku varum */
+  filter: grayscale(0%) invert(0%) contrast(100%);
 }
 
-/* Glass Overlay Info Card */
 .map-info-card {
   position: absolute;
   top: 40px;
@@ -1035,7 +985,6 @@ body {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
-/* Studio Badge with Pulse Animation */
 .studio-badge {
   display: inline-flex;
   align-items: center;
@@ -1086,7 +1035,6 @@ body {
   margin-bottom: 25px;
 }
 
-/* Features inside Card */
 .studio-features {
   display: flex;
   flex-direction: column;
@@ -1122,7 +1070,6 @@ body {
   color: #a0a5b5;
 }
 
-/* Card Buttons */
 .card-actions {
   display: flex;
   gap: 12px;
@@ -1167,7 +1114,6 @@ body {
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* --- Scroll Animation Classes --- */
 .fade-up-scroll {
   opacity: 0;
   transform: translateY(40px);
@@ -1185,7 +1131,6 @@ body {
   transition-delay: 0.2s;
 }
 
-/* --- 100% Mobile Responsiveness (Media Queries) --- */
 @media (max-width: 991px) {
   .map-container {
     height: 450px;
@@ -1203,10 +1148,9 @@ body {
     padding: 60px 0;
   }
 
-  /* Mobile-la map mela card iruntha map theriyathu, so overlay-va mathi kela kondu varrom */
   .map-wrapper {
     display: flex;
-    flex-direction: column-reverse; /* Map card mobile-la map-ku mela illama kela varum clear view-kaga */
+    flex-direction: column-reverse;
     background: none;
     padding: 0;
   }
@@ -1223,30 +1167,28 @@ body {
     width: 100%;
     border-radius: 0 0 20px 20px;
     box-shadow: none;
-    background: rgba(20, 22, 33, 1); /* Mobile static solid background */
+    background: rgba(20, 22, 33, 1);
     border-top: none;
   }
 
   .cm-iframe {
-    filter: grayscale(0%) invert(0%); /* Mobile-la normal dark mode frames easy-a irukkum */
+    filter: grayscale(0%) invert(0%);
   }
   .input-group label:not(.file-label) {
     font-size: 13px;
   }
 }
 
-/* --- Section 5: Premium CTA Section --- */
 .premium-cta-section {
   position: relative;
   padding: 60px 0;
-  background-color: #050507; /* Deepest dark for neon contrast */
+  background-color: #050507;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Cursor Spotlight */
 .cursor-spotlight {
   position: absolute;
   top: 0;
@@ -1262,7 +1204,6 @@ body {
   z-index: 2;
 }
 
-/* Aurora Wave Background */
 .aurora-bg {
   position: absolute;
   top: 0;
@@ -1292,7 +1233,6 @@ body {
   }
 }
 
-/* Floating 3D Objects (Soft Neon Lighting) */
 .floating-obj {
   position: absolute;
   border-radius: 50%;
@@ -1303,7 +1243,7 @@ body {
 .obj-1 {
   width: 300px;
   height: 300px;
-  background: #ff6b00; /* Primary Orange */
+  background: #ff6b00;
   top: -10%;
   left: -5%;
   animation: floatObj 8s ease-in-out infinite;
@@ -1311,7 +1251,7 @@ body {
 .obj-2 {
   width: 250px;
   height: 250px;
-  background: #00f2fe; /* Cyan */
+  background: #00f2fe;
   bottom: -10%;
   right: 5%;
   animation: floatObj 10s ease-in-out infinite reverse;
@@ -1319,7 +1259,7 @@ body {
 .obj-3 {
   width: 200px;
   height: 200px;
-  background: #c850c0; /* Purple/Pink */
+  background: #c850c0;
   top: 40%;
   left: 40%;
   animation: floatObj 12s ease-in-out infinite;
@@ -1335,7 +1275,6 @@ body {
   }
 }
 
-/* Animated Particles */
 .particles-container {
   position: absolute;
   width: 100%;
@@ -1393,7 +1332,6 @@ body {
   }
 }
 
-/* Glassmorphism CTA Card & Gradient Border */
 .cta-glass-card {
   position: relative;
   z-index: 5;
@@ -1442,7 +1380,6 @@ body {
   line-height: 1.8;
 }
 
-/* Animated Counters */
 .cta-counters {
   display: flex;
   justify-content: center;
@@ -1483,7 +1420,6 @@ body {
   font-weight: 600;
 }
 
-/* Morphing CTA Buttons */
 .cta-actions {
   display: flex;
   justify-content: center;
@@ -1505,7 +1441,7 @@ body {
 .btn-morph-primary {
   background: linear-gradient(135deg, var(--primary-orange, #ff6b00), #ff8c33);
   color: #fff;
-  border-radius: 12px; /* Starts slightly rounded */
+  border-radius: 12px;
   box-shadow: 0 10px 25px rgba(255, 107, 0, 0.3);
 }
 
@@ -1516,9 +1452,8 @@ body {
   border-radius: 12px;
 }
 
-/* Morph Effect on Hover */
 .btn-morph-primary:hover {
-  border-radius: 30px; /* Morphs into pill shape */
+  border-radius: 30px;
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 15px 35px rgba(255, 107, 0, 0.5);
 }
@@ -1530,7 +1465,6 @@ body {
   transform: translateY(-5px);
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 991px) {
   .cta-title {
     font-size: 2.5rem;
@@ -1573,12 +1507,12 @@ body {
   .btn-morph-primary,
   .btn-morph-secondary {
     width: 100%;
-    border-radius: 30px; /* Mobile-la default-ave pill shape-la irukkum */
+    border-radius: 30px;
   }
 }
 
 .counter-value {
   display: flex;
-  align-items: baseline; /* Number-um %-um bottom-la nalla align aaga */
+  align-items: baseline;
   justify-content: center;
 }
