@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotionFX - Client Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard2.css">
+</head>
+
+<body>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="logo">
+            <a href="index.html"><img src="./asset/stackly-logo (1).webp" alt="logo"></a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a class="nav-item active" onclick="switchTab('tab-dashboard', this, 'Client Dashboard')"><i
+                        class="fas fa-home"></i> Dashboard</a></li>
+            <li><a class="nav-item" onclick="switchTab('tab-projects', this, 'My Projects')"><i
+                        class="fas fa-folder-open"></i> My Projects</a></li>
+            <li><a class="nav-item" onclick="switchTab('tab-messages', this, 'Messages')"><i
+                        class="fas fa-comments"></i> Messages</a></li>
+            <li><a class="nav-item" onclick="switchTab('tab-downloads', this, 'Downloads')"><i
+                        class="fas fa-download"></i> Downloads</a></li>
+            <li><a class="nav-item" onclick="switchTab('tab-profile', this, 'Profile')"><i class="fas fa-user"></i>
+                    Profile</a></li>
+        </ul>
+
+        <ul class="nav-links bottom-links">
+            <li><a href="index.html" class="nav-item"><i class="fas fa-arrow-left"></i> Back To Home</a></li>
+            <li><a href="login.html" class="nav-item danger-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content" id="mainContent">
+        <header class="topbar">
+            <div class="topbar-left">
+                <div class="menu-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></div>
+                <h2 id="dynamic-page-title" class="page-title">Client Dashboard</h2>
+            </div>
+
+            <div class="profile">
+                <img src="./asset/a23.webp" alt="Client Profile" id="profilePic" class="topbar-avatar">
+            </div>
+        </header>
+
+        <div class="dashboard-body" id="dashboardBody">
+
+            <div id="tab-dashboard" class="content-tab active-tab">
+
+                <div class="welcome-banner anim-item">
+                    <div class="banner-content">
+                        <h2>Welcome back, <span class="user-name">Loading...</span>! 👋</h2>
+                        <p>Track your video projects, review drafts, and download final renders.</p>
+                    </div>
+                </div>
+
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-chart-line"></i> Project Summary</h3>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'"
+                            onclick="switchTab('tab-projects', document.querySelectorAll('.nav-item')[1], 'My Projects')">View
+                            All</button>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-spinner"></i></div>
+                            <div class="stat-details">
+                                <p>Active Projects</p>
+                                <h3>2</h3>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-eye"></i></div>
+                            <div class="stat-details">
+                                <p>Drafts to Review</p>
+                                <h3>1</h3>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="stat-details">
+                                <p>Completed Videos</p>
+                                <h3>8</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-bell"></i> Recent Notifications</h3>
+                    </div>
+                    <div class="item-list">
+                        <div class="list-item">
+                            <div><strong style="color: var(--text-white)">Agency Uploaded a Draft</strong><br><span
+                                    style="color: var(--text-muted); font-size: 13px;">"Tech App Explainer v2" is ready
+                                    for your review.</span></div>
+                            <span class="status-badge"
+                                style="background: rgba(255, 115, 0, 0.2); color: var(--primary-orange);">Action
+                                Required</span>
+                        </div>
+                        <div class="list-item">
+                            <div><strong style="color: var(--text-white)">Rendering Completed</strong><br><span
+                                    style="color: var(--text-muted); font-size: 13px;">Final 4K export for "Logo
+                                    Animation" is available in Downloads.</span></div>
+                            <span class="status-badge" style="background: rgba(255,255,255,0.1); color: #fff;">1 day
+                                ago</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 1. Project Distribution (Pie Chart Section) -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-chart-pie"></i> Project Distribution</h3>
+                    </div>
+                    <p class="short-para">Analyze the current breakdown of your ongoing video production services.</p>
+                    <div class="chart-container glass-panel">
+                        <div class="donut-chart-wrapper">
+                            <div class="donut-chart">
+                                <div class="donut-inner">
+                                    <span class="donut-text">11<br><small>Total</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: var(--primary-orange);"></span>
+                                <div class="legend-info">
+                                    <strong>3D Animation</strong>
+                                    <p>60% (6 Projects)</p>
+                                </div>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #ffb84d;"></span>
+                                <div class="legend-info">
+                                    <strong>Motion Graphics</strong>
+                                    <p>30% (4 Projects)</p>
+                                </div>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: rgba(255,255,255,0.1);"></span>
+                                <div class="legend-info">
+                                    <strong>VFX & Comp</strong>
+                                    <p>10% (1 Project)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Quick Actions Section -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                    </div>
+                    <p class="short-para">Instantly request new edits, upload raw footage, or start a fresh campaign.
+                    </p>
+                    <div class="action-grid">
+                        <div class="action-card glass-panel"
+                            style="background-image: linear-gradient(rgba(10,25,47,0.85), rgba(10,25,47,0.85)), url('./asset/a13.webp');">
+                            <div class="action-icon"><i class="fas fa-video"></i></div>
+                            <h4>New Project</h4>
+                            <button class="btn-primary btn-sm" onclick="window.location.href='404page.html'">Brief Us</button>
+                        </div>
+                        <div class="action-card glass-panel"
+                            style="background-image: linear-gradient(rgba(10,25,47,0.85), rgba(10,25,47,0.85)), url('./asset/a37.webp');">
+                            <div class="action-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                            <h4>Upload Assets</h4>
+                            <button class="btn-primary btn-sm" onclick="window.location.href='404page.html'">Send Files</button>
+                        </div>
+                        <div class="action-card glass-panel"
+                            style="background-image: linear-gradient(rgba(10,25,47,0.85), rgba(255,115,0,0.4)), url('./asset/a38.webp');">
+                            <div class="action-icon"><i class="fas fa-comments"></i></div>
+                            <h4>Request Revision</h4>
+                            <button class="btn-primary btn-sm" onclick="window.location.href='404page.html'">Open
+                                Ticket</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Recent Deliverables (Image + Download) -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-box-open"></i> Final Deliverables</h3>
+                        <button class="btn-icon-only" onclick="window.location.href='404page.html'"><i class="fas fa-external-link-alt"></i></button>
+                    </div>
+                    <p class="short-para">Download your recently approved 4K renders and source files.</p>
+                    <div class="deliverables-grid">
+                        <div class="deliverable-card">
+                            <img src="./asset/a9.webp"
+                                alt="Render 1">
+                            <div class="del-info">
+                                <strong>Main Title Sequence</strong>
+                                <p>MP4 • 4K • 1.2GB</p>
+                                <button class="btn-primary btn-sm w-100" onclick="window.location.href='404page.html'"><i class="fas fa-download"></i>
+                                    Download</button>
+                            </div>
+                        </div>
+                        <div class="deliverable-card">
+                            <img src="./asset/a5.webp"
+                                alt="Render 2">
+                            <div class="del-info">
+                                <strong>Social Media Teaser</strong>
+                                <p>MP4 • 1080p • 150MB</p>
+                                <button class="btn-primary btn-sm w-100" onclick="window.location.href='404page.html'"><i class="fas fa-download"></i>
+                                    Download</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Dedicated Account Manager -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-headset"></i> Your Account Manager</h3>
+                    </div>
+                    <p class="short-para">Reach out directly for urgent approvals, strategy, or billing queries.</p>
+                    <div class="manager-card glass-panel">
+                        <img src="./asset/a28.webp"
+                            alt="Account Manager" class="manager-img">
+                        <div class="manager-details">
+                            <h4>David Carter</h4>
+                            <p style="color: var(--primary-orange); font-size: 13px; margin-bottom: 10px;">Lead
+                                Post-Production Supervisor</p>
+                            <div class="manager-actions">
+                                <button class="btn-primary btn-sm" onclick="window.location.href='404page.html'"><i class="fas fa-envelope"></i> Email</button>
+                                <button class="btn-secondary btn-sm" onclick="window.location.href='404page.html'"><i class="fas fa-phone-alt"></i> Call</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-projects" class="content-tab">
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-folder-open"></i> Active Projects</h3>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'">Request New Project</button>
+                    </div>
+                    <div class="item-list">
+                        <div class="list-item">
+                            <div><strong style="color: var(--text-white)">Tech App Explainer (3D)</strong><br><span
+                                    style="color: var(--text-muted); font-size: 13px;">Duration: 60s | Format: 16:9 |
+                                    Delivery: Nov 15</span></div>
+                            <button class="btn-primary" onclick="window.location.href='404page.html'"
+                                style="padding: 5px 15px; font-size: 12px; background: #e66800;">Review Draft</button>
+                        </div>
+                        <div class="list-item">
+                            <div><strong style="color: var(--text-white)">Social Media Promo Reels</strong><br><span
+                                    style="color: var(--text-muted); font-size: 13px;">Duration: 15s (x3) | Format: 9:16
+                                    | Delivery: Nov 20</span></div>
+                            <span class="status-badge" style="background: rgba(255,255,255,0.1); color: #fff;">Animating
+                                phase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-check-double"></i> Completed Projects</h3>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card"
+                            style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./asset/a2.webp') center/cover;">
+                            <div class="stat-details">
+                                <h3 style="font-size: 18px; color: #fff;">Brand Logo Reveal</h3>
+                                <p style="color: #aaa;">Completed on Oct 10</p>
+                            </div>
+                        </div>
+                        <div class="stat-card"
+                            style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./asset/a1.webp') center/cover;">
+                            <div class="stat-details">
+                                <h3 style="font-size: 18px; color: #fff;">Cyberpunk Ad Campaign</h3>
+                                <p style="color: #aaa;">Completed on Sep 25</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 1. AI-Assisted Concept Board Section -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-magic"></i> Concept Approvals</h3>
+                        <button class="btn-icon-only" onclick="window.location.href='404page.html'"><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                    <p class="desc-para">Review the latest atmospheric lighting layers, typographic elements, and
+                        intricate face-swapping refinements tailored for your cinematic movie poster. Ensure every
+                        shadow perfectly aligns with your creative vision before final rendering.</p>
+                    <div class="concept-board glass-panel">
+                        <div class="concept-image-wrapper">
+                            <img src="./asset/a48.webp"
+                                alt="Cinematic Poster Art">
+                            <span class="status-badge overlay-badge">Pending Approval</span>
+                        </div>
+                        <div class="concept-details">
+                            <h4>Dark Fantasy Poster V2</h4>
+                            <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 15px;">Focus on deep
+                                shadows and typographic placement.</p>
+                            <div class="concept-actions">
+                                <button class="btn-primary btn-sm" onclick="window.location.href='404page.html'">Approve Concept</button>
+                                <button class="btn-secondary btn-sm" onclick="window.location.href='404page.html'">Request Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Project Milestone Tracker -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-tasks"></i> Active Milestones</h3>
+                    </div>
+                    <p class="desc-para">Monitor real-time progress across all production stages, from initial
+                        storyboards and typographic block-outs to advanced 3D face-swapping and final output. Keep track
+                        of every critical milestone to ensure your project stays on schedule.</p>
+
+                    <div class="milestone-container glass-panel">
+                        <div class="milestone-item completed">
+                            <div class="milestone-icon"><i class="fas fa-check"></i></div>
+                            <div class="milestone-info">
+                                <strong>Script &<br>Storyboard</strong>
+                                <span>Approved on Nov 1</span>
+                            </div>
+                        </div>
+
+                        <div class="milestone-line active-line"></div>
+
+                        <div class="milestone-item active">
+                            <div class="milestone-icon"><i class="fas fa-sync fa-spin"></i></div>
+                            <div class="milestone-info">
+                                <strong>3D Modeling<br>& Rigging</strong>
+                                <span style="color: var(--primary-orange);">In Progress<br>(80%)</span>
+                            </div>
+                            <button class="btn-secondary btn-sm" onclick="window.location.href='404page.html'"
+                                style="margin-left: auto; background: var(--text-light); color: var(--bg-color); border: none; font-weight: bold;">View
+                                WIP</button>
+                        </div>
+
+                        <div class="milestone-line"></div>
+
+                        <div class="milestone-item pending">
+                            <div class="milestone-icon"><i class="fas fa-lock"></i></div>
+                            <div class="milestone-info">
+                                <strong>VFX Compositing</strong>
+                                <span>Awaiting Models</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Project Asset Vault -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-box"></i> Asset Vault</h3>
+                        <button class="btn-primary btn-sm" onclick="window.location.href='404page.html'"><i class="fas fa-upload"></i> Upload</button>
+                    </div>
+                    <p class="desc-para">Securely upload high-resolution raw footage, complex 3D atmospheric assets, and
+                        custom typography fonts needed for your project. This centralized vault ensures our rendering
+                        farm has instant access to all critical design elements.</p>
+                    <div class="asset-vault-grid">
+                        <div class="vault-card">
+                            <img src="./asset/a8.webp"
+                                alt="Server Assets">
+                            <div class="vault-overlay">
+                                <i class="fas fa-file-video vault-icon"></i>
+                                <strong>Raw RED Footage</strong>
+                                <span>4 Files • 120GB</span>
+                            </div>
+                        </div>
+                        <div class="vault-card">
+                            <img src="./asset/a7.webp"
+                                alt="3D Assets">
+                            <div class="vault-overlay">
+                                <i class="fas fa-cubes vault-icon"></i>
+                                <strong>Character Models</strong>
+                                <span>2 Files • 4.5GB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Quality Assurance & Feedback -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-comments"></i> Frame-by-Frame Review</h3>
+                    </div>
+                    <p class="desc-para">Leave precise, frame-by-frame visual feedback on complex visual effects,
+                        atmospheric color grading passes, and detailed edits. Your direct input ensures the final
+                        sequences meet the absolute highest cinematic standards.</p>
+                    <div class="qa-banner glass-panel">
+                        <div class="qa-content">
+                            <h4>Review Session: Scene 04</h4>
+                            <p style="color: var(--text-light); font-size: 13px; margin: 10px 0;">3 new comments from
+                                the VFX Supervisor.</p>
+                            <button class="btn-primary glow-btn" onclick="window.location.href='404page.html'">Open Review Tool <i
+                                    class="fas fa-external-link-alt"></i></button>
+                        </div>
+                        <div class="qa-image">
+                            <img src="./asset/a13.webp"
+                                alt="Video Editing">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-messages" class="content-tab">
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-comments"></i> Communication with Agency</h3>
+                    </div>
+                    <div class="item-list">
+                        <div class="list-item" style="border-left: 4px solid var(--primary-orange);">
+                            <div>
+                                <strong style="color: var(--primary-orange)">Agency Manager</strong><br>
+                                <span style="color: var(--text-white); font-size: 14px;">"Hi! We've adjusted the
+                                    lighting on scene 3 as requested. Let me know if it looks better!"</span>
+                            </div>
+                            <span style="color: var(--text-muted); font-size: 12px;">Today, 10:30 AM</span>
+                        </div>
+                        <div class="list-item">
+                            <div>
+                                <strong style="color: var(--text-white)">You</strong><br>
+                                <span style="color: var(--text-muted); font-size: 14px;">"Can we make the transition a
+                                    bit smoother in the intro?"</span>
+                            </div>
+                            <span style="color: var(--text-muted); font-size: 12px;">Yesterday, 4:15 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-video"></i> Scheduled Syncs</h3>
+                        <button class="btn-secondary btn-sm" onclick="window.location.href='404page.html'">Reschedule</button>
+                    </div>
+                    <p class="desc-para">Join scheduled video calls to discuss storyboard approvals, rendering
+                        pipelines, and milestone deliverables. Sync your calendar to never miss a critical project
+                        review.</p>
+                    <div class="meeting-card glass-panel">
+                        <div class="meeting-img">
+                            <img src="./asset/e1.webp"
+                                alt="Video Call">
+                            <div class="meeting-date">
+                                <strong>15</strong><span>NOV</span>
+                            </div>
+                        </div>
+                        <div class="meeting-details">
+                            <h4>Monthly Production Review</h4>
+                            <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 15px;"><i
+                                    class="fas fa-clock"></i> 10:00 AM - 11:30 AM (EST)</p>
+                            <div class="meeting-actions">
+                                <button class="btn-primary glow-btn" onclick="window.location.href='404page.html'"><i class="fas fa-link"></i> Join Zoom
+                                    Call</button>
+                                <button class="btn-secondary btn-sm" onclick="window.location.href='404page.html'">Add to Calendar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Shared Media & Attachments -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-images"></i> Shared in Chat</h3>
+                        <button class="btn-icon-only" onclick="window.location.href='404page.html'"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <p class="desc-para">Quickly access all high-resolution moodboards, style frames, and reference
+                        images shared in messages. Download assets directly to your local drive for offline review.
+                    </p>
+                    <div class="shared-media-grid">
+                        <div class="media-item">
+                            <img src="./asset/a2.webp"
+                                alt="Reference 1">
+                            <div class="media-overlay">
+                                <button class="btn-primary btn-sm" onclick="window.location.href='404page.html'"><i class="fas fa-download"></i></button>
+                            </div>
+                        </div>
+                        <div class="media-item">
+                            <img src="./asset/a6.webp"
+                                alt="Reference 2">
+                            <div class="media-overlay">
+                                <button class="btn-primary btn-sm" onclick="window.location.href='404page.html'"><i class="fas fa-download"></i></button>
+                            </div>
+                        </div>
+                        <div class="media-item">
+                            <img src="./asset/a1.webp"
+                                alt="Reference 3">
+                            <div class="media-overlay">
+                                <button class="btn-primary btn-sm" onclick="window.location.href='404page.html'"><i class="fas fa-download"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Support Tickets -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-ticket-alt"></i> Revision Tickets</h3>
+                        <button class="btn-primary btn-sm" onclick="window.location.href='404page.html'"><i class="fas fa-plus"></i> New Ticket</button>
+                    </div>
+                    <p class="desc-para">Track the status of your formal revision requests, technical support
+                        tickets, and billing queries. Keep a complete log of all resolved issues for future
+                        reference.</p>
+                    <div class="ticket-list">
+                        <div class="ticket-card glass-panel" style="border-left: 4px solid var(--primary-orange);">
+                            <div class="ticket-info">
+                                <h4>#TCK-089: Audio Sync Issue</h4>
+                                <p>Scene 4 background score is slightly delayed.</p>
+                            </div>
+                            <div class="ticket-status">
+                                <span class="status-badge"
+                                    style="background: rgba(255, 115, 0, 0.2); color: var(--primary-orange);">In
+                                    Progress</span>
+                                <button class="btn-secondary btn-sm" onclick="window.location.href='404page.html'">View Thread</button>
+                            </div>
+                        </div>
+                        <div class="ticket-card glass-panel" style="border-left: 4px solid #4CAF50;">
+                            <div class="ticket-info">
+                                <h4>#TCK-088: Font Change</h4>
+                                <p>Update title font to 'Cinzel Decorative'.</p>
+                            </div>
+                            <div class="ticket-status">
+                                <span class="status-badge"
+                                    style="background: rgba(76, 175, 80, 0.1); color: #4CAF50;">Resolved</span>
+                                <button class="btn-secondary btn-sm" onclick="window.location.href='404page.html'">View Thread</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- </div> -->
+            </div>
+
+            <div id="tab-downloads" class="content-tab">
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-film"></i> Final Video Renders</h3>
+                    </div>
+                    <div class="item-list">
+                        <div class="list-item">
+                            <div><strong style="color: var(--text-white)">Brand_Logo_Reveal_4K.mp4</strong><br><span
+                                    style="color: var(--text-muted); font-size: 13px;">File Size: 450 MB | H.264
+                                    Codec</span></div>
+                            <button class="btn-primary" onclick="window.location.href='404page.html'" style="padding: 8px 15px;"><i class="fas fa-download"></i>
+                                Download</button>
+                        </div>
+                        <div class="list-item">
+                            <div><strong style="color: var(--text-white)">Cyberpunk_Ad_1080p.mp4</strong><br><span
+                                    style="color: var(--text-muted); font-size: 13px;">File Size: 820 MB | H.264
+                                    Codec</span></div>
+                            <button class="btn-primary" onclick="window.location.href='404page.html'" style="padding: 8px 15px;"><i class="fas fa-download"></i>
+                                Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-file-archive"></i> Source Files & Assets</h3>
+                    </div>
+                    <div class="item-list">
+                        <div class="list-item">
+                            <div><strong style="color: var(--text-white)">Logo_Project_Files.zip</strong><br><span
+                                    style="color: var(--text-muted); font-size: 13px;">Contains After Effects (.aep) and
+                                    Illustrator (.ai) files</span></div>
+                            <button class="btn-primary" onclick="window.location.href='404page.html'"
+                                style="padding: 8px 15px; background: transparent; border: 1px solid var(--primary-orange); color: var(--primary-orange);"><i
+                                    class="fas fa-download"></i> Source (1.2 GB)</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div id="tab-downloads" class="content-tab"> -->
+
+                    <div class="content-section anim-item">
+                        <div class="section-header">
+                            <h3><i class="fas fa-film"></i> Master Video Exports</h3>
+                            <button class="btn-secondary btn-sm" onclick="window.location.href='404page.html'"><i class="fas fa-history"></i> Version History</button>
+                        </div>
+                        <p class="desc-para">Download your final, color-graded cinematic video renders in pristine 4K
+                            and 8K resolutions. These master files are perfectly optimized for both theatrical
+                            projection and high-end digital streaming platforms.</p>
+                        <div class="download-grid">
+                            <div class="download-card glass-panel">
+                                <div class="download-img">
+                                    <img src="./asset/a9.webp"
+                                        alt="Dark Fantasy Render">
+                                    <span class="format-badge">4K ProRes</span>
+                                </div>
+                                <div class="download-info">
+                                    <h4>Dark Fantasy Trailer_Final.mov</h4>
+                                    <p>File Size: 4.2 GB | Duration: 02:15</p>
+                                    <button class="btn-primary w-100" onclick="window.location.href='404page.html'"><i class="fas fa-download"></i> Download
+                                        Master</button>
+                                </div>
+                            </div>
+                            <div class="download-card glass-panel">
+                                <div class="download-img">
+                                    <img src="./asset/a5.webp"
+                                        alt="Cyberpunk Scene">
+                                    <span class="format-badge"
+                                        style="background: rgba(255,255,255,0.1); color: #fff;">1080p H.264</span>
+                                </div>
+                                <div class="download-info">
+                                    <h4>Cyberpunk_Ad_Web.mp4</h4>
+                                    <p>File Size: 850 MB | Duration: 00:45</p>
+                                    <button class="btn-primary w-100" onclick="window.location.href='404page.html'"><i class="fas fa-download"></i> Download
+                                        Web</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-section anim-item">
+                        <div class="section-header">
+                            <h3><i class="fas fa-file-archive"></i> Project Source Files</h3>
+                        </div>
+                        <p class="desc-para">Access all raw project structures including After Effects compositions,
+                            Blender 3D models, and uncompressed EXR sequences. Securely download the entire architecture
+                            of your visual effects to keep a local backup.</p>
+                        <div class="file-list-container glass-panel">
+                            <div class="file-list-item">
+                                <div class="file-icon"><i class="fas fa-file-video"></i></div>
+                                <div class="file-details">
+                                    <strong>VFX_Compositing_Project.aep</strong>
+                                    <span>After Effects CC 2026 | 1.8 GB</span>
+                                </div>
+                                <button class="btn-icon-only" onclick="window.location.href='404page.html'"><i class="fas fa-cloud-download-alt"></i></button>
+                            </div>
+                            <div class="file-list-item">
+                                <div class="file-icon" style="color: #ff9900; background: rgba(255,153,0,0.1);"><i
+                                        class="fas fa-cube"></i></div>
+                                <div class="file-details">
+                                    <strong>Character_Rig_Models.blend</strong>
+                                    <span>Blender 3D Assets | 3.4 GB</span>
+                                </div>
+                                <button class="btn-icon-only" onclick="window.location.href='404page.html'"><i class="fas fa-cloud-download-alt"></i></button>
+                            </div>
+                            <div class="file-list-item" style="border-bottom: none; padding-bottom: 0;">
+                                <div class="file-icon" style="color: #4CAF50; background: rgba(76,175,80,0.1);"><i
+                                        class="fas fa-file-archive"></i></div>
+                                <div class="file-details">
+                                    <strong>Raw_Red_Footage_Archive.zip</strong>
+                                    <span>8K RED RAW Files | 145 GB</span>
+                                </div>
+                                <button class="btn-icon-only" onclick="window.location.href='404page.html'"><i class="fas fa-link"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-section anim-item">
+                        <div class="section-header">
+                            <h3><i class="fas fa-font"></i> Exclusive Typography Assets</h3>
+                        </div>
+                        <p class="desc-para">Retrieve the custom-built fonts and title treatment templates designed
+                            specifically for your project's dark fantasy aesthetic. These scalable vector files are
+                            pre-formatted and ready for both print and digital campaigns.</p>
+                        <div class="typography-grid">
+                            <div class="type-card glass-panel">
+                                <img src="./asset/a13.webp"
+                                    alt="Neon Font">
+                                <div class="type-overlay">
+                                    <h4>Neon Void Font Family</h4>
+                                    <button class="btn-primary btn-sm" onclick="window.location.href='404page.html'"><i class="fas fa-download"></i> .OTF /
+                                        .TTF</button>
+                                </div>
+                            </div>
+                            <div class="type-card glass-panel">
+                                <img src="./asset/a4.webp"
+                                    alt="Cinematic Font">
+                                <div class="type-overlay">
+                                    <h4>Cinzel Dark Cinematic</h4>
+                                    <button class="btn-primary btn-sm" onclick="window.location.href='404page.html'"><i class="fas fa-download"></i> .OTF /
+                                        .TTF</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-section anim-item">
+                        <div class="section-header">
+                            <h3><i class="fas fa-server"></i> Storage & Archival</h3>
+                        </div>
+                        <p class="desc-para">Monitor your current cloud storage allocation for active projects and
+                            archived renders. Upgrade your secure server capacity instantly to ensure uninterrupted
+                            access to massive VFX file packages and raw footage.</p>
+                        <div class="storage-banner glass-panel">
+                            <div class="storage-image">
+                                <img src="./asset/a31.webp"
+                                    alt="Server Storage">
+                            </div>
+                            <div class="storage-content">
+                                <div class="storage-header">
+                                    <h4>Dedicated Agency Server</h4>
+                                    <span style="color: var(--primary-orange); font-weight: bold;">8.5 TB / 10 TB
+                                        Used</span>
+                                </div>
+                                <div class="progress-track" style="margin: 15px 0; height: 10px;">
+                                    <div class="progress-fill"
+                                        style="width: 85%; background: linear-gradient(90deg, #ff9900, #ff4757);"></div>
+                                </div>
+                                <p style="color: #ff4757; font-size: 13px; margin-bottom: 15px;"><i
+                                        class="fas fa-exclamation-triangle"></i> Storage is almost full. Large 8K
+                                    renders may fail to sync.</p>
+                                <div class="storage-actions">
+                                    <button class="btn-primary glow-btn" onclick="window.location.href='404page.html'">Upgrade to 20TB <i
+                                            class="fas fa-arrow-up"></i></button>
+                                    <button class="btn-primary glow-btn" onclick="window.location.href='404page.html'">Clean Old Files</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- </div> -->
+            </div>
+
+            <div id="tab-profile" class="content-tab">
+    
+    <div class="content-section anim-item">
+        <div class="section-header">
+            <h3><i class="fas fa-id-card"></i> Client Profile</h3>
+        </div>
+        <p class="desc-para">Manage your personal agency account details, update your primary contact information, and review your current partnership tier. Keeping this information up-to-date ensures seamless communication and fast delivery.</p>
+        <div class="settings-profile-container glass-panel" style="padding: 25px; display: flex; align-items: center; gap: 25px; flex-wrap: wrap;">
+            <img src="./asset/a26.webp" class="settings-avatar" alt="Client Profile" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary-orange);">
+            <div class="profile-info">
+                <h3 class="user-name" style="color: var(--text-white); margin-bottom: 5px; font-size: 24px; word-break: break-all;">Loading Name...</h3>
+                <p class="user-email-display" style="color: var(--text-muted); margin-bottom: 10px; word-break: break-all;">client@business.com</p>
+                <span class="status-badge" style="display: inline-block; margin-bottom: 15px; background: rgba(255, 115, 0, 0.2); color: var(--primary-orange);">Premium Partner</span><br>
+                <button class="btn-primary" onclick="window.location.href='404page.html'" style="padding: 8px 20px; font-size: 13px;"><i class="fas fa-user-edit"></i> Edit Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section anim-item">
+        <div class="section-header">
+            <h3><i class="fas fa-cog"></i> Notification Preferences</h3>
+        </div>
+        <p class="desc-para">Customize how and when you receive updates regarding rendering progress, draft approvals, and final asset deliveries. Toggle your preferred communication channels below.</p>
+        <div class="item-list glass-panel" style="padding: 15px;">
+            <div class="list-item" style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 15px; margin-bottom: 15px;">
+                <div style="color: var(--text-white);">
+                    <strong>Email alerts for New Drafts</strong>
+                    <p style="color: var(--text-muted); font-size: 12px; margin-top: 3px;">Get notified instantly when a WIP video is ready.</p>
+                </div>
+                <div class="toggle-switch active" onclick="toggleSwitch(this)">
+                    <div class="toggle-knob"></div>
+                </div>
+            </div>
+            <div class="list-item">
+                <div style="color: var(--text-white);">
+                    <strong>SMS alerts for Final Delivery</strong>
+                    <p style="color: var(--text-muted); font-size: 12px; margin-top: 3px;">Receive text messages when 4K renders are done.</p>
+                </div>
+                <div class="toggle-switch" onclick="toggleSwitch(this)">
+                    <div class="toggle-knob"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section anim-item">
+        <div class="section-header">
+            <h3><i class="fas fa-credit-card"></i> Payment & Billing</h3>
+            <button class="btn-secondary btn-sm" onclick="window.location.href='404page.html'"><i class="fas fa-receipt"></i> History</button>
+        </div>
+        <p class="desc-para">Review your active retainer plans, update your payment methods, and download official invoices for your tax records. All transactions are securely encrypted.</p>
+        <div class="billing-card glass-panel">
+            <div class="billing-icon-wrap">
+                <i class="fab fa-cc-visa" style="font-size: 40px; color: var(--text-white);"></i>
+            </div>
+            <div class="billing-info">
+                <h4 style="color: var(--text-white); margin-bottom: 5px;">Visa ending in 4242</h4>
+                <p style="color: var(--text-muted); font-size: 13px;">Expires 12/2028 • Primary Method</p>
+            </div>
+            <div class="billing-actions">
+                <button class="btn-primary btn-sm" onclick="window.location.href='404page.html'">Update Card</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section anim-item">
+        <div class="section-header">
+            <h3><i class="fas fa-shield-alt"></i> Security & Access</h3>
+        </div>
+        <p class="desc-para">Enable Two-Factor Authentication (2FA) to protect your unreleased commercial assets. Review recent login activity to ensure your agency account remains secure.</p>
+        <div class="security-grid">
+            <div class="security-card glass-panel" style="text-align: center; padding: 25px;">
+                <i class="fas fa-mobile-alt" style="font-size: 30px; color: var(--primary-orange); margin-bottom: 15px;"></i>
+                <h4 style="color: var(--text-white); margin-bottom: 10px;">Two-Factor Auth</h4>
+                <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 20px;">Add an extra layer of security using an authenticator app.</p>
+                <button class="btn-primary glow-btn" onclick="window.location.href='404page.html'" style="width: 100%;">Enable 2FA</button>
+            </div>
+            <div class="security-card glass-panel" style="padding: 25px;">
+                <h4 style="color: var(--text-white); margin-bottom: 15px;"><i class="fas fa-history" style="color: var(--primary-orange);"></i> Recent Logins</h4>
+                <div class="login-log" style="display: flex; flex-direction: column; gap: 10px;">
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 5px;">
+                        <span style="color: var(--text-white); font-size: 13px;">Mac OS • Chrome</span>
+                        <span style="color: #4CAF50; font-size: 12px;">Active Now</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: var(--text-white); font-size: 13px;">iOS • Safari</span>
+                        <span style="color: var(--text-muted); font-size: 12px;">2 hrs ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+        </div>
+    </main>
+
+    <script>
+        // Sidebar Toggle Logic
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            if (window.innerWidth <= 768) {
+                sidebar.classList.toggle('mobile-open');
+                overlay.classList.toggle('show');
+            } else {
+                sidebar.classList.toggle('closed');
+                mainContent.classList.toggle('expanded');
+            }
+        }
+
+        // Tab Switching Logic
+        function switchTab(tabId, element, pageTitle) {
+            // Hide all tabs
+            document.querySelectorAll('.content-tab').forEach(tab => {
+                tab.classList.remove('active-tab');
+            });
+
+            // Show selected tab
+            document.getElementById(tabId).classList.add('active-tab');
+
+            // Update Active state on Menu
+            document.querySelectorAll('.nav-links .nav-item').forEach(nav => nav.classList.remove('active'));
+            element.classList.add('active');
+
+            // Update Page Title
+            document.getElementById('dynamic-page-title').innerText = pageTitle;
+
+            // Close sidebar on mobile
+            if (window.innerWidth <= 768) {
+                toggleSidebar();
+            }
+
+            // Trigger scroll animations for new tab
+            observeAnimations();
+        }
+
+        // User Profile Handling & Extraction
+        document.addEventListener("DOMContentLoaded", () => {
+            // Fetching the logged in client email
+            const storedEmail = localStorage.getItem('loggedInEmail') || "client@company.com";
+
+            // Extracting Name
+            let extractedName = storedEmail.split('@')[0];
+
+            // Formatting Name slightly (capitalizes first letter)
+            extractedName = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
+
+            // Apply Name to UI
+            document.querySelectorAll(".user-name").forEach(el => el.textContent = extractedName);
+
+            // Apply Email to UI
+            document.querySelectorAll(".user-email-display").forEach(el => el.textContent = storedEmail);
+
+            // Start initial animations
+            observeAnimations();
+        });
+
+        // Scroll Reveal Animations
+        function observeAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('show');
+                        }, index * 100);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const activeTabItems = document.querySelectorAll('.active-tab .anim-item');
+            activeTabItems.forEach(item => {
+                item.classList.remove('show');
+                observer.observe(item);
+            });
+        }
+    </script>
+    <script>
+    // Function to handle toggle switch clicks
+    function toggleSwitch(element) {
+        element.classList.toggle('active');
+        
+        // Optional: You can add logic here to save the preference
+        // const isEnabled = element.classList.contains('active');
+        // console.log("Preference is now:", isEnabled);
+    }
+</script>
+</body>
+
+</html>

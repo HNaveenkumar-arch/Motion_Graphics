@@ -497,7 +497,7 @@
                     <input type="checkbox" id="remember">
                     Remember me
                 </label>
-                <a href="#" class="forgot-pwd">Forgot Password?</a>
+                <a href="404page.html" class="forgot-pwd">Forgot Password?</a>
             </div>
 
             <button type="submit" class="submit-btn" id="loginBtnText">Admin Login</button>
@@ -506,10 +506,10 @@
         <div class="social-login">
             <p>Or connect with</p>
             <div class="icons-container">
-                <a href="#" class="social-icon"><i class="fa-brands fa-google"></i></a>
-                <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="404page.html" class="social-icon"><i class="fa-brands fa-google"></i></a>
+                <a href="404page.html" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="404page.html" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                <a href="404page.html" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
 
@@ -562,45 +562,48 @@
         }
 
         // Form Validation & Redirects
-        function validateForm(e) {
-            e.preventDefault();
+function validateForm(e) {
+    e.preventDefault();
 
-            let isValid = true;
+    let isValid = true;
 
-            const emailInput = document.getElementById('email');
-            const passwordInput = document.getElementById('password');
-            const emailError = document.getElementById('emailError');
-            const passwordError = document.getElementById('passwordError');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
 
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            if (!emailRegex.test(emailInput.value)) {
-                emailInput.classList.add('invalid');
-                emailError.style.display = 'block';
-                isValid = false;
-            } else {
-                emailInput.classList.remove('invalid');
-                emailError.style.display = 'none';
-            }
+    if (!emailRegex.test(emailInput.value)) {
+        emailInput.classList.add('invalid');
+        emailError.style.display = 'block';
+        isValid = false;
+    } else {
+        emailInput.classList.remove('invalid');
+        emailError.style.display = 'none';
+    }
 
-            if (passwordInput.value.length < 6) {
-                passwordInput.classList.add('invalid');
-                passwordError.style.display = 'block';
-                isValid = false;
-            } else {
-                passwordInput.classList.remove('invalid');
-                passwordError.style.display = 'none';
-            }
+    if (passwordInput.value.length < 6) {
+        passwordInput.classList.add('invalid');
+        passwordError.style.display = 'block';
+        isValid = false;
+    } else {
+        passwordInput.classList.remove('invalid');
+        passwordError.style.display = 'none';
+    }
 
-            // Redirect based on selected Role
-            if (isValid) {
-                if (currentRole === 'admin') {
-                    window.location.href = 'admin_dashboard.html'; // Update your admin link here
-                } else if (currentRole === 'client') {
-                    window.location.href = 'client_dashboard.html'; // Update your client link here
-                }
-            }
+    // NEW ADDITION: Save the valid email to localStorage before redirecting
+    if (isValid) {
+        localStorage.setItem('loggedInEmail', emailInput.value); // Saves the email
+        
+        // Redirect based on selected Role
+        if (currentRole === 'admin') {
+            window.location.href = 'dashboard1.html'; 
+        } else if (currentRole === 'client') {
+            window.location.href = 'dashboard2.html'; 
         }
+    }
+}
     </script>
 </body>
 </html>

@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+    <nav class="navbar" id="myNavbar">
+        <div class="logo">
+            <a href="index.html"><img src="./asset/stackly-logo (1).webp" alt="logo"></a>
+        </div>
+
+        <button class="hamburger" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="service.html" class="nav-link"><i class="fas fa-layer-group"></i> Services</a></li>
+            <li><a href="portfolio.html" class="nav-link"><i class="fas fa-clapperboard"></i> Portfolio</a></li>
+            <li><a href="blog.html" class="nav-link active"><i class="fas fa-pen-nib"></i> Blog</a></li>
+            <li><a href="contact.html" class="nav-link"><i class="fas fa-paper-plane"></i> Contact</a></li>
+
+            <li class="mobile-actions">
+                <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="register.html" class="get-started-btn"><i class="fas fa-user-plus"></i> Register</a>
+            </li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="register.html" class="get-started-btn"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+    </nav>
+
+    <section id="blog-hero" class="blog-hero-section">
+  <!-- Dark Overlay for the Background Image -->
+  <div class="hero-overlay"></div>
+
+  <!-- Floating Motion Graphic Elements -->
+  <div class="float-shape shape-circle"></div>
+  <div class="float-shape shape-square"></div>
+  <div class="float-shape shape-triangle"></div>
+
+  <div class="container relative-z">
+    <!-- Glassmorphism Title Card -->
+    <div class="blog-glass-card scroll-animate">
+      
+      <!-- Animated Breadcrumb Inside Card -->
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="divider">&raquo;</span>
+        <span class="current">Blog</span>
+      </div>
+
+      <!-- Gradient Typography -->
+      <h1 class="hero-title">
+        Motion Design Insights & <br> <span class="gradient-text">Creative Stories</span>
+      </h1>
+      
+      <p class="hero-desc">
+        Stay inspired with expert articles, animation trends, creative workflows, industry news, and behind-the-scenes stories from our talented motion designers.
+      </p>
+
+      <!-- Premium Search Bar -->
+      <!-- Premium Search Bar with Error Handling -->
+<div class="search-container">
+  <form class="hero-search-form" id="blog-search-form">
+    <!-- Removed 'required' attribute so we can handle it via custom JS -->
+    <input type="text" id="blog-search-input" placeholder="Search for articles, trends, news..." class="search-input">
+    <button type="submit" class="search-btn">🔍 Search</button>
+  </form>
+  <!-- Error Message Box (Hidden by default) -->
+  <div id="search-error" class="error-msg">⚠️ Please enter a keyword to search.</div>
+</div>
+
+      <!-- CTA Buttons -->
+      <div class="hero-actions">
+        <a href="404page.html" class="primary-btn">Explore Articles</a>
+        <a href="404page.html" class="secondary-btn">Subscribe Now</a>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<section id="featured-story" class="featured-section">
+  <div class="container">
+    
+    <!-- Section Title -->
+    <div class="section-header scroll-animate">
+      <h2>Featured <span class="highlight">Spotlight</span></h2>
+      <p>Dive deep into our most popular and insightful motion design story.</p>
+    </div>
+
+    <!-- Sticky Layout Grid -->
+    <div class="featured-grid">
+      
+      <!-- Left Column: Sticky Media -->
+      <div class="sticky-column">
+        <div class="sticky-media-card glassmorphism">
+          <!-- Floating Category Badge -->
+          <span class="floating-badge">Motion Graphics</span>
+          
+          <!-- Background Video -->
+          <video autoplay loop muted playsinline class="featured-video">
+            <source src="./asset/q3.mp4" type="video/mp4">
+            <!-- Fallback Image -->
+            <img src="./asset/a4.webp" alt="Featured 3D Art">
+          </video>
+          
+          <!-- Glass Overlay for aesthetics -->
+          <div class="media-overlay"></div>
+
+          <!-- Reading Progress Circle (SVG) -->
+          <div class="progress-container" title="Reading Progress">
+            <svg class="progress-svg" viewBox="0 0 100 100">
+              <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+              <circle class="progress-bar" id="story-progress" cx="50" cy="50" r="45"></circle>
+            </svg>
+            <div class="progress-text" id="progress-text">0%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Scrollable Content -->
+      <div class="scroll-column" id="story-content-area">
+        
+        <div class="meta-info scroll-animate">
+          <div class="author-block">
+            <img src="./asset/a25.webp" alt="Author" class="author-avatar">
+            <div>
+              <span class="author-name">Alex Mercer</span>
+              <span class="publish-date">Oct 12, 2025</span>
+            </div>
+          </div>
+          <div class="reading-time">
+            <span>⏱️ 10 Min Read</span>
+          </div>
+        </div>
+
+        <h3 class="story-title scroll-animate">The Evolution of 3D Motion Graphics in Modern Web Experiences</h3>
+        
+        <div class="story-content scroll-animate">
+          <p class="lead-para">In the ever-evolving landscape of digital design, the transition from flat, two-dimensional interfaces to immersive 3D environments marks a monumental shift in how users interact with content on the web.</p>
+          
+          <p>For years, performance limitations forced designers to rely on static imagery or simple CSS transitions. However, with the rise of WebGL, Three.js, and highly optimized browser rendering engines, we are now entering the golden age of web-based motion graphics.</p>
+          
+          <blockquote class="premium-quote glassmorphism">
+            "We are no longer just building websites; we are architecting digital spaces where gravity, light, and motion guide the user's journey."
+          </blockquote>
+          
+          <p>The integration of **Glassmorphism** combined with 3D elements creates a sense of depth and hierarchy. When light passes through frosted glass UI elements, it gives life to the geometry behind it. This technique isn't just about making things look futuristic—it significantly improves user retention by providing visual feedback that mimics the physical world.</p>
+          
+          <ul class="story-highlights">
+            <li><strong>Interactive Physics:</strong> Elements that react to cursor velocity and scroll position.</li>
+            <li><strong>Dynamic Lighting:</strong> Shadows that shift based on device orientation or time of day.</li>
+            <li><strong>Seamless Transitions:</strong> Eliminating hard page reloads in favor of morphing geometry.</li>
+          </ul>
+
+          <p>As we look to the future, the line between video games and websites will continue to blur. Designers who master the art of 3D motion will be the ones shaping the next generation of the internet.</p>
+        </div>
+
+        <!-- Large CTA -->
+        <div class="scroll-animate">
+          <a href="404page.html" class="large-cta-btn">
+            <span class="btn-text">Read Full Story</span>
+            <span class="btn-arrow">→</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="trending-articles" class="trending-section">
+  <div class="container">
+    <div class="section-header scroll-animate">
+      <h2>Trending <span class="highlight">Articles</span></h2>
+      <p>Discover the most read and shared topics in the motion design world right now.</p>
+    </div>
+  </div>
+
+  <!-- Infinite Scrolling Wrapper -->
+  <div class="scrolling-wrapper scroll-animate">
+    <div class="scrolling-track">
+      
+      <!-- ================= SET 1 (Original 6 Cards) ================= -->
+      
+      <div class="trending-card">
+        <img src="./asset/a5.webp" alt="Motion Design Trends" class="card-img">
+        <div class="card-contenta">
+          <h3>Motion Design Trends</h3>
+          <p>Explore the top animation styles dominating 2026.</p>
+          <a href="404page.html" class="card-btn">Read Article</a>
+        </div>
+      </div>
+
+      <div class="trending-card">
+        <img src="./asset/a10.webp" alt="3D Animation Tips" class="card-img">
+        <div class="card-contenta">
+          <h3>3D Animation Tips</h3>
+          <p>Master lighting and geometry for realistic renders.</p>
+          <a href="404page.html" class="card-btn">Read Article</a>
+        </div>
+      </div>
+
+      <div class="trending-card">
+        <img src="./asset/a12.webp" alt="Branding Through Motion" class="card-img">
+        <div class="card-contenta">
+          <h3>Branding Through Motion</h3>
+          <p>How kinetic typography elevates your brand identity.</p>
+          <a href="404page.html" class="card-btn">Read Article</a>
+        </div>
+      </div>
+
+      <div class="trending-card">
+        <img src="./asset/a40.webp" alt="Product Animation" class="card-img">
+        <div class="card-contenta">
+          <h3>Product Animation</h3>
+          <p>Showcase physical products with digital magic.</p>
+          <a href="404page.html" class="card-btn">Read Article</a>
+        </div>
+      </div>
+
+      <div class="trending-card">
+        <img src="./asset/a41.webp" alt="Explainer Videos" class="card-img">
+        <div class="card-contenta">
+          <h3>Explainer Videos</h3>
+          <p>Keep your audience engaged with storytelling.</p>
+          <a href="404page.html" class="card-btn">Read Article</a>
+        </div>
+      </div>
+
+      <div class="trending-card">
+        <img src="./asset/a42.webp" alt="Social Media Motion" class="card-img">
+        <div class="card-contenta">
+          <h3>Social Media Motion</h3>
+          <p>Bite-sized animations tailored for Instagram & TikTok.</p>
+          <a href="404page.html" class="card-btn">Read Article</a>
+        </div>
+      </div>
+
+      <!-- ================= SET 2 (Duplicated for Seamless Loop) ================= -->
+      
+      <div class="trending-card" aria-hidden="true">
+        <img src="./asset/a5.webp" alt="Motion Design Trends" class="card-img">
+        <div class="card-contenta">
+          <h3>Motion Design Trends</h3>
+          <p>Explore the top animation styles dominating 2026.</p>
+          <a href="404page.html" class="card-btn">Read Article</a>
+        </div>
+      </div>
+
+      <div class="trending-card" aria-hidden="true">
+        <img src="./asset/a10.webp" alt="3D Animation Tips" class="card-img">
+        <div class="card-contenta">
+          <h3>3D Animation Tips</h3>
+          <p>Master lighting and geometry for realistic renders.</p>
+          <a href="404page.html" class="card-btn">Read Article</a>
+        </div>
+      </div>
+
+      <div class="trending-card" aria-hidden="true">
+        <img src="./asset/a12.webp" alt="Branding Through Motion" class="card-img">
+        <div class="card-contenta">
+          <h3>Branding Through Motion</h3>
+          <p>How kinetic typography elevates your brand identity.</p>
+          <a href="404page.html" class="card-btn">Read Article</a>
+        </div>
+      </div>
+
+      <div class="trending-card" aria-hidden="true">
+        <img src="./asset/a40.webp" alt="Product Animation" class="card-img">
+        <div class="card-contenta">
+          <h3>Product Animation</h3>
+          <p>Showcase physical products with digital magic.</p>
+          <a href="404page.html" class="card-btn">Read Article</a>
+        </div>
+      </div>
+
+      <div class="trending-card" aria-hidden="true">
+        <img src="./asset/a41.webp" alt="Explainer Videos" class="card-img">
+        <div class="card-contenta">
+          <h3>Explainer Videos</h3>
+          <p>Keep your audience engaged with storytelling.</p>
+          <a href="404page.html" class="card-btn">Read Article</a>
+        </div>
+      </div>
+
+      <div class="trending-card" aria-hidden="true">
+        <img src="./asset/a42.webp" alt="Social Media Motion" class="card-img">
+        <div class="card-contenta">
+          <h3>Social Media Motion</h3>
+          <p>Bite-sized animations tailored for Instagram & TikTok.</p>
+          <a href="404page.html" class="card-btn">Read Article</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="blog-categories" class="bento-section">
+  <div class="container">
+    
+    <div class="section-header scroll-animate">
+      <h2>Explore <span class="highlight">Categories</span></h2>
+      <p>Find exactly what you're looking for in our organized creative library.</p>
+    </div>
+
+    <div class="bento-grid scroll-animate">
+      
+      <div class="bento-card span-2x2">
+        <img src="./asset/a1.webp" alt="Motion Graphics" class="bento-img">
+        <div class="bento-overlay">
+          <div class="floating-icon">✨</div>
+          <div class="bento-content">
+            <h3>Motion Graphics</h3>
+            <p class="category-desc">Bringing static designs to life with dynamic movement and visual storytelling.</p>
+            <a href="404page.html" class="card-btn">Explore Category</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-card">
+        <img src="./asset/a44.webp" alt="2D Animation" class="bento-img">
+        <div class="bento-overlay">
+          <div class="floating-icon">🎨</div>
+          <div class="bento-content">
+            <h3>2D Animation</h3>
+            <p class="category-desc">Classic storytelling through frame-by-frame artistry.</p>
+            <a href="404page.html" class="card-btn">Explore</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-card">
+        <img src="./asset/a45.webp" alt="3D Animation" class="bento-img">
+        <div class="bento-overlay">
+          <div class="floating-icon">🧊</div>
+          <div class="bento-content">
+            <h3>3D Animation</h3>
+            <p class="category-desc">Crafting immersive worlds with depth and realism.</p>
+            <a href="404page.html" class="card-btn">Explore</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-card">
+        <img src="./asset/a12.webp" alt="Branding" class="bento-img">
+        <div class="bento-overlay">
+          <div class="floating-icon">💼</div>
+          <div class="bento-content">
+            <h3>Branding</h3>
+            <p class="category-desc">Building memorable identities that stand out.</p>
+            <a href="404page.html" class="card-btn">Explore</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-card">
+        <img src="./asset/a40.webp" alt="Video Editing" class="bento-img">
+        <div class="bento-overlay">
+          <div class="floating-icon">🎬</div>
+          <div class="bento-content">
+            <h3>Video Editing</h3>
+            <p class="category-desc">Stitching raw footage into cinematic masterpieces.</p>
+            <a href="404page.html" class="card-btn">Explore</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-card span-2x1">
+        <img src="./asset/a30.webp" alt="VFX" class="bento-img">
+        <div class="bento-overlay">
+          <div class="floating-icon">🔥</div>
+          <div class="bento-content">
+            <h3>VFX (Visual Effects)</h3>
+            <p class="category-desc">Adding spectacular digital effects to real-world footage.</p>
+            <a href="404page.html" class="card-btn">Explore Category</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-card">
+        <img src="./asset/a31.webp" alt="UI Animation" class="bento-img">
+        <div class="bento-overlay">
+          <div class="floating-icon">📱</div>
+          <div class="bento-content">
+            <h3>UI Animation</h3>
+            <p class="category-desc">Enhancing user experiences through micro-interactions.</p>
+            <a href="404page.html" class="card-btn">Explore</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-card">
+        <img src="./asset/a32.webp" alt="Creative Process" class="bento-img">
+        <div class="bento-overlay">
+          <div class="floating-icon">🧠</div>
+          <div class="bento-content">
+            <h3>Creative Process</h3>
+            <p class="category-desc">From brainstorming concepts to final pixel-perfect delivery.</p>
+            <a href="404page.html" class="card-btn">Explore</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="reading-journey" class="journey-section">
+  <div class="container">
+    
+    <div class="section-header scroll-animate">
+      <h2>Our Creative <span class="highlight">Workflow</span></h2>
+      <p>Follow the journey of a project from a simple spark of an idea to a breathtaking visual masterpiece.</p>
+    </div>
+
+    <div class="journey-layout">
+      
+      <!-- Left: Sticky Media Container -->
+      <div class="journey-sticky-col">
+        <div class="sticky-media-box glassmorphism">
+          <!-- The image will change dynamically via JavaScript -->
+          <img id="dynamic-journey-img" src="./asset/a47.webp" alt="Research Phase" class="journey-img">
+          <div class="media-overlay"></div>
+        </div>
+      </div>
+
+      <!-- Right: Scrolling Content -->
+      <div class="journey-scroll-col">
+        <!-- Progress Line Background -->
+        <div class="timeline-line">
+          <!-- Animated Fill Line -->
+          <div class="timeline-fill" id="journey-progress-fill"></div>
+        </div>
+
+        <!-- Step 1: Research -->
+        <div class="journey-step scroll-animate" data-image="./asset/a47.webp">
+          <div class="step-dot"></div>
+          <div class="step-content glassmorphism">
+            <span class="step-number">Phase 01</span>
+            <h3>Research & Ideation</h3>
+            <p>Every great project starts with understanding. We dive deep into the brand's core message, target audience, and industry trends. We gather mood boards, color palettes, and visual references to ensure our creative direction aligns perfectly with the end goal.</p>
+            <a href="404page.html" class="card-btn">View Strategy</a>
+          </div>
+        </div>
+
+        <!-- Step 2: Storyboarding -->
+        <div class="journey-step scroll-animate" data-image="./asset/a36.webp">
+          <div class="step-dot"></div>
+          <div class="step-content glassmorphism">
+            <span class="step-number">Phase 02</span>
+            <h3>Storyboarding</h3>
+            <p>We map out the narrative frame-by-frame. This is where the abstract ideas take a structured form. By sketching out the sequence of events, we establish the pacing, camera angles, and transitions, ensuring a seamless flow before we even touch a digital tool.</p>
+            <a href="404page.html" class="card-btn">See Sketches</a>
+          </div>
+        </div>
+
+        <!-- Step 3: Design -->
+        <div class="journey-step scroll-animate" data-image="./asset/a12.webp">
+          <div class="step-dot"></div>
+          <div class="step-content glassmorphism">
+            <span class="step-number">Phase 03</span>
+            <h3>Visual Design</h3>
+            <p>Here, we define the exact look and feel. We establish a strong typographic hierarchy and build cinematic compositions that command attention, much like a high-end movie poster. Every element is crafted to ensure maximum visual impact and brand consistency.</p>
+            <a href="404page.html" class="card-btn">Explore Assets</a>
+          </div>
+        </div>
+
+        <!-- Step 4: Animation -->
+        <div class="journey-step scroll-animate" data-image="./asset/a2.webp">
+          <div class="step-dot"></div>
+          <div class="step-content glassmorphism">
+            <span class="step-number">Phase 04</span>
+            <h3>Motion & Animation</h3>
+            <p>We bring the static designs to life. Using advanced easing curves and physics-based motion, we create buttery-smooth animations. This phase is all about timing, rhythm, and adding micro-interactions that make the digital experience feel tangible and alive.</p>
+            <a href="404page.html" class="card-btn">Watch Process</a>
+          </div>
+        </div>
+
+        <!-- Step 5: Rendering -->
+        <div class="journey-step scroll-animate" data-image="./asset/a32.webp">
+          <div class="step-dot"></div>
+          <div class="step-content glassmorphism">
+            <span class="step-number">Phase 05</span>
+            <h3>Rendering & Finishing</h3>
+            <p>The polish that makes it premium. We apply atmospheric lighting, volumetric fogs, and complex textures to achieve a photorealistic or highly stylized finish. AI-assisted refinements are utilized to enhance details, ensuring every frame is pixel-perfect.</p>
+            <a href="404page.html" class="card-btn">View Details</a>
+          </div>
+        </div>
+
+        <!-- Step 6: Final Delivery -->
+        <div class="journey-step scroll-animate" data-image="./asset/a35.webp">
+          <div class="step-dot"></div>
+          <div class="step-content glassmorphism">
+            <span class="step-number">Phase 06</span>
+            <h3>Final Delivery</h3>
+            <p>The masterpiece is ready. We optimize all files for their respective platforms—whether it's web-ready Lottie files, 4K video exports, or interactive 3D models. We ensure seamless handoff and integration support for a flawless launch.</p>
+            <a href="404page.html" class="card-btn">Launch Project</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="video-hub-section" id="learning-hub">
+  <div class="video-hub-container">
+    
+    <div class="section-header fade-in-up">
+      <h2 class="section-title">Video Learning Hub</h2>
+      <p class="section-subtitle">Level up your skills with our exclusive tutorials, masterclasses, and behind-the-scenes breakdowns.</p>
+    </div>
+
+    <div class="video-grid">
+      
+      <div class="video-card fade-in-up delay-1">
+        <div class="video-thumb-wrapper">
+          <img src="./asset/a8.webp" alt="Masterclass">
+        </div>
+        <div class="video-card-content">
+          <span class="video-category">Creative Masterclasses</span>
+          <h3 class="video-title">Advanced 3D Lighting</h3>
+          <p class="video-desc">Master the art of cinematic lighting in Cinema 4D. Learn how to use volumetric setups and global illumination to create photorealistic renders.</p>
+          <a href="404page.html" class="btn btn-outline">Watch Episode <span>→</span></a>
+        </div>
+      </div>
+
+      <div class="video-card fade-in-up delay-2">
+        <div class="video-thumb-wrapper">
+          <img src="./asset/a1.webp" alt="Motion Graphics">
+        </div>
+        <div class="video-card-content">
+          <span class="video-category">Motion Graphics Tutorials</span>
+          <h3 class="video-title">Dynamic Typography</h3>
+          <p class="video-desc">Discover the secrets behind fluid typography animations in After Effects. We cover expression-driven movements and kinetic text.</p>
+          <a href="404page.html" class="btn btn-outline">Watch Episode <span>→</span></a>
+        </div>
+      </div>
+
+      <div class="video-card fade-in-up delay-3">
+        <div class="video-thumb-wrapper">
+          <img src="./asset/a2.webp" alt="Behind the Scenes">
+        </div>
+        <div class="video-card-content">
+          <span class="video-category">Behind-the-Scenes</span>
+          <h3 class="video-title">Shooting the Neon Campaign</h3>
+          <p class="video-desc">Step onto the set of our biggest commercial shoot. See how we combined live-action tracking with heavy CGI background replacements.</p>
+          <a href="404page.html" class="btn btn-outline">Watch Episode <span>→</span></a>
+        </div>
+      </div>
+
+      <div class="video-card fade-in-up delay-4">
+        <div class="video-thumb-wrapper">
+          <img src="./asset/a7.webp" alt="Animation Breakdowns">
+        </div>
+        <div class="video-card-content">
+          <span class="video-category">Animation Breakdowns</span>
+          <h3 class="video-title">Frame-by-Frame Liquid Motion</h3>
+          <p class="video-desc">We break down the incredibly complex liquid transition effect used in the Apex rebrand. Learn cell animation techniques step-by-step.</p>
+          <a href="404page.html" class="btn btn-outline">Watch Episode <span>→</span></a>
+        </div>
+      </div>
+
+      <div class="video-card fade-in-up delay-5">
+        <div class="video-thumb-wrapper">
+          <img src="./asset/a11.webp" alt="Software Tips">
+        </div>
+        <div class="video-card-content">
+          <span class="video-category">Software Tips</span>
+          <h3 class="video-title">Cinema 4D Rendering Hacks</h3>
+          <p class="video-desc">Cut your render times in half without losing quality. Explore Octane and Redshift optimization settings used by industry professionals.</p>
+          <a href="404page.html" class="btn btn-outline">Watch Episode <span>→</span></a>
+        </div>
+      </div>
+
+      <div class="video-card fade-in-up delay-6">
+        <div class="video-thumb-wrapper">
+          <img src="./asset/a37.webp" alt="Client Walkthroughs">
+        </div>
+        <div class="video-card-content">
+          <span class="video-category">Client Walkthroughs</span>
+          <h3 class="video-title">Aura Beauty Product Reveal</h3>
+          <p class="video-desc">A deep dive into how we presented the CGI concepts to the client, handled revisions, and delivered the final 4K broadcast files.</p>
+          <a href="404page.html" class="btn btn-outline">Watch Episode <span>→</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     COMMUNITY DISCUSSIONS (MASONRY)
+========================================= -->
+<section class="community-section" id="community">
+  <div class="community-container">
+    
+    <!-- Section Header -->
+    <div class="section-header fade-in-up">
+      <h2 class="section-title">Community Discussions</h2>
+      <p class="section-subtitle">Join the conversation. Share your creative workflow, ask for portfolio reviews, and connect with industry experts.</p>
+    </div>
+
+    <!-- Masonry Grid -->
+    <div class="masonry-grid fade-in-up delay-1">
+      
+      <!-- Card 1 -->
+      <div class="discussion-card">
+        <div class="card-header">
+          <div class="author-info">
+            <img src="./asset/a23.webp" alt="Author" class="author-avatar">
+            <div>
+              <h4 class="author-name">Alex Mercer</h4>
+              <span class="post-time">2 hours ago</span>
+            </div>
+          </div>
+          <span class="topic-badge">Software</span>
+        </div>
+        
+        <h3 class="discussion-title">Favorite Animation Software: AE vs C4D?</h3>
+        <p class="discussion-text">I've been using After Effects for 5 years, but I'm seeing a massive shift towards Cinema 4D for motion design. Is it worth making the complete switch, or should I integrate Unreal Engine into my workflow instead? Let's discuss the learning curve and render times.</p>
+        
+        <!-- Expandable Replies (Hidden by default, shows on hover) -->
+        <div class="expandable-replies">
+          <div class="reply-bubble">
+            <strong>Sarah J.</strong>: "Combine both! Use C4D for assets and AE for compositing."
+          </div>
+          <div class="reply-bubble">
+            <strong>David K.</strong>: "Unreal is the future for real-time rendering. Start learning it now."
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="interaction-stats">
+            <span><i class="icon">👍</i> 245</span>
+            <span><i class="icon">💬</i> 42</span>
+            <span><i class="icon">🔗</i> 12</span>
+          </div>
+          <a href="404page.html" class="btn btn-primary btn-sm">Join Thread</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="discussion-card">
+        <div class="card-header">
+          <div class="author-info">
+            <img src="./asset/a25.webp" alt="Author" class="author-avatar">
+            <div>
+              <h4 class="author-name">Elena Rostova</h4>
+              <span class="post-time">5 hours ago</span>
+            </div>
+          </div>
+          <span class="topic-badge">Workflow</span>
+        </div>
+        
+        <h3 class="discussion-title">What is your Best Creative Workflow?</h3>
+        <p class="discussion-text">From the initial client brief to the final render, my process always feels a bit chaotic. I usually start with mood boards on Pinterest, then jump straight into style frames. What software do you use for storyboarding, and how do you handle client revisions without losing your mind?</p>
+        
+        <div class="expandable-replies">
+          <div class="reply-bubble">
+            <strong>Mike T.</strong>: "I use Milanote for moodboards and frame planning. Total game changer!"
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="interaction-stats">
+            <span><i class="icon">👍</i> 189</span>
+            <span><i class="icon">💬</i> 56</span>
+          </div>
+          <a href="404page.html" class="btn btn-primary btn-sm">Join Thread</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="discussion-card">
+        <div class="card-header">
+          <div class="author-info">
+            <img src="./asset/a24.webp" alt="Author" class="author-avatar">
+            <div>
+              <h4 class="author-name">James Carter</h4>
+              <span class="post-time">1 day ago</span>
+            </div>
+          </div>
+          <span class="topic-badge">Industry</span>
+        </div>
+        
+        <h3 class="discussion-title">Industry Challenges: AI in Motion Design</h3>
+        <p class="discussion-text">Generative AI is moving fast. Tools like Sora and Midjourney are getting crazy good. How is everyone adapting to this? Are you incorporating AI into your daily workflow for asset generation, or do you feel it threatens traditional motion design roles?</p>
+        
+        <div class="expandable-replies">
+          <div class="reply-bubble">
+            <strong>Chris H.</strong>: "I use AI for fast concepting and voiceovers, but the final animation is always manual."
+          </div>
+          <div class="reply-bubble">
+            <strong>Leo M.</strong>: "Adapt or die. AI is a tool, not an artist."
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="interaction-stats">
+            <span><i class="icon">👍</i> 512</span>
+            <span><i class="icon">💬</i> 128</span>
+            <span><i class="icon">🔗</i> 45</span>
+          </div>
+          <a href="404page.html" class="btn btn-primary btn-sm">Join Thread</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="discussion-card">
+        <div class="card-header">
+          <div class="author-info">
+            <img src="./asset/a27.webp" alt="Author" class="author-avatar">
+            <div>
+              <h4 class="author-name">Sophie Lin</h4>
+              <span class="post-time">2 days ago</span>
+            </div>
+          </div>
+          <span class="topic-badge">Reviews</span>
+        </div>
+        
+        <h3 class="discussion-title">Brutal Portfolio Reviews Needed!</h3>
+        <p class="discussion-text">I just finished updating my 2026 Showreel. I’ve applied to 15 studios but haven't heard back. Can someone review my timing, easing, and overall color palettes? I need honest, brutal feedback to level up. Link is in the thread.</p>
+        
+        <div class="expandable-replies">
+          <div class="reply-bubble">
+            <strong>Animator_Pro</strong>: "Your easing is great, but cut the first 5 seconds. Start with your BEST work immediately."
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="interaction-stats">
+            <span><i class="icon">👍</i> 88</span>
+            <span><i class="icon">💬</i> 34</span>
+          </div>
+          <a href="404page.html" class="btn btn-primary btn-sm">Join Thread</a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="discussion-card">
+        <div class="card-header">
+          <div class="author-info">
+            <img src="./asset/a28.webp" alt="Author" class="author-avatar">
+            <div>
+              <h4 class="author-name">Daniel Brooks</h4>
+              <span class="post-time">3 days ago</span>
+            </div>
+          </div>
+          <span class="topic-badge">Career</span>
+        </div>
+        
+        <h3 class="discussion-title">Freelance vs. Full-Time Studio Work?</h3>
+        <p class="discussion-text">I've been working at an agency for 3 years, but I'm thinking about going freelance. Is the market too saturated right now? How do you consistently find high-paying clients without relying solely on platforms like Upwork?</p>
+        
+        <div class="expandable-replies">
+          <div class="reply-bubble">
+            <strong>Jessica R.</strong>: "Networking on LinkedIn is key. Don't use freelance sites, pitch directly to brands."
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="interaction-stats">
+            <span><i class="icon">👍</i> 320</span>
+            <span><i class="icon">💬</i> 92</span>
+          </div>
+          <a href="404page.html" class="btn btn-primary btn-sm">Join Thread</a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="discussion-card">
+        <div class="card-header">
+          <div class="author-info">
+            <img src="./asset/w2.webp" alt="Author" class="author-avatar">
+            <div>
+              <h4 class="author-name">Mia Fernandez</h4>
+              <span class="post-time">4 days ago</span>
+            </div>
+          </div>
+          <span class="topic-badge">Inspiration</span>
+        </div>
+        
+        <h3 class="discussion-title">Motion Design Inspiration Sources</h3>
+        <p class="discussion-text">Apart from Behance and Dribbble, where do you guys find unique inspiration? I feel like everything looks the same lately. Any niche forums, directors, or art movements you study to keep your work fresh and original?</p>
+        
+        <div class="expandable-replies">
+          <div class="reply-bubble">
+            <strong>Tom H.</strong>: "I watch 80s anime and study architecture. Look outside our industry for the best ideas!"
+          </div>
+          <div class="reply-bubble">
+            <strong>Nina W.</strong>: "Vimeo Staff Picks is still the gold standard for me."
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="interaction-stats">
+            <span><i class="icon">👍</i> 415</span>
+            <span><i class="icon">💬</i> 67</span>
+            <span><i class="icon">🔗</i> 22</span>
+          </div>
+          <a href="404page.html" class="btn btn-primary btn-sm">Join Thread</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="resources-section" id="resources">
+  <div class="resources-container">
+    
+    <div class="section-header fade-in-up">
+      <h2 class="section-title">Popular Tags & Resources</h2>
+      <p class="section-subtitle">Find exactly what you need. Search specific topics or download our free premium creative assets.</p>
+    </div>
+
+    <!-- Premium Search Filter -->
+    <div class="search-wrapper fade-in-up delay-1">
+      <div class="search-glass-box" id="search-box-container">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" id="search-input-field" placeholder="Search tutorials, software, or tags...">
+        <button class="btn btn-primary search-btn" id="search-action-btn">Search</button>
+      </div>
+      <!-- Error Message (Hidden by default) -->
+      <div class="search-error-msg" id="search-error-msg">⚠️ Please enter a keyword to search.</div>
+    </div>
+
+    <div class="tag-cloud fade-in-up delay-2">
+      <a href="404page.html" class="gradient-chip">Motion Graphics</a>
+      <a href="404page.html" class="gradient-chip">After Effects</a>
+      <a href="404page.html" class="gradient-chip">Blender</a>
+      <a href="#404page.html" class="gradient-chip">Cinema 4D</a>
+      <a href="404page.html" class="gradient-chip">Explainer Video</a>
+      <a href="404page.html" class="gradient-chip">UI Motion</a>
+      <a href="404page.html" class="gradient-chip">Branding</a>
+      <a href="404page.html" class="gradient-chip">Storyboarding</a>
+      <a href="404page.html" class="gradient-chip">Animation Tips</a>
+      <a href="404page.html" class="gradient-chip">Visual Effects</a>
+    </div>
+
+    <div class="resource-grid fade-in-up delay-3">
+      
+      <div class="resource-card">
+        <div class="resource-icon-wrapper">
+          <span class="resource-icon">📁</span>
+        </div>
+        <h3 class="resource-title">Ultimate 4K Texture Pack</h3>
+        <p class="resource-desc">High-resolution textures for your 3D models. Includes diffuse, normal, and roughness maps for hyper-realistic renders.</p>
+        <a href="404page.html" class="btn btn-download">Download Free <span>↓</span></a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-icon-wrapper">
+          <span class="resource-icon">⚡</span>
+        </div>
+        <h3 class="resource-title">AE Motion Presets Bundle</h3>
+        <p class="resource-desc">Speed up your workflow with 50+ pre-animated text, easing curves, and seamless transitions for After Effects.</p>
+        <a href="404page.html" class="btn btn-download">Download Free <span>↓</span></a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-icon-wrapper">
+          <span class="resource-icon">📖</span>
+        </div>
+        <h3 class="resource-title">Pro Storyboarding Template</h3>
+        <p class="resource-desc">Professional PDF and PSD storyboard templates used by top animation studios to pitch concepts to high-end clients.</p>
+        <a href="#404page.html" class="btn btn-download">Download Free <span>↓</span></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     PREMIUM CTA SECTION
+========================================= -->
+<section class="cta-premium-section" id="contact">
+  
+  <!-- Animated Background Layers -->
+  <div class="aurora-bg"></div>
+  <div class="particles-overlay"></div>
+
+  <!-- Floating Glowing Shapes -->
+  <div class="floating-shape shape-1"></div>
+  <div class="floating-shape shape-2"></div>
+  <div class="floating-shape shape-3"></div>
+
+  <div class="cta-container fade-in-up">
+    
+    <!-- Glassmorphism Panel with Spotlight -->
+    <div class="cta-glass-panel spotlight-target" id="cta-panel">
+      <!-- Spotlight Element (Controlled by JS) -->
+      <div class="cta-spotlight" id="cta-spotlight"></div>
+      
+      <div class="cta-content">
+        <h2 class="cta-heading">Let's Bring Your Vision to Life</h2>
+        <p class="cta-text">
+          Whether you need engaging motion graphics, cinematic animations, product videos, or creative storytelling, our team is ready to turn your ideas into unforgettable visual experiences.
+        </p>
+        
+        <!-- Action Buttons -->
+        <div class="cta-buttons">
+          <a href="404page.html" class="btn btn-morph primary-morph">
+            <span class="btn-text">🚀 Start Your Project</span>
+          </a>
+          <a href="404page.html" class="btn btn-morph secondary-morph">
+            <span class="btn-text">📞 Book a Free Consultation</span>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col footer-fade-in">
+                <div class="logo">
+                    <a href="index.html"><img src="./asset/stackly-logo (1).webp" alt="logo"></a>
+                </div>
+                <p class="footer-desc">
+                    CreativeMotion Studio transforms ideas into stunning visual stories through premium motion graphics, 2D & 3D animation, explainer videos, and cinematic brand content. We help businesses captivate audiences with innovative, high-impact animations that inspire, engage, and deliver lasting results.
+                </p>
+                <div class="social-icons">
+                    <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                    <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                    <a href="404page.html"><i class="fab fa-youtube"></i></a>
+                    <a href="404page.html"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col footer-fade-in" style="transition-delay: 0.1s;">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="service.html"><i class="fas fa-chevron-right"></i> Service</a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                    <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-fade-in" style="transition-delay: 0.2s;">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+    <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Motion Graphics</a></li>
+    <li><a href="404page.html"><i class="fas fa-chevron-right"></i> 2D & 3D Animation</a></li>
+    <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Portfolio Showcase</a></li>
+    <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Creative Blog</a></li>
+    <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Contact & Support</a></li>
+</ul>
+            </div>
+
+            <div class="footer-col footer-fade-in" style="transition-delay: 0.3s;">
+                <h4>Connect</h4>
+                <ul class="footer-contact">
+    <li><i class="fas fa-envelope"></i> stackly@motioncraftagency.com</li>
+    <li><i class="fas fa-phone-alt"></i> +91 9876543210</li>
+    <li><i class="fas fa-map-marker-alt"></i> MMR Complex, Chinna Thirupathi,<br>Salem, NY 10001</li>
+    <li><i class="fas fa-clock"></i> Monday – Friday: 9:00 AM – 7:00 PM<br>Global Client Support Available</li>
+</ul>
+                
+
+
+            </div>
+        </div>
+
+        <div class="footer-bottom footer-fade-in" style="transition-delay: 0.4s;">
+            <p>&copy; 2026 CreativeMotion Studio. All rights reserved. Bringing Stories to Life Through Animation.</p>
+            <div class="footer-bottom-links">
+                <a href="404page.html">Privacy Policy</a>
+                <a href="404page.html">Terms of Service</a>
+                <a href="404page.html">Cookie Policy</a>
+                <a href="404page.html">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchForm = document.getElementById("blog-search-form");
+    const searchInput = document.getElementById("blog-search-input");
+    const errorMsg = document.getElementById("search-error");
+
+    if (searchForm) {
+      searchForm.addEventListener("submit", function (e) {
+        // Form default ah reload aagaratha stop panna
+        e.preventDefault(); 
+        
+        // Get the value and remove extra spaces
+        const query = searchInput.value.trim();
+        
+        if (query === "") {
+          // Edhum fill pannalana error message box-ku kela varum
+          errorMsg.classList.add("show");
+          
+          // Form shake aagum
+          searchForm.classList.add("shake-error");
+          
+          // Shake effect mudinja aprm class remove aagum
+          setTimeout(() => {
+            searchForm.classList.remove("shake-error");
+          }, 400);
+        } else {
+          // Fill pannitu search amukuna 404page.html ku pogum
+          window.location.href = '404page.html';
+        }
+      });
+
+      // Type panna arambichale error message maranjidum
+      searchInput.addEventListener("input", function () {
+        if (searchInput.value.trim() !== "") {
+          errorMsg.classList.remove("show");
+          searchForm.classList.remove("shake-error");
+        }
+      });
+    }
+  });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const steps = document.querySelectorAll(".journey-step");
+  const stickyImg = document.getElementById("dynamic-journey-img");
+  const progressFill = document.getElementById("journey-progress-fill");
+  const scrollCol = document.querySelector(".journey-scroll-col");
+
+  // 1. Intersection Observer to change Image based on active card
+  const observerOptions = {
+    root: null,
+    rootMargin: "-40% 0px -40% 0px", // Triggers when card reaches the middle of the screen
+    threshold: 0
+  };
+
+  const stepObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Highlight active dot
+        steps.forEach(s => s.classList.remove("active"));
+        entry.target.classList.add("active");
+
+        // Get new image source from data attribute
+        const newSrc = entry.target.getAttribute("data-image");
+        
+        // Update image with a smooth fade effect
+        if (stickyImg.getAttribute("src") !== newSrc) {
+          stickyImg.classList.add("fade");
+          setTimeout(() => {
+            stickyImg.setAttribute("src", newSrc);
+            stickyImg.classList.remove("fade");
+          }, 200); // Matches the CSS transition time
+        }
+      }
+    });
+  }, observerOptions);
+
+  steps.forEach(step => stepObserver.observe(step));
+
+  // 2. Scroll Event to animate the vertical progress line
+  if (scrollCol && progressFill) {
+    window.addEventListener("scroll", () => {
+      const rect = scrollCol.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Calculate how far we've scrolled inside the right column
+      let scrolled = (windowHeight / 2) - rect.top;
+      let totalScrollable = rect.height;
+      
+      let progress = (scrolled / totalScrollable) * 100;
+      
+      // Clamp between 0 and 100
+      if (progress < 0) progress = 0;
+      if (progress > 100) progress = 100;
+      
+      progressFill.style.height = progress + "%";
+    });
+  }
+});
+
+
+
+// Function to update the main player when a playlist item is clicked
+function changeVideo(element, category, title, imageSrc) {
+  // 1. Remove 'active' class from all playlist items
+  const allItems = document.querySelectorAll('.playlist-item');
+  allItems.forEach(item => {
+    item.classList.remove('active');
+  });
+
+  // 2. Add 'active' class to the clicked item
+  element.classList.add('active');
+
+  // 3. Update Main Player Details
+  document.getElementById('main-video-badge').innerText = category;
+  document.getElementById('main-video-title').innerText = title;
+  
+  // 4. Update Main Player Thumbnail Image
+  const mainThumb = document.getElementById('main-video-thumb');
+  // Small fade effect when changing image
+  mainThumb.style.opacity = '0.5';
+  setTimeout(() => {
+    mainThumb.src = imageSrc;
+    mainThumb.style.opacity = '1';
+  }, 200);
+}
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const searchBtn = document.getElementById('search-action-btn');
+  const searchInput = document.getElementById('search-input-field');
+  const searchContainer = document.getElementById('search-box-container');
+  const errorMsg = document.getElementById('search-error-msg');
+
+  if (searchBtn) {
+    searchBtn.addEventListener('click', function() {
+      // Get the input value and remove extra spaces
+      const query = searchInput.value.trim();
+      
+      if (query === '') {
+        // If empty: Show Error Message & Red Border
+        errorMsg.classList.add('show-error');
+        searchContainer.classList.add('error-border');
+      } else {
+        // If filled: Hide Error Message
+        errorMsg.classList.remove('show-error');
+        searchContainer.classList.remove('error-border');
+        
+        // Show Success Alert
+        window.location.href='404page.html'
+        
+        // Optional: Clear the input after searching
+        searchInput.value = ''; 
+      }
+    });
+
+    // Optional: Remove error style instantly when user starts typing again
+    searchInput.addEventListener('input', function() {
+      if (searchInput.value.trim() !== '') {
+        errorMsg.classList.remove('show-error');
+        searchContainer.classList.remove('error-border');
+      }
+    });
+  }
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const ctaPanel = document.getElementById('cta-panel');
+  const ctaSpotlight = document.getElementById('cta-spotlight');
+
+  if (ctaPanel && ctaSpotlight) {
+    ctaPanel.addEventListener('mousemove', function(e) {
+      // Get the bounding rectangle of the panel
+      const rect = ctaPanel.getBoundingClientRect();
+      
+      // Calculate mouse position relative to the panel
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      // Make the spotlight visible
+      ctaSpotlight.style.opacity = '1';
+      
+      // Update the radial gradient position to follow the cursor
+      ctaSpotlight.style.background = `radial-gradient(600px circle at ${x}px ${y}px, rgba(255, 115, 0, 0.15), transparent 40%)`;
+    });
+
+    // Hide spotlight when mouse leaves the panel
+    ctaPanel.addEventListener('mouseleave', function() {
+      ctaSpotlight.style.opacity = '0';
+    });
+  }
+});
+</script>
+
+    
+    </body>
+
+</html>

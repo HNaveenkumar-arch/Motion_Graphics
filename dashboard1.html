@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotionFX - Agency Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard1.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="logo">
+            <a href="index.html"><img src="./asset/stackly-logo (1).webp" alt="logo"></a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a class="nav-item active" onclick="switchTab('tab-dashboard', this, 'Dashboard')"><i
+                        class="fas fa-chart-pie"></i>Admin Dashboard</a></li>
+            <li><a class="nav-item" onclick="switchTab('tab-projects', this, 'Projects')"><i
+                        class="fas fa-clapperboard"></i> Projects</a></li>
+            <li><a class="nav-item" onclick="switchTab('tab-clients', this, 'Clients')"><i class="fas fa-users"></i>
+                    Clients</a></li>
+            <li><a class="nav-item" onclick="switchTab('tab-portfolio', this, 'Portfolio')"><i
+                        class="fas fa-newspaper"></i> Portfolio</a></li>
+            <li><a class="nav-item" onclick="switchTab('tab-settings', this, 'Settings')"><i class="fas fa-cog"></i>
+                    Settings</a></li>
+        </ul>
+
+        <ul class="nav-links bottom-links">
+            <li><a href="index.html" class="nav-item"><i class="fas fa-arrow-left"></i> Back To Home</a></li>
+            <li><a href="login.html" class="nav-item danger-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content" id="mainContent">
+        <header class="topbar">
+            <div class="topbar-left">
+                <div class="menu-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></div>
+                <h2 id="dynamic-page-title" class="page-title">Admin Dashboard</h2>
+            </div>
+
+            <!-- Topbar Profile Area -->
+            <div class="profile">
+                <img src="./asset/a28.webp" alt="Admin Profile" id="profilePic" class="topbar-avatar">
+            </div>
+        </header>
+
+        <div class="dashboard-body" id="dashboardBody">
+
+            <div id="tab-dashboard" class="content-tab active-tab">
+
+                <div class="welcome-banner glass-panel anim-item">
+                    <div class="banner-content">
+                        <h2>Welcome back, <span class="user-name" style="color: var(--primary-orange);">Creator</span>!
+                            👋</h2>
+                        <p>Here is your agency's performance at a glance.</p>
+                    </div>
+                </div>
+
+                <div class="content-section glass-panel anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-bolt"></i> Agency Overview</h3>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'">New Project</button>
+                    </div>
+                    <div class="stats-grid grid-layout">
+                        <div class="stat-card hover-effect">
+                            <div class="stat-icon"><i class="fas fa-video"></i></div>
+                            <div class="stat-details">
+                                <p>Active Renders</p>
+                                <h3>12</h3>
+                            </div>
+                        </div>
+                        <div class="stat-card hover-effect">
+                            <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="stat-details">
+                                <p>Completed This Month</p>
+                                <h3>45</h3>
+                            </div>
+                        </div>
+                        <div class="stat-card hover-effect">
+                            <div class="stat-icon"><i class="fas fa-wallet"></i></div>
+                            <div class="stat-details">
+                                <p>Total Revenue</p>
+                                <h3>$24k</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section glass-panel anim-item chart-container">
+                    <div class="section-header">
+                        <h3><i class="fas fa-chart-line"></i> Revenue & Growth Analytics</h3>
+                        <select class="custom-select">
+                            <option>This Week</option>
+                        </select>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="content-section glass-panel anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-tasks"></i> Project Pipelines</h3>
+                    </div>
+                    <div class="grid-layout">
+                        <div class="project-card hover-effect">
+                            <h4>Sci-Fi Environment Build</h4>
+                            <div class="progress-info"><span>Modeling</span> <span>75%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="project-card hover-effect">
+                            <h4>Character Animation</h4>
+                            <div class="progress-info"><span>Rigging</span> <span>40%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        <div class="project-card hover-effect">
+                            <h4>Product Commercial</h4>
+                            <div class="progress-info"><span>Final Render</span> <span>95%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section glass-panel anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-users"></i> Top Team Members</h3>
+                    </div>
+                    <div class="grid-layout">
+                        <div class="team-card hover-effect">
+                            <img src="./asset/s1.webp" alt="Avatar">
+                            <h4>Alex Johnson</h4>
+                            <span>Lead 3D Artist</span>
+                        </div>
+                        <div class="team-card hover-effect">
+                            <img src="./asset/w2.webp" alt="Avatar">
+                            <h4>Sarah Smith</h4>
+                            <span>VFX Supervisor</span>
+                        </div>
+                        <div class="team-card hover-effect">
+                            <img src="./asset/w3.webp" alt="Avatar">
+                            <h4>Mike Chen</h4>
+                            <span>Motion Designer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section glass-panel anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-toolbox"></i> Quick Tools</h3>
+                    </div>
+                    <div class="grid-layout">
+                        <div class="tool-card hover-effect">
+                            <i class="fas fa-cloud-upload-alt tool-icon"></i>
+                            <h4>Cloud Render</h4>
+                            <p>Send to render farm</p>
+                        </div>
+                        <div class="tool-card hover-effect">
+                            <i class="fas fa-wand-magic-sparkles tool-icon"></i>
+                            <h4 style="margin: 10px 0 5px 0;">AI Upscale</h4>
+                            <p>Enhance resolution</p>
+                        </div>
+                        <div class="tool-card hover-effect">
+                            <i class="fas fa-folder-open tool-icon"></i>
+                            <h4>Asset Library</h4>
+                            <p>Browse 3D models</p>
+                        </div>
+                        <div class="tool-card hover-effect">
+                            <i class="fas fa-file-invoice-dollar tool-icon"></i>
+                            <h4>Invoices</h4>
+                            <p>Manage billing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section glass-panel anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-history"></i> Recent Activities</h3>
+                    </div>
+                    <div class="item-list">
+                        <div class="list-item hover-effect">
+                            <div><strong style="color: var(--text-white)">Sci-Fi Cinematic Poster
+                                    Animation</strong><br><span
+                                    style="color: var(--text-light); font-size: 13px;">Render completed (4K,
+                                    60fps)</span></div>
+                            <span class="status-badge">Just Now</span>
+                        </div>
+                        <div class="list-item hover-effect">
+                            <div><strong style="color: var(--text-white)">Client Feedback</strong><br><span
+                                    style="color: var(--text-light); font-size: 13px;">Face-swapping refinement
+                                    requested by StudioX</span></div>
+                            <span class="status-badge" style="background: rgba(255,255,255,0.1);">2 hrs ago</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="tab-projects" class="content-tab">
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-film"></i> Ongoing Projects</h3>
+                    </div>
+                    <div class="item-list">
+                        <div class="list-item">
+                            <div><strong style="color: var(--text-white)">Dark Fantasy Movie Poster
+                                    Concept</strong><br><span style="color: var(--text-muted); font-size: 13px;">Client:
+                                    Nexus Gaming | Deadline: Oct 12</span></div>
+                            <span class="status-badge">In Progress - 70%</span>
+                        </div>
+                        <div class="list-item">
+                            <div><strong style="color: var(--text-white)">Atmospheric Typography Intro</strong><br><span
+                                    style="color: var(--text-muted); font-size: 13px;">Client: Indie Films | Deadline:
+                                    Oct 15</span></div>
+                            <span class="status-badge">Storyboarding</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-archive"></i> Drafts & Templates</h3>
+                    </div>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">Manage your After Effects & Premiere Pro
+                        saved templates.</p>
+                    <div class="stats-grid">
+                        <div class="stat-card" style="justify-content: center; border-style: dashed;">
+                            <a href="404page.html"
+                                style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: inherit;">
+                                <i class="fas fa-plus"
+                                    style="font-size: 24px; color: var(--primary-orange); margin-bottom: 10px;"></i>
+                                <p style="margin: 0;">Upload Template</p>
+                            </a>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-details">
+                                <h3 style="font-size: 18px;">Cinematic Typography Pack</h3>
+                                <p>Version 2.1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1. Portfolio Showcase Section -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-image"></i> Recent Masterpieces</h3>
+                    </div>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">Cinematic movie posters and typographic
+                        designs.</p>
+                    <div class="portfolio-grid">
+                        <div class="portfolio-card">
+                            <img src="./asset/a48.webp" alt="Cinematic Poster">
+                            <div class="portfolio-overlay">
+                                <h4>Sci-Fi Thriller Poster</h4>
+                                <p>Atmospheric composition</p>
+                                <button class="btn-primary" onclick="window.location.href='404page.html'">View Full <i
+                                        class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="portfolio-card">
+                            <img src="./asset/a49.webp" alt="Dark Fantasy">
+                            <div class="portfolio-overlay">
+                                <h4>Neon Cyberpunk</h4>
+                                <p>Advanced typography</p>
+                                <button class="btn-primary" onclick="window.location.href='404page.html'">View Full <i
+                                        class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Premium Design Assets Section -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-layer-group"></i> Featured Toolkits</h3>
+                    </div>
+                    <div class="asset-grid">
+                        <div class="asset-card glass-panel">
+                            <div class="asset-icon"><i class="fas fa-font"></i></div>
+                            <div class="asset-info">
+                                <h4>Cinematic Typography V3</h4>
+                                <p>30+ premium title animations</p>
+                            </div>
+                            <button class="btn-icon" onclick="window.location.href='404page.html'"><i
+                                    class="fas fa-download"></i></button>
+                        </div>
+                        <div class="asset-card glass-panel">
+                            <div class="asset-icon"><i class="fas fa-cloud-moon"></i></div>
+                            <div class="asset-info">
+                                <h4>Atmospheric Overlays</h4>
+                                <p>Fog, smoke & light leaks</p>
+                            </div>
+                            <button class="btn-icon" onclick="window.location.href='404page.html'"><i
+                                    class="fas fa-download"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Testimonial / Feedback Section -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-star"></i> Client Feedback</h3>
+                    </div>
+                    <div class="testimonial-slider">
+                        <div class="review-card glass-panel">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="review-text">"The face-swapping refinements and the overall mood of the movie
+                                poster exceeded our expectations. Truly premium work!"</p>
+                            <div class="reviewer">
+                                <div class="reviewer-avatar"><strong>JD</strong></div>
+                                <div class="reviewer-details">
+                                    <h4>John Doe</h4>
+                                    <span>Indie Director</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Quick Action / CTA Section -->
+                <div class="content-section anim-item cta-banner glass-panel">
+                    <div class="cta-content">
+                        <h3>Ready for your next blockbuster?</h3>
+                        <p>Let's create something visually stunning together.</p>
+                        <div class="cta-buttons">
+                            <button class="btn-primary glow-btn" onclick="window.location.href='404page.html'">Start
+                                Project <i class="fas fa-rocket"></i></button>
+                            <button class="btn-secondary" onclick="window.location.href='404page.html'">Contact
+                                Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-clients" class="content-tab">
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-building"></i> Top Clients</h3>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'">Add Client</button>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon" style="border-radius: 50%;"><i class="fas fa-gamepad"></i></div>
+                            <div class="stat-details">
+                                <h3 style="font-size: 18px;">Nexus Gaming</h3>
+                                <p>5 Active Projects</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="border-radius: 50%;"><i class="fas fa-video"></i></div>
+                            <div class="stat-details">
+                                <h3 style="font-size: 18px;">Indie Films</h3>
+                                <p>2 Active Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-file-signature"></i> Client Contracts</h3>
+                    </div>
+                    <div class="item-list">
+                        <div class="list-item">
+                            <div><strong style="color: var(--text-white)">Retainer Agreement - Q4</strong><br><span
+                                    style="color: var(--text-muted); font-size: 13px;">Nexus Gaming</span></div>
+                            <button class="btn-primary" onclick="window.location.href='404page.html'"
+                                style="padding: 5px 15px; font-size: 12px;">View PDF</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-play-circle"></i> 2026 Animation Showreel</h3>
+                        <span class="status-badge"
+                            style="background: var(--orange-glow); color: var(--primary-orange);">New</span>
+                    </div>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">Our latest reel showcasing high-end motion
+                        graphics and 3D VFX for top clients.</p>
+                    <div class="showreel-container glass-panel">
+                        <img src="./asset/a1.webp" alt="Motion Graphics Showreel">
+                        <button class="play-btn-large" onclick="window.location.href='404page.html'"><i
+                                class="fas fa-play"></i></button>
+                        <div class="showreel-overlay-text">
+                            <h4>Watch Full Reel</h4>
+                            <p>2 Mins • 4K Resolution</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-chart-line"></i> Client Case Studies</h3>
+                    </div>
+                    <div class="case-study-grid">
+                        <div class="case-card glass-panel">
+                            <div class="case-img-wrapper">
+                                <img src="./asset/a7.webp" alt="3D Rendering">
+                            </div>
+                            <div class="case-content">
+                                <span class="category-tag">3D Product Animation</span>
+                                <h4>TechNova Launch Video</h4>
+                                <p>Increased client engagement by 300% using cinematic 3D product rendering.</p>
+                                <button class="btn-secondary case-btn"
+                                    onclick="window.location.href='404page.html'">View Breakdown <i
+                                        class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="case-card glass-panel">
+                            <div class="case-img-wrapper">
+                                <img src="./asset/a14.webp" alt="VFX Composition">
+                            </div>
+                            <div class="case-content">
+                                <span class="category-tag">VFX & Compositing</span>
+                                <h4>Neon City Trailer</h4>
+                                <p>Full green-screen replacement and CGI environments for an indie game.</p>
+                                <button class="btn-secondary case-btn"
+                                    onclick="window.location.href='404page.html'">View Breakdown <i
+                                        class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-magic"></i> Dedicated Client Services</h3>
+                    </div>
+                    <div class="service-boxes">
+                        <div class="service-box glass-panel">
+                            <i class="fas fa-cube service-icon"></i>
+                            <h4>3D Animation</h4>
+                            <p>Cinema 4D & Blender pipelines.</p>
+                        </div>
+                        <div class="service-box glass-panel">
+                            <i class="fas fa-bezier-curve service-icon"></i>
+                            <h4>Motion Graphics</h4>
+                            <p>Advanced After Effects templates.</p>
+                        </div>
+                        <div class="service-box glass-panel">
+                            <i class="fas fa-film service-icon"></i>
+                            <h4>VFX & Grading</h4>
+                            <p>Nuke & DaVinci Resolve color.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-globe"></i> Trusted by Studios</h3>
+                    </div>
+                    <div class="brands-container glass-panel">
+                        <div class="brand-item">
+                            <i class="fab fa-playstation"></i>
+                            <span>Gaming Studios</span>
+                        </div>
+                        <div class="brand-item">
+                            <i class="fas fa-tv"></i>
+                            <span>OTT Platforms</span>
+                        </div>
+                        <div class="brand-item">
+                            <i class="fas fa-ad"></i>
+                            <span>Ad Agencies</span>
+                        </div>
+                        <div class="brand-item">
+                            <i class="fas fa-music"></i>
+                            <span>Record Labels</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-portfolio" class="content-tab">
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-star"></i> Featured Works</h3>
+                        <button class="btn-primary" onclick="window.location.href='404page.html'">Upload Video</button>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card"
+                            style="background: url('./asset/a49.webp') center/cover; height: 150px; position: relative;">
+                            <div
+                                style="position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(0,0,0,0.7); padding: 10px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
+                                <strong style="color: #fff;">Sci-Fi Poster Render</strong>
+                            </div>
+                        </div>
+                        <div class="stat-card"
+                            style="background: url('./asset/a43.webp') center/cover; height: 150px; position: relative;">
+                            <div
+                                style="position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(0,0,0,0.7); padding: 10px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
+                                <strong style="color: #fff;">Atmospheric 3D Loop</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-chart-bar"></i> Portfolio Analytics</h3>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-eye"></i></div>
+                            <div class="stat-details">
+                                <p>Total Views</p>
+                                <h3>142,500</h3>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                            <div class="stat-details">
+                                <p>Behance Appreciations</p>
+                                <h3>8,900</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1. In-Depth Project Spotlight Section -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-search-plus"></i> Project Spotlight</h3>
+                        <button class="btn-secondary" onclick="window.location.href='404page.html'">View Case
+                            Study</button>
+                    </div>
+                    <div class="project-spotlight glass-panel">
+                        <div class="spotlight-image">
+                            <img src="./asset/a8.webp" alt="Cinematic Poster Art">
+                        </div>
+                        <div class="spotlight-content">
+                            <span class="category-tag">Featured Masterpiece</span>
+                            <h4>Abyssal Horizon: The Official Poster</h4>
+                            <p class="long-para">
+                                Explore our flagship project where we blended high-concept atmospheric design with
+                                advanced technical face-swapping refinements to create a truly immersive cinematic movie
+                                poster. Every element, from the subtle fog layers to the dynamic lighting, was
+                                meticulously crafted to evoke raw emotion. This piece stands as a testament to pushing
+                                the boundaries of AI-assisted creative design and traditional compositing to deliver
+                                industry-standard visual storytelling.
+                            </p>
+                            <div class="spotlight-actions">
+                                <button class="btn-primary" onclick="window.location.href='404page.html'">High-Res
+                                    Download <i class="fas fa-download"></i></button>
+                                <button class="btn-icon-only" onclick="window.location.href='404page.html'"
+                                    aria-label="Share"><i class="fas fa-share-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Creative Process & Workflow Section -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-cogs"></i> Our Creative Pipeline</h3>
+                    </div>
+                    <p class="long-para" style="margin-bottom: 25px;">
+                        Our creative pipeline is built on blending cutting-edge digital tools with a deep understanding
+                        of visual storytelling and composition. We focus heavily on integrating detailed atmospheric
+                        effects with striking typographic elements that command attention on any scale. By obsessing
+                        over every pixel, texture, and lighting nuance, we consistently deliver high-end visuals that
+                        captivate audiences and elevate the core narrative of every film we work on.
+                    </p>
+                    <div class="process-grid">
+                        <div class="process-step glass-panel">
+                            <div class="step-number">01</div>
+                            <img src="./asset/a36.webp" alt="Concept Art">
+                            <h4>Concept & Atmosphere</h4>
+                            <p>Establishing the mood through lighting and environment block-outs.</p>
+                        </div>
+                        <div class="process-step glass-panel">
+                            <div class="step-number">02</div>
+                            <img src="./asset/a11.webp" alt="Typography Design">
+                            <h4>Typographic Integration</h4>
+                            <p>Crafting custom title treatments that seamlessly blend into the scene.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Award-Winning Typography Series -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-pen-nib"></i> Typographic Explorations</h3>
+                    </div>
+                    <div class="series-card glass-panel">
+                        <div class="series-content">
+                            <h4>The Neon Void Collection</h4>
+                            <p class="long-para">
+                                Dive into our exclusive collection of title sequences and typographic explorations
+                                designed specifically for modern sci-fi and dark fantasy genres. This series
+                                demonstrates how custom, sharp letterforms interact with complex environmental lighting
+                                to set the perfect cinematic mood right from the opening frame. It showcases our
+                                commitment to typography not just as text, but as a crucial visual element of the
+                                cinematic experience.
+                            </p>
+                            <button class="btn-primary glow-btn" onclick="window.location.href='404page.html'">Explore
+                                The Gallery <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                        <div class="series-image-grid">
+                            <img src="./asset/a7.webp" alt="Typography 1">
+                            <img src="./asset/a2.webp" alt="Typography 2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-settings" class="content-tab">
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-user-edit"></i> Admin Profile</h3>
+                    </div>
+                    <div class="settings-profile-container">
+                        <img src="./asset/a28.webp" id="settingsProfilePic" class="settings-avatar">
+                        <div class="profile-info">
+                            <h3 class="user-name"
+                                style="color: var(--text-white); margin-bottom: 5px; word-break: break-all;">Admin</h3>
+                            <p class="user-email-display"
+                                style="color: var(--text-muted); margin-bottom: 15px; word-break: break-all;">
+                                admin@agency.com</p>
+                            <button class="btn-primary" onclick="window.location.href='404page.html'"
+                                style="padding: 8px 15px; font-size: 13px;">Change Password</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-sliders-h"></i> Render Preferences</h3>
+                    </div>
+                    <div class="item-list">
+                        <div class="list-item">
+                            <div style="color: var(--text-white);">Default Export Resolution</div>
+                            <select
+                                style="background: var(--bg-color); color: var(--text-white); border: 1px solid var(--primary-orange); padding: 5px 10px; border-radius: 5px; outline: none;">
+                                <option>1080p (FHD)</option>
+                                <option>2160p (4K)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1. Cloud Integrations Section -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-plug"></i> Workspace Integrations</h3>
+                    </div>
+                    <p class="short-para">Seamlessly link your external render engines and cloud storage for a faster
+                        workflow.</p>
+                    <div class="integration-grid">
+                        <div class="integration-card glass-panel">
+                            <img src="./asset/a26.webp" alt="Cloud Sync" class="integration-img">
+                            <div class="integration-info">
+                                <h4>Creative Cloud Sync</h4>
+                                <span class="status-active">Connected</span>
+                            </div>
+                            <button class="btn-secondary btn-sm"
+                                onclick="window.location.href='404page.html'">Manage</button>
+                        </div>
+                        <div class="integration-card glass-panel">
+                            <img src="./asset/w3.webp" alt="Render Farm" class="integration-img">
+                            <div class="integration-info">
+                                <h4>Octane Render Farm</h4>
+                                <span class="status-inactive">Disconnected</span>
+                            </div>
+                            <button class="btn-primary btn-sm"
+                                onclick="window.location.href='404page.html'">Connect</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Team & Access Control Section -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-shield-alt"></i> Team Permissions</h3>
+                        <button class="btn-icon-only" onclick="window.location.href='404page.html'"><i
+                                class="fas fa-plus"></i></button>
+                    </div>
+                    <p class="short-para">Control team member roles and manage client review permissions securely.</p>
+                    <div class="team-access-container glass-panel">
+                        <div class="team-image-banner">
+                            <img src="./asset/a19.webp" alt="Cyber Security">
+                            <div class="banner-overlay">Global Access Control Active</div>
+                        </div>
+                        <div class="team-list">
+                            <div class="team-member">
+                                <div class="member-avatar"><i class="fas fa-user-ninja"></i></div>
+                                <div class="member-details">
+                                    <h4>Alex Designer</h4>
+                                    <p>Senior Animator</p>
+                                </div>
+                                <select class="settings-select">
+                                    <option>Full Access</option>
+                                    <option>View Only</option>
+                                </select>
+                            </div>
+                            <div class="team-member">
+                                <div class="member-avatar"
+                                    style="background: rgba(255,255,255,0.1); color: var(--text-light);"><i
+                                        class="fas fa-user-tie"></i></div>
+                                <div class="member-details">
+                                    <h4>Nexus Client</h4>
+                                    <p>External Reviewer</p>
+                                </div>
+                                <select class="settings-select">
+                                    <option>View Only</option>
+                                    <option>Comment Access</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Cloud Storage & Billing Section -->
+                <div class="content-section anim-item">
+                    <div class="section-header">
+                        <h3><i class="fas fa-hdd"></i> Storage & Billing</h3>
+                    </div>
+                    <p class="short-para">Monitor your cloud storage capacity and manage subscription tiers for 8K
+                        rendering.</p>
+                    <div class="storage-card glass-panel">
+                        <div class="storage-visual">
+                            <img src="./asset/a41.webp" alt="Server Storage">
+                        </div>
+                        <div class="storage-details">
+                            <div class="storage-header">
+                                <h4>Pro Agency Plan</h4>
+                                <span>850 GB / 1 TB Used</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 85%;"></div>
+                            </div>
+                            <p class="warning-text"><i class="fas fa-exclamation-triangle"></i> Running low on space for
+                                large VFX files.</p>
+                            <div class="storage-actions">
+                                <button class="btn-primary glow-btn"
+                                    onclick="window.location.href='404page.html'">Upgrade to 5TB <i
+                                        class="fas fa-arrow-up"></i></button>
+                                <button class="btn-secondary" onclick="window.location.href='404page.html'">View
+                                    Invoices</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // Sidebar Toggle
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            if (window.innerWidth <= 768) {
+                sidebar.classList.toggle('mobile-open');
+                overlay.classList.toggle('show');
+            } else {
+                sidebar.classList.toggle('closed');
+                mainContent.classList.toggle('expanded');
+            }
+        }
+
+        // Tab Switch
+        function switchTab(tabId, element, pageTitle) {
+            document.querySelectorAll('.content-tab').forEach(tab => tab.classList.remove('active-tab'));
+            document.getElementById(tabId).classList.add('active-tab');
+            document.querySelectorAll('.nav-links .nav-item').forEach(nav => nav.classList.remove('active'));
+            element.classList.add('active');
+            document.getElementById('dynamic-page-title').innerText = pageTitle;
+
+            if (window.innerWidth <= 768) toggleSidebar();
+
+            // Tab மாறும்போது மீண்டும் அனிமேஷனை ஒப்ஸர்வ் செய்ய
+            initAnimations();
+        }
+
+        // Scroll Animation function
+        function initAnimations() {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.anim-item').forEach(element => {
+                observer.observe(element);
+            });
+        }
+
+        // DOM Loaded
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // 1. User Profile Setup
+            const storedEmail = localStorage.getItem('loggedInEmail') || "admin@motionfx.com";
+            let extractedName = storedEmail.split('@')[0];
+            extractedName = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
+            document.querySelectorAll(".user-name").forEach(el => el.textContent = extractedName);
+            document.querySelectorAll(".user-email-display").forEach(el => el.textContent = storedEmail);
+
+            // 2. Initialize Animations
+            initAnimations();
+
+            // 3. Chart.js Setup (Chart Canvas இருப்பதை உறுதி செய்யவும்)
+            const chartElement = document.getElementById('revenueChart');
+            if (chartElement) {
+                const ctx = chartElement.getContext('2d');
+                let gradient = ctx.createLinearGradient(0, 0, 0, 400);
+                gradient.addColorStop(0, 'rgba(255, 115, 0, 0.5)');
+                gradient.addColorStop(1, 'rgba(255, 115, 0, 0.0)');
+
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6'],
+                        datasets: [{
+                            label: 'Revenue ($)',
+                            data: [4200, 5100, 4800, 6500, 5900, 7800],
+                            borderColor: '#ff7300',
+                            backgroundColor: gradient,
+                            borderWidth: 3,
+                            tension: 0.4,
+                            fill: true,
+                            pointBackgroundColor: '#0a192f',
+                            pointBorderColor: '#ff7300',
+                            pointBorderWidth: 2,
+                            pointRadius: 4,
+                            pointHoverRadius: 7
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            x: { grid: { color: 'rgba(204, 214, 246, 0.05)' }, ticks: { color: '#ccd6f6' } },
+                            y: { grid: { color: 'rgba(204, 214, 246, 0.05)' }, ticks: { color: '#ccd6f6', callback: value => '$' + value } }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15 // Elements will animate when 15% visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        // Optional: unobserve if you only want it to animate once
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const animItems = document.querySelectorAll('.anim-item');
+            animItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+
+</html>
