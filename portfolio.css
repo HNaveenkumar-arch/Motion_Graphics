@@ -350,7 +350,7 @@ body {
 ========================================= */
 .projects-section {
   background-color: var(--bg-color);
-  padding: 100px 20px;
+  padding: 60px 20px;
   width: 100%;
 }
 
@@ -702,7 +702,7 @@ body {
 ========================================= */
 .case-studies-section {
   background-color: var(--bg-color);
-  padding: 100px 20px;
+  padding: 60px 20px;
   width: 100%;
 }
 
@@ -891,7 +891,7 @@ body {
 /* --- Base Layout --- */
 .journey-section {
   background-color: var(--bg-color);
-  padding: 100px 20px;
+  padding: 60px 20px;
   width: 100%;
 }
 
@@ -1124,7 +1124,7 @@ body {
 .showcase-wall {
   position: relative;
   background-color: #050505; /* Deep cinematic dark */
-  padding: 120px 20px;
+  padding: 70px 20px;
   width: 100%;
   overflow: hidden;
 }
@@ -1386,7 +1386,7 @@ body {
 ========================================= */
 .success-section {
   background-color: var(--bg-color);
-  padding: 100px 20px;
+  padding: 60px 20px;
   width: 100%;
 }
 
@@ -1634,7 +1634,7 @@ body {
 
 .awards-section {
   background-color: var(--bg-color);
-  padding: 80px 20px;
+  padding: 60px 20px;
   color: var(--text-light);
   overflow: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -1948,7 +1948,7 @@ body {
 /* --- Behind the Scenes Section --- */
 .bts-section {
   background-color: var(--bg-color);
-  padding: 100px 20px;
+  padding: 60px 20px;
   color: var(--text-light);
   overflow: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -2129,7 +2129,7 @@ body {
 
 .testimonial-section {
   background-color: var(--bg-color);
-  padding: 100px 20px;
+  padding: 60px 20px;
   overflow: hidden;
 }
 

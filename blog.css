@@ -746,7 +746,7 @@ body {
 /* --- Trending Articles Base --- */
 .trending-section {
   background-color: var(--bg-color);
-  padding: 100px 0; /* Left and right 0 so the track spans full width */
+  padding: 60px 0; /* Left and right 0 so the track spans full width */
   color: var(--text-light);
   overflow: hidden; /* Prevents horizontal scrollbar */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -932,7 +932,7 @@ body {
 /* --- Bento Section Base --- */
 .bento-section {
   background-color: var(--bg-color);
-  padding: 100px 20px;
+  padding: 60px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -1125,7 +1125,7 @@ body {
 /* --- Journey Section Base --- */
 .journey-section {
   background-color: var(--bg-color);
-  padding: 120px 20px;
+  padding: 70px 20px;
   color: var(--text-light);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -1356,7 +1356,7 @@ body {
 ========================================= */
 .video-hub-section {
   background-color: var(--bg-color);
-  padding: 100px 20px;
+  padding: 60px 20px;
   width: 100%;
 }
 
@@ -1526,7 +1526,7 @@ body {
 ========================================= */
 .community-section {
   background-color: var(--bg-color);
-  padding: 100px 20px;
+  padding: 60px 20px;
   width: 100%;
 }
 
@@ -1793,7 +1793,7 @@ body {
 ========================================= */
 .resources-section {
   background-color: var(--bg-color);
-  padding: 100px 20px;
+  padding: 60px 20px;
   width: 100%;
 }
 
@@ -2065,7 +2065,7 @@ body {
 .cta-premium-section {
   position: relative;
   background-color: var(--bg-color);
-  padding: 120px 20px;
+  padding: 70px 20px;
   width: 100%;
   overflow: hidden;
   display: flex;
