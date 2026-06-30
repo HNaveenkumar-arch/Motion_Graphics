@@ -2,1228 +2,1184 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly - Home Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="portfolio.css">
-    <link rel="stylesheet" href="common.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly - Home Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="common.css">
 </head>
 
 <body>
 
-    <nav class="navbar" id="myNavbar">
-        <div class="logo">
-            <a href="index.html"><img src="./asset/stackly-logo (1).webp" alt="logo"></a>
+  <nav class="navbar" id="myNavbar">
+    <div class="logo">
+      <a href="index.html"><img src="./asset/stackly-logo (1).webp" alt="logo"></a>
+    </div>
+
+    <button class="hamburger" id="hamburger-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="service.html" class="nav-link"><i class="fas fa-layer-group"></i> Services</a></li>
+      <li><a href="portfolio.html" class="nav-link active"><i class="fas fa-clapperboard"></i> Portfolio</a></li>
+      <li><a href="blog.html" class="nav-link"><i class="fas fa-pen-nib"></i> Blog</a></li>
+      <li><a href="contact.html" class="nav-link"><i class="fas fa-paper-plane"></i> Contact</a></li>
+
+      <li class="mobile-actions">
+        <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+        <a href="register.html" class="get-started-btn"><i class="fas fa-user-plus"></i> Register</a>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+      <a href="register.html" class="get-started-btn"><i class="fas fa-user-plus"></i> Register</a>
+    </div>
+  </nav>
+
+  <section class="portfolio-hero">
+
+    <video autoplay loop muted playsinline class="hero-video">
+      <source src="./asset/q3.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="floating-element shape-1"></div>
+    <div class="floating-element shape-2"></div>
+    <div class="floating-element shape-3"></div>
+
+    <div class="hero-container">
+
+      <div class="hero-content">
+
+        <nav class="breadcrumb fade-in-up">
+          <a href="/">Home</a> <span class="separator">/</span> <span class="current">Portfolio</span>
+        </nav>
+
+        <h1 class="fade-in-up delay-1">Our Creative Portfolio</h1>
+        <p class="fade-in-up delay-2">
+          Explore our collection of motion graphics, cinematic animations, explainer videos, and creative visual
+          experiences crafted for brands worldwide.
+        </p>
+
+        <p class="hero-subtext fade-in-up delay-3">
+          We specialize in blending high-end technology with artistic storytelling to deliver visually stunning results.
+          From concept development to final render, our work ensures your brand stands out with a unique cinematic
+          identity that captivates audiences across every digital platform.
+        </p>
+
+        <div class="hero-buttons fade-in-up delay-4">
+          <a href="404page.html" class="btn btn-primary">View Projects</a>
+          <a href="404page.html" class="btn btn-secondary">Start Your Project</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="projects-section" id="projects">
+    <div class="projects-container">
+
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Explore our premium selection of cinematic masterpieces.</p>
+      </div>
+
+      <div class="bento-grid">
+
+        <div class="bento-item bento-large fade-in-up delay-1">
+          <img src="./asset/a3.webp" alt="Project 1" class="bento-img">
+          <div class="bento-overlay">
+            <div class="bento-tags">
+              <span class="tag">Motion Graphics</span>
+              <span class="tag outline-tag">Duration: 4 Weeks</span>
+            </div>
+            <div class="bento-info">
+              <div>
+                <p class="client-name">Client: NeoTech Brands</p>
+                <h3 class="project-name">Cyberpunk Cityscape</h3>
+              </div>
+              <a href="404page.html" class="btn-case-study">View Case Study <span class="arrow">→</span></a>
+            </div>
+          </div>
         </div>
 
-        <button class="hamburger" id="hamburger-btn">
-            <i class="fas fa-bars"></i>
-        </button>
+        <div class="bento-item fade-in-up delay-2">
+          <img src="./asset/a11.webp" alt="Project 2" class="bento-img">
+          <div class="bento-overlay">
+            <div class="bento-tags">
+              <span class="tag">3D Animation</span>
+            </div>
+            <div class="bento-info">
+              <div>
+                <p class="client-name">Client: Aura Beauty</p>
+                <h3 class="project-name">Liquid Gold Reveal</h3>
+              </div>
+              <a href="404page.html" class="btn-case-study">View <span class="arrow">→</span></a>
+            </div>
+          </div>
+        </div>
 
-        <ul class="nav-menu" id="nav-menu">
-            <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="service.html" class="nav-link"><i class="fas fa-layer-group"></i> Services</a></li>
-            <li><a href="portfolio.html" class="nav-link active"><i class="fas fa-clapperboard"></i> Portfolio</a></li>
-            <li><a href="blog.html" class="nav-link"><i class="fas fa-pen-nib"></i> Blog</a></li>
-            <li><a href="contact.html" class="nav-link"><i class="fas fa-paper-plane"></i> Contact</a></li>
+        <div class="bento-item bento-tall fade-in-up delay-3">
+          <img src="./asset/a1.webp" alt="Project 3" class="bento-img">
+          <div class="bento-overlay">
+            <div class="bento-tags">
+              <span class="tag">VFX Breakdown</span>
+              <span class="tag outline-tag">2 Weeks</span>
+            </div>
+            <div class="bento-info vertical-info">
+              <div>
+                <p class="client-name">Client: Apex Gaming</p>
+                <h3 class="project-name">Hero Character Teaser</h3>
+              </div>
+              <a href="404page.html" class="btn-case-study">View Case Study <span class="arrow">→</span></a>
+            </div>
+          </div>
+        </div>
 
-            <li class="mobile-actions">
-                <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
-                <a href="register.html" class="get-started-btn"><i class="fas fa-user-plus"></i> Register</a>
-            </li>
+        <div class="bento-item bento-wide fade-in-up delay-4">
+          <img src="./asset/a19.webp" alt="Project 4" class="bento-img">
+          <div class="bento-overlay">
+            <div class="bento-tags">
+              <span class="tag">Explainer Video</span>
+            </div>
+            <div class="bento-info">
+              <div>
+                <p class="client-name">Client: FinSpace</p>
+                <h3 class="project-name">The Future of Finance</h3>
+              </div>
+              <a href="404page.html" class="btn-case-study">View Case Study <span class="arrow">→</span></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="case-studies-section" id="case-studies">
+    <div class="case-container">
+
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">In-Depth Case Studies</h2>
+        <p class="section-subtitle">Discover how we turn complex challenges into cinematic triumphs.</p>
+      </div>
+
+      <div class="case-grid">
+
+        <div class="case-card fade-in-up delay-1">
+
+          <video autoplay loop muted playsinline class="case-video">
+
+            <source src="./asset/q1.mp4" type="video/mp4">
+          </video>
+          <div class="case-overlay"></div>
+
+          <div class="case-content">
+            <div class="case-header">
+              <span class="case-category">Brand Identity</span>
+              <h3 class="case-title">Nebula: Global Brand Evolution</h3>
+            </div>
+
+            <div class="case-details">
+              <div class="detail-block">
+                <h4>The Challenge</h4>
+                <p>Revamping a decade-old legacy brand to appeal to modern Gen-Z audiences without alienating their core
+                  B2B enterprise clients. The visual language was entirely outdated, lacking dynamic digital presence,
+                  motion guidelines, and cross-platform consistency.</p>
+              </div>
+
+              <div class="detail-block">
+                <h4>Our Solution</h4>
+                <p>We engineered a highly dynamic, motion-first brand system. By utilizing immersive 3D web
+                  technologies, cinematic video elements, and a vibrant color palette, we bridged the gap between
+                  professional corporate trust and modern visual aesthetics.</p>
+              </div>
+
+              <div class="detail-block">
+                <h4>The Process</h4>
+                <ul class="process-list">
+                  <li><span>01.</span> Strategy & Audience Research</li>
+                  <li><span>02.</span> 3D Concept Prototyping</li>
+                  <li><span>03.</span> Motion System & UI Design</li>
+                  <li><span>04.</span> Full-stack Development & Render</li>
+                </ul>
+              </div>
+
+              <div class="detail-block">
+                <h4>The Results</h4>
+                <p>A staggering 300% increase in user engagement, a 45% boost in average session duration, and the
+                  project won three prestigious industry design awards within the first quarter.</p>
+              </div>
+
+              <div class="case-cta">
+                <a href="404page.html" class="btn btn-primary">Start Similar Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card fade-in-up delay-2">
+
+          <video autoplay loop muted playsinline class="case-video">
+            <source src="./asset/q2.mp4" type="video/mp4">
+          </video>
+          <div class="case-overlay"></div>
+
+          <div class="case-content">
+            <div class="case-header">
+              <span class="case-category">Product Launch</span>
+              <h3 class="case-title">Aura: Cinematic 3D Reveal</h3>
+            </div>
+
+            <div class="case-details">
+              <div class="detail-block">
+                <h4>The Challenge</h4>
+                <p>The client was launching a revolutionary smart device but only had CAD files and engineering
+                  blueprints. They needed a photorealistic, jaw-dropping promotional video for their global keynote
+                  event, and physical prototypes were not yet available.</p>
+              </div>
+
+              <div class="detail-block">
+                <h4>Our Solution</h4>
+                <p>We took their raw CAD models and rebuilt them from the ground up in Cinema4D. We applied
+                  hyper-realistic textures, complex lighting setups, and simulated fluid dynamics to create a completely
+                  CGI-driven product film that looked better than real life.</p>
+              </div>
+
+              <div class="detail-block">
+                <h4>The Process</h4>
+                <ul class="process-list">
+                  <li><span>01.</span> CAD Optimization & Retopology</li>
+                  <li><span>02.</span> Texturing & Look Development</li>
+                  <li><span>03.</span> Camera Animation & Dynamics</li>
+                  <li><span>04.</span> High-Fidelity Rendering & Compositing</li>
+                </ul>
+              </div>
+
+              <div class="detail-block">
+                <h4>The Results</h4>
+                <p>The launch video garnered over 2 Million views in 48 hours, driving pre-orders up by 150%. The
+                  hyper-realistic renders were later repurposed for their entire global billboard campaign.</p>
+              </div>
+
+              <div class="case-cta">
+                <a href="404page.html" class="btn btn-primary">Start Similar Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="journey-section" id="journey">
+    <div class="journey-container">
+
+      <div class="journey-sticky-left fade-in-up">
+        <div class="journey-media-frame">
+          <div class="media-overlay"></div>
+
+          <img src="./asset/a35.webp" class="journey-img active" id="journey-img-1" alt="Client Brief">
+          <img src="./asset/a14.webp" class="journey-img" id="journey-img-2" alt="Research">
+          <img src="./asset/a36.webp" class="journey-img" id="journey-img-3" alt="Storyboarding">
+          <img src="./asset/a12.webp" class="journey-img" id="journey-img-4" alt="Design">
+          <img src="./asset/a1.webp" class="journey-img" id="journey-img-5" alt="Animation">
+          <img src="./asset/a37.webp" class="journey-img" id="journey-img-6" alt="Sound Design">
+          <img src="./asset/a32.webp" class="journey-img" id="journey-img-7" alt="Final Delivery">
+        </div>
+
+        <div class="journey-cta">
+          <a href="404page.html" class="btn btn-primary">Start Your Journey</a>
+        </div>
+      </div>
+
+      <div class="journey-content-right fade-in-up delay-2">
+        <div class="journey-header">
+          <h2 class="section-title">The Creative Journey</h2>
+          <p class="section-subtitle">A seamless 7-step process from concept to cinematic reality.</p>
+        </div>
+
+        <div class="journey-steps-wrapper">
+
+          <div class="journey-step case-card-style" data-step="1">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Client Brief</h3>
+            <p class="step-desc">We start by deeply understanding your brand, goals, target audience, and the core
+              message you want to deliver. This aligns our creative vision with your business objectives.</p>
+            <a href="404page.html" class="btn btn-step">Explore Phase <span>→</span></a>
+          </div>
+
+          <div class="journey-step case-card-style" data-step="2">
+            <div class="step-number">02</div>
+            <h3 class="step-title">Research & Strategy</h3>
+            <p class="step-desc">Our team dives into market trends, competitor analysis, and visual references. We build
+              a robust strategic foundation to ensure the final product stands out.</p>
+            <a href="404page.html" class="btn btn-step">View Strategy <span>→</span></a>
+          </div>
+
+          <div class="journey-step case-card-style" data-step="3">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Storyboarding</h3>
+            <p class="step-desc">We translate the strategy into a visual script. Rough sketches and style frames are
+              created to map out the narrative flow, pacing, and camera movements.</p>
+            <a href="404page.html" class="btn btn-step">See Storyboards <span>→</span></a>
+          </div>
+
+          <div class="journey-step case-card-style" data-step="4">
+            <div class="step-number">04</div>
+            <h3 class="step-title">Design & Asset Creation</h3>
+            <p class="step-desc">Here, the magic takes shape. We design 2D vectors, model 3D assets, and establish the
+              complete visual language, lighting, and texturing of your project.</p>
+            <a href="404page.html" class="btn btn-step">View Designs <span>→</span></a>
+          </div>
+
+          <div class="journey-step case-card-style" data-step="5">
+            <div class="step-number">05</div>
+            <h3 class="step-title">Animation</h3>
+            <p class="step-desc">We breathe life into the static designs. Utilizing advanced keyframing, physics
+              simulations, and dynamic motion, we craft smooth and captivating animations.</p>
+            <a href="404page.html" class="btn btn-step">Watch Process <span>→</span></a>
+          </div>
+
+          <div class="journey-step case-card-style" data-step="6">
+            <div class="step-number">06</div>
+            <h3 class="step-title">Sound Design</h3>
+            <p class="step-desc">Audio is 50% of the experience. We mix custom foley, cinematic sound effects, and
+              premium background scores to emotionally elevate the visual impact.</p>
+            <a href="404page.html" class="btn btn-step">Listen Now <span>→</span></a>
+          </div>
+
+          <div class="journey-step case-card-style" data-step="7">
+            <div class="step-number">07</div>
+            <h3 class="step-title">Final Delivery</h3>
+            <p class="step-desc">After rigorous quality checks and color grading, we render the project in pristine 4K
+              resolution, optimized for all your required digital and broadcast platforms.</p>
+            <a href="404page.html" class="btn btn-step">View Results <span>→</span></a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="showcase-wall" id="showcase">
+
+    <div class="particles-bg"></div>
+
+    <div class="showcase-container">
+
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">Explore Our Creative Masterpieces</h2>
+        <p class="section-subtitle">Discover a curated collection of award-worthy motion graphics, cinematic animations,
+          and visually stunning digital experiences crafted for brands across diverse industries.</p>
+      </div>
+
+      <div class="category-badges fade-in-up delay-1">
+        <span class="badge">Brand Identity Animation</span>
+        <span class="badge">Product Launch Videos</span>
+        <span class="badge">Corporate Motion Graphics</span>
+        <span class="badge">Social Media Campaigns</span>
+        <span class="badge">3D Product Visualization</span>
+        <span class="badge">Character Animation</span>
+        <span class="badge">Event Promo Videos</span>
+        <span class="badge">UI & App Motion Design</span>
+      </div>
+
+      <div class="showcase-grid fade-in-up delay-2">
+
+        <div class="showcase-card-wrapper">
+          <div class="showcase-card">
+            <div class="spotlight"></div>
+
+            <img src="./asset/a2.webp" class="showcase-img" alt="Project 1">
+
+            <div class="showcase-overlay">
+              <span class="showcase-category">Brand Identity Animation</span>
+              <h3 class="showcase-title">Nexus Rebrand</h3>
+
+              <div class="showcase-meta">
+                <p><span>Software:</span> After Effects, Cinema 4D</p>
+                <p><span>Duration:</span> 4 Weeks</p>
+                <p><span>Team:</span> 3 Artists, 1 Sound Designer</p>
+              </div>
+
+              <a href="404page.html" class="btn btn-primary magnetic-btn">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-card-wrapper">
+          <div class="showcase-card">
+            <div class="spotlight"></div>
+
+            <img src="./asset/a1.webp" class="showcase-img" alt="Project 2">
+
+            <div class="showcase-overlay">
+              <span class="showcase-category">Product Launch Videos</span>
+              <h3 class="showcase-title">Aura Tech Reveal</h3>
+
+              <div class="showcase-meta">
+                <p><span>Software:</span> Blender, Premiere Pro</p>
+                <p><span>Duration:</span> 2 Weeks</p>
+                <p><span>Team:</span> 2 3D Generalists</p>
+              </div>
+
+              <a href="404page.html" class="btn btn-primary magnetic-btn">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-card-wrapper">
+          <div class="showcase-card">
+            <div class="spotlight"></div>
+
+            <img src="./asset/a35.webp" class="showcase-img" alt="Project 3">
+
+            <div class="showcase-overlay">
+              <span class="showcase-category">Social Media Campaigns</span>
+              <h3 class="showcase-title">Neon Nights Promo</h3>
+
+              <div class="showcase-meta">
+                <p><span>Software:</span> Nuke, After Effects</p>
+                <p><span>Duration:</span> 1 Week</p>
+                <p><span>Team:</span> 1 Motion Designer</p>
+              </div>
+
+              <a href="404page.html" class="btn btn-primary magnetic-btn">View Project</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="success-section" id="success-stories">
+    <div class="success-container">
+
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">Client Success Stories</h2>
+        <p class="section-subtitle">Real results, measurable growth, and cinematic experiences that drive business
+          impact.</p>
+      </div>
+
+      <div class="success-cards-wrapper">
+
+        <div class="success-card fade-in-up delay-1">
+
+          <div class="success-image-side">
+            <img src="./asset/a5.webp" alt="NeoTech Project" class="success-img">
+            <div class="image-overlay"></div>
+          </div>
+
+          <div class="success-info-side">
+
+            <div class="success-story-content">
+              <div class="client-brand">
+                <span class="client-logo">N</span>
+                <span class="client-name">NeoTech Brands</span>
+              </div>
+
+              <h3 class="success-title">Redefining Digital Identity for a Tech Giant</h3>
+
+              <div class="success-text-block">
+                <h4>Project Overview</h4>
+                <p>NeoTech approached us with a challenge: their legacy brand was losing traction among younger
+                  demographics. We orchestrated a complete visual overhaul, delivering a cinematic brand film and a
+                  cohesive motion design system.</p>
+              </div>
+
+              <div class="success-text-block">
+                <h4>Results Achieved</h4>
+                <p>By shifting to a motion-first visual language, the brand experienced an immediate surge in audience
+                  retention, repositioning NeoTech as an industry innovator across all digital channels.</p>
+              </div>
+
+              <a href="404page.html" class="btn btn-primary">Read Full Case Study</a>
+            </div>
+
+            <div class="success-stats-grid">
+              <div class="stat-box">
+                <div class="stat-value"><span class="counter" data-target="300">0</span>%</div>
+                <p class="stat-label">Engagement</p>
+              </div>
+              <div class="stat-box">
+                <div class="stat-value">+<span class="counter" data-target="45">0</span>%</div>
+                <p class="stat-label">Conversion</p>
+              </div>
+              <div class="stat-box">
+                <div class="stat-value"><span class="counter" data-target="2.5">0</span>M</div>
+                <p class="stat-label">Watch Time</p>
+              </div>
+              <div class="stat-box">
+                <div class="stat-value"><span class="counter" data-target="15">0</span>M+</div>
+                <p class="stat-label">Social Reach</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="success-card fade-in-up delay-2">
+
+          <div class="success-image-side">
+            <img src="./asset/a11.webp" alt="Aura Beauty Project" class="success-img">
+            <div class="image-overlay"></div>
+          </div>
+
+          <div class="success-info-side">
+
+            <div class="success-story-content">
+              <div class="client-brand">
+                <span class="client-logo" style="color: #00e5ff; border-color: #00e5ff;">A</span>
+                <span class="client-name">Aura Beauty</span>
+              </div>
+
+              <h3 class="success-title">Launching a Flagship Product with CGI</h3>
+
+              <div class="success-text-block">
+                <h4>Project Overview</h4>
+                <p>Aura Beauty needed a show-stopping launch video for their flagship skincare line. We utilized
+                  high-end Cinema 4D to create hyper-realistic product renders, fluid simulations, and macro-level
+                  texture details.</p>
+              </div>
+
+              <div class="success-text-block">
+                <h4>Results Achieved</h4>
+                <p>The completely CGI-driven campaign was indistinguishable from reality. It went viral on Instagram and
+                  TikTok, driving massive pre-orders before the physical product hit the shelves.</p>
+              </div>
+
+              <a href="404page.html" class="btn btn-secondary">Read Full Case Study</a>
+            </div>
+
+            <div class="success-stats-grid">
+              <div class="stat-box">
+                <div class="stat-value"><span class="counter" data-target="500">0</span>%</div>
+                <p class="stat-label">Engagement</p>
+              </div>
+              <div class="stat-box">
+                <div class="stat-value">+<span class="counter" data-target="120">0</span>%</div>
+                <p class="stat-label">Conversion</p>
+              </div>
+              <div class="stat-box">
+                <div class="stat-value"><span class="counter" data-target="4.2">0</span>M</div>
+                <p class="stat-label">Watch Time</p>
+              </div>
+              <div class="stat-box">
+                <div class="stat-value"><span class="counter" data-target="22">0</span>M+</div>
+                <p class="stat-label">Social Reach</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="awards-achievements" class="awards-section">
+    <div class="container">
+
+      <div class="section-header scroll-animate">
+        <h2>Awards <span class="highlight">& Achievements</span></h2>
+        <p>A journey of excellence, continuous learning, and client satisfaction.</p>
+      </div>
+
+      <div class="stats-grid scroll-animate">
+        <div class="stat-card glassmorphism">
+          <div class="stat-icon">⌛</div>
+          <div class="counter-wrapper">
+            <h3 class="counter" data-target="8">0</h3>
+          </div>
+          <p>Years of Experience</p>
+          <a href="404page.html" class="card-btn">View Journey</a>
+        </div>
+
+        <div class="stat-card glassmorphism">
+          <div class="stat-icon">🚀</div>
+          <div class="counter-wrapper">
+            <h3 class="counter" data-target="150">0</h3><span class="plus">+</span>
+          </div>
+          <p>Projects Completed</p>
+          <a href="404page.html" class="card-btn">Explore Work</a>
+        </div>
+
+        <div class="stat-card glassmorphism">
+          <div class="stat-icon">😊</div>
+          <div class="counter-wrapper">
+            <h3 class="counter" data-target="120">0</h3><span class="plus">+</span>
+          </div>
+          <p>Happy Clients</p>
+          <a href="404page.html" class="card-btn">Read Reviews</a>
+        </div>
+
+        <div class="stat-card glassmorphism">
+          <div class="stat-icon">🏆</div>
+          <div class="counter-wrapper">
+            <h3 class="counter" data-target="25">0</h3>
+          </div>
+          <p>Awards Won</p>
+          <a href="404page.html" class="card-btn">See Gallery</a>
+        </div>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item left scroll-animate">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glassmorphism">
+            <div class="floating-icon">🏆</div>
+            <span class="date">2023 - 2024</span>
+            <h3>Best UI/UX Design Agency Award</h3>
+            <p>Awarded by the Global Design Council for delivering exceptional user experiences and innovative
+              glassmorphic interfaces for fintech clients. Recognized for pushing digital design boundaries.</p>
+            <a href="404page.html" class="card-btn timeline-btn">View Certificate</a>
+          </div>
+        </div>
+
+        <div class="timeline-item right scroll-animate">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glassmorphism">
+            <div class="floating-icon">📜</div>
+            <span class="date">2022</span>
+            <h3>Google Cloud Certified Professional</h3>
+            <p>Successfully achieved the professional-level cloud architect credential, demonstrating advanced skills in
+              designing, developing, and managing robust, secure, and highly scalable cloud systems.</p>
+            <a href="404page.html" class="card-btn timeline-btn">Verify Credential</a>
+          </div>
+        </div>
+
+        <div class="timeline-item left scroll-animate">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glassmorphism">
+            <div class="floating-icon">🏅</div>
+            <span class="date">2021</span>
+            <h3>Top Rated Freelancer on Upwork</h3>
+            <p>Maintained a 100% Job Success Score over 50+ complex web development and automation projects. Recognized
+              for excellent technical communication, engineering discipline, and pixel-perfect results.</p>
+            <a href="404page.html" class="card-btn timeline-btn">View Profile</a>
+          </div>
+        </div>
+
+        <div class="timeline-item right scroll-animate">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glassmorphism">
+            <div class="floating-icon">🥇</div>
+            <span class="date">2019 - 2020</span>
+            <h3>National Hackathon Winner</h3>
+            <p>Secured first place among 500+ teams by building an AI-powered accessibility framework. The platform
+              architecture was highly praised by veteran industry experts for its clean, modular codebase.</p>
+            <a href="404page.html" class="card-btn timeline-btn">View Project Source</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="behind-the-scenes" class="bts-section">
+    <div class="container">
+
+      <div class="section-header scroll-animate">
+        <h2>Behind the <span class="highlight">Scenes</span></h2>
+        <p>Take an exclusive peek into our creative process, workspace, and the magic that happens before launch.</p>
+      </div>
+
+      <div class="masonry-grid">
+
+        <div class="masonry-item scroll-animate">
+          <img src="./asset/a38.webp" alt="Creative Brainstorming" class="masonry-img">
+          <div class="overlay">
+            <div class="overlay-content">
+              <span class="category">Ideation</span>
+              <h3>Creative Brainstorming</h3>
+              <p>Where raw concepts meet unlimited coffee. We map out wireframes, user journeys, and core
+                functionalities before touching a single pixel.</p>
+              <a href="404page.html" class="card-btn">View Process</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="masonry-item scroll-animate" style="aspect-ratio: 3/4;">
+          <img src="./asset/a3.webp" alt="Animation Process" class="masonry-img"
+            style="height: 100%; object-fit: cover;">
+          <div class="overlay">
+            <div class="overlay-content">
+              <span class="category">Motion Design</span>
+              <h3>Animation Process</h3>
+              <p>Bringing static designs to life. We rig, keyframe, and add physics to create buttery smooth
+                micro-interactions and scroll sequences.</p>
+              <a href="404page.html" class="card-btn">See Animations</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="masonry-item scroll-animate">
+          <img src="./asset/a8.webp" alt="Storyboards" class="masonry-img">
+          <div class="overlay">
+            <div class="overlay-content">
+              <span class="category">Planning</span>
+              <h3>Storyboards</h3>
+              <p>Every masterpiece needs a blueprint. Sketching the narrative frame-by-frame to ensure a seamless flow
+                of information.</p>
+              <a href="404page.html" class="card-btn">View Sketches</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="masonry-item scroll-animate" style="aspect-ratio: 4/5;">
+          <img src="./asset/a32.webp" alt="Team Workspace" class="masonry-img" style="height: 100%; object-fit: cover;">
+          <div class="overlay">
+            <div class="overlay-content">
+              <span class="category">Culture</span>
+              <h3>Team Workspace</h3>
+              <p>Our neon-lit sanctuary. A highly collaborative environment equipped with dual monitors, drawing
+                tablets, and pure inspiration.</p>
+              <a href="404page.html" class="card-btn">Tour Office</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="masonry-item scroll-animate">
+          <img src="./asset/a14.webp" alt="Editing Sessions" class="masonry-img">
+          <div class="overlay">
+            <div class="overlay-content">
+              <span class="category">Production</span>
+              <h3>Editing Sessions</h3>
+              <p>The final polish. Relentless fine-tuning, color grading, and code refactoring until the project hits
+                our 100% perfection standard.</p>
+              <a href="404page.html" class="card-btn">Watch Reel</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="testimonials" class="testimonial-section">
+    <div class="container">
+
+      <div class="section-header scroll-animate">
+        <h2>Client <span class="highlight">Testimonials</span></h2>
+        <p>Don't just take our word for it. Here is what our partners have to say.</p>
+      </div>
+
+      <div class="swiper mySwiper scroll-animate">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-card glassmorphism">
+              <div class="quote-icon">❝</div>
+              <p class="review">"The team's ability to blend aesthetics with high-performance code is unmatched. Our
+                conversion rates jumped 40% after the redesign."</p>
+              <div class="stars">★★★★★</div>
+              <div class="client-info">
+                <img src="./asset/a27.webp" alt="Client">
+                <div>
+                  <h4>Alex Johnson</h4>
+                  <span>CTO, TechFlow</span>
+                </div>
+              </div>
+              <div class="company-logo">TechFlow Inc.</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card glassmorphism">
+              <div class="quote-icon">❝</div>
+              <p class="review">"Professional, timely, and incredibly creative. They didn't just build a website; they
+                built a digital experience that our users love."</p>
+              <div class="stars">★★★★★</div>
+              <div class="client-info">
+                <img src="./asset/a28.webp" alt="Client">
+                <div>
+                  <h4>Sarah Williams</h4>
+                  <span>Founder, Bloom</span>
+                </div>
+              </div>
+              <div class="company-logo">Bloom Studio</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card glassmorphism">
+              <div class="quote-icon">❝</div>
+              <p class="review">"Highly recommended for their UI/UX expertise. Their glassmorphism design approach gave
+                our fintech app a futuristic look."</p>
+              <div class="stars">★★★★★</div>
+              <div class="client-info">
+                <img src="./asset/a25.webp" alt="Client">
+                <div>
+                  <h4>Rajesh Kumar</h4>
+                  <span>Product Manager, FinUp</span>
+                </div>
+              </div>
+              <div class="company-logo">FinUp Services</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="cta" class="cta-section">
+    <div class="aurora-bg"></div>
+    <div class="spotlight" id="cta-spotlight"></div>
+
+    <div class="floating-obj obj-1"></div>
+    <div class="floating-obj obj-2"></div>
+    <div class="floating-obj obj-3"></div>
+
+    <div class="container relative-z">
+      <div class="cta-card glassmorphism scroll-animate">
+
+        <h2 class="cta-title">Let's Create Your Next <span class="neon-text">Masterpiece</span></h2>
+        <p class="cta-desc">
+          From concept to final delivery, our team is ready to transform your ideas into breathtaking motion graphics,
+          engaging animations, and unforgettable visual experiences tailored to your brand.
+        </p>
+
+        <div class="cta-counters">
+          <div class="cta-stat">
+            <span class="counter neon-text" data-target="500">0</span><span>+</span>
+            <p>Brands Transformed</p>
+          </div>
+          <div class="cta-stat">
+            <span class="counter neon-text" data-target="99">0</span><span>%</span>
+            <p>Client Satisfaction</p>
+          </div>
+        </div>
+
+        <div class="cta-buttons">
+          <a href="404page.html" class="morphing-btn primary-btn">
+            <span class="btn-icon">🚀</span> Start Your Project
+          </a>
+          <a href="404page.html" class="morphing-btn secondary-btn">
+            <span class="btn-icon">📅</span> Book a Free Consultation
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col footer-fade-in">
+        <div class="logo">
+          <a href="index.html"><img src="./asset/stackly-logo (1).webp" alt="logo"></a>
+        </div>
+        <p class="footer-desc">
+          CreativeMotion Studio transforms ideas into stunning visual stories through premium motion graphics, 2D & 3D
+          animation, explainer videos, and cinematic brand content. We help businesses captivate audiences with
+          innovative, high-impact animations that inspire, engage, and deliver lasting results.
+        </p>
+        <div class="social-icons">
+          <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+          <a href="404page.html"><i class="fab fa-twitter"></i></a>
+          <a href="404page.html"><i class="fab fa-instagram"></i></a>
+          <a href="404page.html"><i class="fab fa-youtube"></i></a>
+          <a href="404page.html"><i class="fab fa-discord"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col footer-fade-in" style="transition-delay: 0.1s;">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="service.html"><i class="fas fa-chevron-right"></i> Service</a></li>
+          <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+          <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-fade-in" style="transition-delay: 0.2s;">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Motion Graphics</a></li>
+          <li><a href="404page.html"><i class="fas fa-chevron-right"></i> 2D & 3D Animation</a></li>
+          <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Portfolio Showcase</a></li>
+          <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Creative Blog</a></li>
+          <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Contact & Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-fade-in" style="transition-delay: 0.3s;">
+        <h4>Connect</h4>
+        <ul class="footer-contact">
+          <li><i class="fas fa-envelope"></i> stackly@motioncraftagency.com</li>
+          <li><i class="fas fa-phone-alt"></i> +91 9876543210</li>
+          <li><i class="fas fa-map-marker-alt"></i> MMR Complex, Chinna Thirupathi,<br>Salem, NY 10001</li>
+          <li><i class="fas fa-clock"></i> Monday – Friday: 9:00 AM – 7:00 PM<br>Global Client Support Available</li>
         </ul>
 
-        <div class="nav-actions">
-            <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
-            <a href="register.html" class="get-started-btn"><i class="fas fa-user-plus"></i> Register</a>
-        </div>
-    </nav>
 
-    <section class="portfolio-hero">
-  <!-- Background Video -->
-  <video autoplay loop muted playsinline class="hero-video">
-    <source src="./asset/q3.mp4" type="video/mp4">
-  </video>
-  
-  <div class="hero-overlay"></div>
 
-  <div class="floating-element shape-1"></div>
-  <div class="floating-element shape-2"></div>
-  <div class="floating-element shape-3"></div>
-
-  <div class="hero-container">
-    
-    <!-- Hero Content (Card) -->
-    <div class="hero-content">
-      
-      <!-- Breadcrumb Moved Inside the Card -->
-      <nav class="breadcrumb fade-in-up">
-        <a href="/">Home</a> <span class="separator">/</span> <span class="current">Portfolio</span>
-      </nav>
-
-      <h1 class="fade-in-up delay-1">Our Creative Portfolio</h1>
-      <p class="fade-in-up delay-2">
-        Explore our collection of motion graphics, cinematic animations, explainer videos, and creative visual experiences crafted for brands worldwide.
-      </p>
-      
-      <p class="hero-subtext fade-in-up delay-3">
-        We specialize in blending high-end technology with artistic storytelling to deliver visually stunning results. From concept development to final render, our work ensures your brand stands out with a unique cinematic identity that captivates audiences across every digital platform.
-      </p>
-      
-      <div class="hero-buttons fade-in-up delay-4">
-        <a href="404page.html" class="btn btn-primary">View Projects</a>
-        <a href="404page.html" class="btn btn-secondary">Start Your Project</a>
       </div>
     </div>
 
-  </div>
-
-</section>
-
-
-<section class="projects-section" id="projects">
-  <div class="projects-container">
-    
-    <div class="section-header fade-in-up">
-      <h2 class="section-title">Featured Projects</h2>
-      <p class="section-subtitle">Explore our premium selection of cinematic masterpieces.</p>
-    </div>
-
-    <div class="bento-grid">
-      
-      <div class="bento-item bento-large fade-in-up delay-1">
-        <img src="./asset/a3.webp" alt="Project 1" class="bento-img">
-        <div class="bento-overlay">
-          <div class="bento-tags">
-            <span class="tag">Motion Graphics</span>
-            <span class="tag outline-tag">Duration: 4 Weeks</span>
-          </div>
-          <div class="bento-info">
-            <div>
-              <p class="client-name">Client: NeoTech Brands</p>
-              <h3 class="project-name">Cyberpunk Cityscape</h3>
-            </div>
-            <a href="404page.html" class="btn-case-study">View Case Study <span class="arrow">→</span></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="bento-item fade-in-up delay-2">
-        <img src="./asset/a11.webp" alt="Project 2" class="bento-img">
-        <div class="bento-overlay">
-          <div class="bento-tags">
-            <span class="tag">3D Animation</span>
-          </div>
-          <div class="bento-info">
-            <div>
-              <p class="client-name">Client: Aura Beauty</p>
-              <h3 class="project-name">Liquid Gold Reveal</h3>
-            </div>
-            <a href="404page.html" class="btn-case-study">View <span class="arrow">→</span></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="bento-item bento-tall fade-in-up delay-3">
-        <img src="./asset/a1.webp" alt="Project 3" class="bento-img">
-        <div class="bento-overlay">
-          <div class="bento-tags">
-            <span class="tag">VFX Breakdown</span>
-            <span class="tag outline-tag">2 Weeks</span>
-          </div>
-          <div class="bento-info vertical-info">
-            <div>
-              <p class="client-name">Client: Apex Gaming</p>
-              <h3 class="project-name">Hero Character Teaser</h3>
-            </div>
-            <a href="404page.html" class="btn-case-study">View Case Study <span class="arrow">→</span></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="bento-item bento-wide fade-in-up delay-4">
-        <img src="./asset/a19.webp" alt="Project 4" class="bento-img">
-        <div class="bento-overlay">
-          <div class="bento-tags">
-            <span class="tag">Explainer Video</span>
-          </div>
-          <div class="bento-info">
-            <div>
-              <p class="client-name">Client: FinSpace</p>
-              <h3 class="project-name">The Future of Finance</h3>
-            </div>
-            <a href="404page.html" class="btn-case-study">View Case Study <span class="arrow">→</span></a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-<!-- =========================================
-     FULL REVEAL CASE STUDIES
-========================================= -->
-<section class="case-studies-section" id="case-studies">
-  <div class="case-container">
-    
-    <!-- Section Header -->
-    <div class="section-header fade-in-up">
-      <h2 class="section-title">In-Depth Case Studies</h2>
-      <p class="section-subtitle">Discover how we turn complex challenges into cinematic triumphs.</p>
-    </div>
-
-    <!-- Cards Wrapper -->
-    <div class="case-grid">
-      
-      <!-- Card 1 -->
-      <div class="case-card fade-in-up delay-1">
-        <!-- Background Video -->
-        <video autoplay loop muted playsinline class="case-video">
-          <!-- Replace with your actual video link -->
-          <source src="./asset/q1.mp4" type="video/mp4">
-        </video>
-        <div class="case-overlay"></div>
-        
-        <!-- Full Content -->
-        <div class="case-content">
-          <div class="case-header">
-            <span class="case-category">Brand Identity</span>
-            <h3 class="case-title">Nebula: Global Brand Evolution</h3>
-          </div>
-          
-          <div class="case-details">
-            <div class="detail-block">
-              <h4>The Challenge</h4>
-              <p>Revamping a decade-old legacy brand to appeal to modern Gen-Z audiences without alienating their core B2B enterprise clients. The visual language was entirely outdated, lacking dynamic digital presence, motion guidelines, and cross-platform consistency.</p>
-            </div>
-            
-            <div class="detail-block">
-              <h4>Our Solution</h4>
-              <p>We engineered a highly dynamic, motion-first brand system. By utilizing immersive 3D web technologies, cinematic video elements, and a vibrant color palette, we bridged the gap between professional corporate trust and modern visual aesthetics.</p>
-            </div>
-            
-            <div class="detail-block">
-              <h4>The Process</h4>
-              <ul class="process-list">
-                <li><span>01.</span> Strategy & Audience Research</li>
-                <li><span>02.</span> 3D Concept Prototyping</li>
-                <li><span>03.</span> Motion System & UI Design</li>
-                <li><span>04.</span> Full-stack Development & Render</li>
-              </ul>
-            </div>
-            
-            <div class="detail-block">
-              <h4>The Results</h4>
-              <p>A staggering 300% increase in user engagement, a 45% boost in average session duration, and the project won three prestigious industry design awards within the first quarter.</p>
-            </div>
-            
-            <div class="case-cta">
-              <a href="404page.html" class="btn btn-primary">Start Similar Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="case-card fade-in-up delay-2">
-        <!-- Background Video -->
-        <video autoplay loop muted playsinline class="case-video">
-          <source src="./asset/q2.mp4" type="video/mp4">
-        </video>
-        <div class="case-overlay"></div>
-        
-        <!-- Full Content -->
-        <div class="case-content">
-          <div class="case-header">
-            <span class="case-category">Product Launch</span>
-            <h3 class="case-title">Aura: Cinematic 3D Reveal</h3>
-          </div>
-          
-          <div class="case-details">
-            <div class="detail-block">
-              <h4>The Challenge</h4>
-              <p>The client was launching a revolutionary smart device but only had CAD files and engineering blueprints. They needed a photorealistic, jaw-dropping promotional video for their global keynote event, and physical prototypes were not yet available.</p>
-            </div>
-            
-            <div class="detail-block">
-              <h4>Our Solution</h4>
-              <p>We took their raw CAD models and rebuilt them from the ground up in Cinema4D. We applied hyper-realistic textures, complex lighting setups, and simulated fluid dynamics to create a completely CGI-driven product film that looked better than real life.</p>
-            </div>
-            
-            <div class="detail-block">
-              <h4>The Process</h4>
-              <ul class="process-list">
-                <li><span>01.</span> CAD Optimization & Retopology</li>
-                <li><span>02.</span> Texturing & Look Development</li>
-                <li><span>03.</span> Camera Animation & Dynamics</li>
-                <li><span>04.</span> High-Fidelity Rendering & Compositing</li>
-              </ul>
-            </div>
-            
-            <div class="detail-block">
-              <h4>The Results</h4>
-              <p>The launch video garnered over 2 Million views in 48 hours, driving pre-orders up by 150%. The hyper-realistic renders were later repurposed for their entire global billboard campaign.</p>
-            </div>
-            
-            <div class="case-cta">
-              <a href="404page.html" class="btn btn-primary">Start Similar Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- =========================================
-     STICKY PROJECT JOURNEY
-========================================= -->
-<section class="journey-section" id="journey">
-  <div class="journey-container">
-    
-    <!-- Left: Sticky Media Panel -->
-    <div class="journey-sticky-left fade-in-up">
-      <div class="journey-media-frame">
-        <!-- Overlay for darker aesthetic -->
-        <div class="media-overlay"></div>
-        
-        <!-- Images for each step (Change src to your actual images) -->
-        <img src="./asset/a35.webp" class="journey-img active" id="journey-img-1" alt="Client Brief">
-        <img src="./asset/a14.webp" class="journey-img" id="journey-img-2" alt="Research">
-        <img src="./asset/a36.webp" class="journey-img" id="journey-img-3" alt="Storyboarding">
-        <img src="./asset/a12.webp" class="journey-img" id="journey-img-4" alt="Design">
-        <img src="./asset/a1.webp" class="journey-img" id="journey-img-5" alt="Animation">
-        <img src="./asset/a37.webp" class="journey-img" id="journey-img-6" alt="Sound Design">
-        <img src="./asset/a32.webp" class="journey-img" id="journey-img-7" alt="Final Delivery">
-      </div>
-      
-      <!-- CTA Button -->
-      <div class="journey-cta">
-        <a href="404page.html" class="btn btn-primary">Start Your Journey</a>
+    <div class="footer-bottom footer-fade-in" style="transition-delay: 0.4s;">
+      <p>&copy; 2026 CreativeMotion Studio. All rights reserved. Bringing Stories to Life Through Animation.</p>
+      <div class="footer-bottom-links">
+        <a href="404page.html">Privacy Policy</a>
+        <a href="404page.html">Terms of Service</a>
+        <a href="404page.html">Cookie Policy</a>
+        <a href="404page.html">Accessibility</a>
       </div>
     </div>
-
-    <!-- Right: Scrollable Content -->
-    <div class="journey-content-right fade-in-up delay-2">
-      <div class="journey-header">
-        <h2 class="section-title">The Creative Journey</h2>
-        <p class="section-subtitle">A seamless 7-step process from concept to cinematic reality.</p>
-      </div>
-
-      <div class="journey-steps-wrapper">
-        
-        <!-- Step 1 Card -->
-        <div class="journey-step case-card-style" data-step="1">
-          <div class="step-number">01</div>
-          <h3 class="step-title">Client Brief</h3>
-          <p class="step-desc">We start by deeply understanding your brand, goals, target audience, and the core message you want to deliver. This aligns our creative vision with your business objectives.</p>
-          <a href="404page.html" class="btn btn-step">Explore Phase <span>→</span></a>
-        </div>
-
-        <!-- Step 2 Card -->
-        <div class="journey-step case-card-style" data-step="2">
-          <div class="step-number">02</div>
-          <h3 class="step-title">Research & Strategy</h3>
-          <p class="step-desc">Our team dives into market trends, competitor analysis, and visual references. We build a robust strategic foundation to ensure the final product stands out.</p>
-          <a href="404page.html" class="btn btn-step">View Strategy <span>→</span></a>
-        </div>
-
-        <!-- Step 3 Card -->
-        <div class="journey-step case-card-style" data-step="3">
-          <div class="step-number">03</div>
-          <h3 class="step-title">Storyboarding</h3>
-          <p class="step-desc">We translate the strategy into a visual script. Rough sketches and style frames are created to map out the narrative flow, pacing, and camera movements.</p>
-          <a href="404page.html" class="btn btn-step">See Storyboards <span>→</span></a>
-        </div>
-
-        <!-- Step 4 Card -->
-        <div class="journey-step case-card-style" data-step="4">
-          <div class="step-number">04</div>
-          <h3 class="step-title">Design & Asset Creation</h3>
-          <p class="step-desc">Here, the magic takes shape. We design 2D vectors, model 3D assets, and establish the complete visual language, lighting, and texturing of your project.</p>
-          <a href="404page.html" class="btn btn-step">View Designs <span>→</span></a>
-        </div>
-
-        <!-- Step 5 Card -->
-        <div class="journey-step case-card-style" data-step="5">
-          <div class="step-number">05</div>
-          <h3 class="step-title">Animation</h3>
-          <p class="step-desc">We breathe life into the static designs. Utilizing advanced keyframing, physics simulations, and dynamic motion, we craft smooth and captivating animations.</p>
-          <a href="404page.html" class="btn btn-step">Watch Process <span>→</span></a>
-        </div>
-
-        <!-- Step 6 Card -->
-        <div class="journey-step case-card-style" data-step="6">
-          <div class="step-number">06</div>
-          <h3 class="step-title">Sound Design</h3>
-          <p class="step-desc">Audio is 50% of the experience. We mix custom foley, cinematic sound effects, and premium background scores to emotionally elevate the visual impact.</p>
-          <a href="404page.html" class="btn btn-step">Listen Now <span>→</span></a>
-        </div>
-
-        <!-- Step 7 Card -->
-        <div class="journey-step case-card-style" data-step="7">
-          <div class="step-number">07</div>
-          <h3 class="step-title">Final Delivery</h3>
-          <p class="step-desc">After rigorous quality checks and color grading, we render the project in pristine 4K resolution, optimized for all your required digital and broadcast platforms.</p>
-          <a href="404page.html" class="btn btn-step">View Results <span>→</span></a>
-        </div>
-
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-
-<!-- =========================================
-     CREATIVE SHOWCASE WALL (3D GALLERY)
-========================================= -->
-<section class="showcase-wall" id="showcase">
-  <!-- Animated Particles Background -->
-  <div class="particles-bg"></div>
-
-  <div class="showcase-container">
-    
-    <!-- Header -->
-    <div class="section-header fade-in-up">
-      <h2 class="section-title">Explore Our Creative Masterpieces</h2>
-      <p class="section-subtitle">Discover a curated collection of award-worthy motion graphics, cinematic animations, and visually stunning digital experiences crafted for brands across diverse industries.</p>
-    </div>
-
-    <!-- Floating Category Badges -->
-    <div class="category-badges fade-in-up delay-1">
-      <span class="badge">Brand Identity Animation</span>
-      <span class="badge">Product Launch Videos</span>
-      <span class="badge">Corporate Motion Graphics</span>
-      <span class="badge">Social Media Campaigns</span>
-      <span class="badge">3D Product Visualization</span>
-      <span class="badge">Character Animation</span>
-      <span class="badge">Event Promo Videos</span>
-      <span class="badge">UI & App Motion Design</span>
-    </div>
-
-    <!-- 3D Gallery Grid -->
-    <div class="showcase-grid fade-in-up delay-2">
-      
-      <!-- Card 1 -->
-      <div class="showcase-card-wrapper">
-        <div class="showcase-card">
-          <!-- Spotlight Element -->
-          <div class="spotlight"></div>
-          
-          <img src="./asset/a2.webp" class="showcase-img" alt="Project 1">
-          
-          <!-- Details Overlay -->
-          <div class="showcase-overlay">
-            <span class="showcase-category">Brand Identity Animation</span>
-            <h3 class="showcase-title">Nexus Rebrand</h3>
-            
-            <div class="showcase-meta">
-              <p><span>Software:</span> After Effects, Cinema 4D</p>
-              <p><span>Duration:</span> 4 Weeks</p>
-              <p><span>Team:</span> 3 Artists, 1 Sound Designer</p>
-            </div>
-            
-            <a href="404page.html" class="btn btn-primary magnetic-btn">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="showcase-card-wrapper">
-        <div class="showcase-card">
-          <div class="spotlight"></div>
-          
-          <img src="./asset/a1.webp" class="showcase-img" alt="Project 2">
-          
-          <div class="showcase-overlay">
-            <span class="showcase-category">Product Launch Videos</span>
-            <h3 class="showcase-title">Aura Tech Reveal</h3>
-            
-            <div class="showcase-meta">
-              <p><span>Software:</span> Blender, Premiere Pro</p>
-              <p><span>Duration:</span> 2 Weeks</p>
-              <p><span>Team:</span> 2 3D Generalists</p>
-            </div>
-            
-            <a href="404page.html" class="btn btn-primary magnetic-btn">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="showcase-card-wrapper">
-        <div class="showcase-card">
-          <div class="spotlight"></div>
-          
-          <img src="./asset/a35.webp" class="showcase-img" alt="Project 3">
-          
-          <div class="showcase-overlay">
-            <span class="showcase-category">Social Media Campaigns</span>
-            <h3 class="showcase-title">Neon Nights Promo</h3>
-            
-            <div class="showcase-meta">
-              <p><span>Software:</span> Nuke, After Effects</p>
-              <p><span>Duration:</span> 1 Week</p>
-              <p><span>Team:</span> 1 Motion Designer</p>
-            </div>
-            
-            <a href="404page.html" class="btn btn-primary magnetic-btn">View Project</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- =========================================
-     CLIENT SUCCESS STORIES
-========================================= -->
-<section class="success-section" id="success-stories">
-  <div class="success-container">
-    
-    <!-- Section Header -->
-    <div class="section-header fade-in-up">
-      <h2 class="section-title">Client Success Stories</h2>
-      <p class="section-subtitle">Real results, measurable growth, and cinematic experiences that drive business impact.</p>
-    </div>
-
-    <div class="success-cards-wrapper">
-      
-      <!-- Story Card 1 -->
-      <div class="success-card fade-in-up delay-1">
-        
-        <!-- Left: Project Image -->
-        <div class="success-image-side">
-          <img src="./asset/a5.webp" alt="NeoTech Project" class="success-img">
-          <div class="image-overlay"></div>
-        </div>
-
-        <!-- Right: Content & Stats -->
-        <div class="success-info-side">
-          
-          <!-- Top Content -->
-          <div class="success-story-content">
-            <div class="client-brand">
-              <span class="client-logo">N</span>
-              <span class="client-name">NeoTech Brands</span>
-            </div>
-            
-            <h3 class="success-title">Redefining Digital Identity for a Tech Giant</h3>
-            
-            <div class="success-text-block">
-              <h4>Project Overview</h4>
-              <p>NeoTech approached us with a challenge: their legacy brand was losing traction among younger demographics. We orchestrated a complete visual overhaul, delivering a cinematic brand film and a cohesive motion design system.</p>
-            </div>
-            
-            <div class="success-text-block">
-              <h4>Results Achieved</h4>
-              <p>By shifting to a motion-first visual language, the brand experienced an immediate surge in audience retention, repositioning NeoTech as an industry innovator across all digital channels.</p>
-            </div>
-            
-            <a href="404page.html" class="btn btn-primary">Read Full Case Study</a>
-          </div>
-
-          <!-- Bottom Stats -->
-          <div class="success-stats-grid">
-            <div class="stat-box">
-              <div class="stat-value"><span class="counter" data-target="300">0</span>%</div>
-              <p class="stat-label">Engagement</p>
-            </div>
-            <div class="stat-box">
-              <div class="stat-value">+<span class="counter" data-target="45">0</span>%</div>
-              <p class="stat-label">Conversion</p>
-            </div>
-            <div class="stat-box">
-              <div class="stat-value"><span class="counter" data-target="2.5">0</span>M</div>
-              <p class="stat-label">Watch Time</p>
-            </div>
-            <div class="stat-box">
-              <div class="stat-value"><span class="counter" data-target="15">0</span>M+</div>
-              <p class="stat-label">Social Reach</p>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-
-      <!-- Story Card 2 -->
-      <div class="success-card fade-in-up delay-2">
-        
-        <!-- Left: Project Image -->
-        <div class="success-image-side">
-          <img src="./asset/a11.webp" alt="Aura Beauty Project" class="success-img">
-          <div class="image-overlay"></div>
-        </div>
-
-        <!-- Right: Content & Stats -->
-        <div class="success-info-side">
-          
-          <!-- Top Content -->
-          <div class="success-story-content">
-            <div class="client-brand">
-              <span class="client-logo" style="color: #00e5ff; border-color: #00e5ff;">A</span>
-              <span class="client-name">Aura Beauty</span>
-            </div>
-            
-            <h3 class="success-title">Launching a Flagship Product with CGI</h3>
-            
-            <div class="success-text-block">
-              <h4>Project Overview</h4>
-              <p>Aura Beauty needed a show-stopping launch video for their flagship skincare line. We utilized high-end Cinema 4D to create hyper-realistic product renders, fluid simulations, and macro-level texture details.</p>
-            </div>
-            
-            <div class="success-text-block">
-              <h4>Results Achieved</h4>
-              <p>The completely CGI-driven campaign was indistinguishable from reality. It went viral on Instagram and TikTok, driving massive pre-orders before the physical product hit the shelves.</p>
-            </div>
-            
-            <a href="404page.html" class="btn btn-secondary">Read Full Case Study</a>
-          </div>
-
-          <!-- Bottom Stats -->
-          <div class="success-stats-grid">
-            <div class="stat-box">
-              <div class="stat-value"><span class="counter" data-target="500">0</span>%</div>
-              <p class="stat-label">Engagement</p>
-            </div>
-            <div class="stat-box">
-              <div class="stat-value">+<span class="counter" data-target="120">0</span>%</div>
-              <p class="stat-label">Conversion</p>
-            </div>
-            <div class="stat-box">
-              <div class="stat-value"><span class="counter" data-target="4.2">0</span>M</div>
-              <p class="stat-label">Watch Time</p>
-            </div>
-            <div class="stat-box">
-              <div class="stat-value"><span class="counter" data-target="22">0</span>M+</div>
-              <p class="stat-label">Social Reach</p>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<section id="awards-achievements" class="awards-section">
-  <div class="container">
-    
-    <div class="section-header scroll-animate">
-      <h2>Awards <span class="highlight">& Achievements</span></h2>
-      <p>A journey of excellence, continuous learning, and client satisfaction.</p>
-    </div>
-
-    <div class="stats-grid scroll-animate">
-      <div class="stat-card glassmorphism">
-        <div class="stat-icon">⌛</div>
-        <div class="counter-wrapper">
-          <h3 class="counter" data-target="8">0</h3>
-        </div>
-        <p>Years of Experience</p>
-        <a href="404page.html" class="card-btn">View Journey</a>
-      </div>
-      
-      <div class="stat-card glassmorphism">
-        <div class="stat-icon">🚀</div>
-        <div class="counter-wrapper">
-          <h3 class="counter" data-target="150">0</h3><span class="plus">+</span>
-        </div>
-        <p>Projects Completed</p>
-        <a href="404page.html" class="card-btn">Explore Work</a>
-      </div>
-      
-      <div class="stat-card glassmorphism">
-        <div class="stat-icon">😊</div>
-        <div class="counter-wrapper">
-          <h3 class="counter" data-target="120">0</h3><span class="plus">+</span>
-        </div>
-        <p>Happy Clients</p>
-        <a href="404page.html" class="card-btn">Read Reviews</a>
-      </div>
-      
-      <div class="stat-card glassmorphism">
-        <div class="stat-icon">🏆</div>
-        <div class="counter-wrapper">
-          <h3 class="counter" data-target="25">0</h3>
-        </div>
-        <p>Awards Won</p>
-        <a href="404page.html" class="card-btn">See Gallery</a>
-      </div>
-    </div>
-
-    <div class="timeline">
-      
-      <div class="timeline-item left scroll-animate">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content glassmorphism">
-          <div class="floating-icon">🏆</div>
-          <span class="date">2023 - 2024</span>
-          <h3>Best UI/UX Design Agency Award</h3>
-          <p>Awarded by the Global Design Council for delivering exceptional user experiences and innovative glassmorphic interfaces for fintech clients. Recognized for pushing digital design boundaries.</p>
-          <a href="404page.html" class="card-btn timeline-btn">View Certificate</a>
-        </div>
-      </div>
-
-      <div class="timeline-item right scroll-animate">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content glassmorphism">
-          <div class="floating-icon">📜</div>
-          <span class="date">2022</span>
-          <h3>Google Cloud Certified Professional</h3>
-          <p>Successfully achieved the professional-level cloud architect credential, demonstrating advanced skills in designing, developing, and managing robust, secure, and highly scalable cloud systems.</p>
-          <a href="404page.html" class="card-btn timeline-btn">Verify Credential</a>
-        </div>
-      </div>
-
-      <div class="timeline-item left scroll-animate">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content glassmorphism">
-          <div class="floating-icon">🏅</div>
-          <span class="date">2021</span>
-          <h3>Top Rated Freelancer on Upwork</h3>
-          <p>Maintained a 100% Job Success Score over 50+ complex web development and automation projects. Recognized for excellent technical communication, engineering discipline, and pixel-perfect results.</p>
-          <a href="404page.html" class="card-btn timeline-btn">View Profile</a>
-        </div>
-      </div>
-
-      <div class="timeline-item right scroll-animate">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content glassmorphism">
-          <div class="floating-icon">🥇</div>
-          <span class="date">2019 - 2020</span>
-          <h3>National Hackathon Winner</h3>
-          <p>Secured first place among 500+ teams by building an AI-powered accessibility framework. The platform architecture was highly praised by veteran industry experts for its clean, modular codebase.</p>
-          <a href="404page.html" class="card-btn timeline-btn">View Project Source</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<section id="behind-the-scenes" class="bts-section">
-  <div class="container">
-    
-    <div class="section-header scroll-animate">
-      <h2>Behind the <span class="highlight">Scenes</span></h2>
-      <p>Take an exclusive peek into our creative process, workspace, and the magic that happens before launch.</p>
-    </div>
-
-    <!-- Masonry Gallery Grid -->
-    <div class="masonry-grid">
-      
-      <!-- Gallery Item 1: Creative Brainstorming -->
-      <div class="masonry-item scroll-animate">
-        <img src="./asset/a38.webp" alt="Creative Brainstorming" class="masonry-img">
-        <div class="overlay">
-          <div class="overlay-content">
-            <span class="category">Ideation</span>
-            <h3>Creative Brainstorming</h3>
-            <p>Where raw concepts meet unlimited coffee. We map out wireframes, user journeys, and core functionalities before touching a single pixel.</p>
-            <a href="404page.html" class="card-btn">View Process</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Gallery Item 2: Animation Process (Taller Image for Masonry feel) -->
-      <div class="masonry-item scroll-animate" style="aspect-ratio: 3/4;">
-        <img src="./asset/a3.webp" alt="Animation Process" class="masonry-img" style="height: 100%; object-fit: cover;">
-        <div class="overlay">
-          <div class="overlay-content">
-            <span class="category">Motion Design</span>
-            <h3>Animation Process</h3>
-            <p>Bringing static designs to life. We rig, keyframe, and add physics to create buttery smooth micro-interactions and scroll sequences.</p>
-            <a href="404page.html" class="card-btn">See Animations</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Gallery Item 3: Storyboards -->
-      <div class="masonry-item scroll-animate">
-        <img src="./asset/a8.webp" alt="Storyboards" class="masonry-img">
-        <div class="overlay">
-          <div class="overlay-content">
-            <span class="category">Planning</span>
-            <h3>Storyboards</h3>
-            <p>Every masterpiece needs a blueprint. Sketching the narrative frame-by-frame to ensure a seamless flow of information.</p>
-            <a href="404page.html" class="card-btn">View Sketches</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Gallery Item 4: Team Workspace -->
-      <div class="masonry-item scroll-animate" style="aspect-ratio: 4/5;">
-        <img src="./asset/a32.webp" alt="Team Workspace" class="masonry-img" style="height: 100%; object-fit: cover;">
-        <div class="overlay">
-          <div class="overlay-content">
-            <span class="category">Culture</span>
-            <h3>Team Workspace</h3>
-            <p>Our neon-lit sanctuary. A highly collaborative environment equipped with dual monitors, drawing tablets, and pure inspiration.</p>
-            <a href="404page.html" class="card-btn">Tour Office</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Gallery Item 5: Editing Sessions -->
-      <div class="masonry-item scroll-animate">
-        <img src="./asset/a14.webp" alt="Editing Sessions" class="masonry-img">
-        <div class="overlay">
-          <div class="overlay-content">
-            <span class="category">Production</span>
-            <h3>Editing Sessions</h3>
-            <p>The final polish. Relentless fine-tuning, color grading, and code refactoring until the project hits our 100% perfection standard.</p>
-            <a href="404page.html" class="card-btn">Watch Reel</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<section id="testimonials" class="testimonial-section">
-  <div class="container">
-    
-    <div class="section-header scroll-animate">
-      <h2>Client <span class="highlight">Testimonials</span></h2>
-      <p>Don't just take our word for it. Here is what our partners have to say.</p>
-    </div>
-
-    <!-- Swiper Carousel -->
-    <div class="swiper mySwiper scroll-animate">
-      <div class="swiper-wrapper">
-        
-        <!-- Slide 1 -->
-        <div class="swiper-slide">
-          <div class="testimonial-card glassmorphism">
-            <div class="quote-icon">❝</div>
-            <p class="review">"The team's ability to blend aesthetics with high-performance code is unmatched. Our conversion rates jumped 40% after the redesign."</p>
-            <div class="stars">★★★★★</div>
-            <div class="client-info">
-              <img src="./asset/a27.webp" alt="Client">
-              <div>
-                <h4>Alex Johnson</h4>
-                <span>CTO, TechFlow</span>
-              </div>
-            </div>
-            <div class="company-logo">TechFlow Inc.</div>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="swiper-slide">
-          <div class="testimonial-card glassmorphism">
-            <div class="quote-icon">❝</div>
-            <p class="review">"Professional, timely, and incredibly creative. They didn't just build a website; they built a digital experience that our users love."</p>
-            <div class="stars">★★★★★</div>
-            <div class="client-info">
-              <img src="./asset/a28.webp" alt="Client">
-              <div>
-                <h4>Sarah Williams</h4>
-                <span>Founder, Bloom</span>
-              </div>
-            </div>
-            <div class="company-logo">Bloom Studio</div>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="swiper-slide">
-          <div class="testimonial-card glassmorphism">
-            <div class="quote-icon">❝</div>
-            <p class="review">"Highly recommended for their UI/UX expertise. Their glassmorphism design approach gave our fintech app a futuristic look."</p>
-            <div class="stars">★★★★★</div>
-            <div class="client-info">
-              <img src="./asset/a25.webp" alt="Client">
-              <div>
-                <h4>Rajesh Kumar</h4>
-                <span>Product Manager, FinUp</span>
-              </div>
-            </div>
-            <div class="company-logo">FinUp Services</div>
-          </div>
-        </div>
-
-      </div>
-      <!-- Pagination -->
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-</section>
-
-
-<section id="cta" class="cta-section">
-  <!-- Aurora & Particles Background -->
-  <div class="aurora-bg"></div>
-  <div class="spotlight" id="cta-spotlight"></div>
-  
-  <!-- Floating 3D Geometric Objects -->
-  <div class="floating-obj obj-1"></div>
-  <div class="floating-obj obj-2"></div>
-  <div class="floating-obj obj-3"></div>
-
-  <div class="container relative-z">
-    <div class="cta-card glassmorphism scroll-animate">
-      
-      <!-- Content -->
-      <h2 class="cta-title">Let's Create Your Next <span class="neon-text">Masterpiece</span></h2>
-      <p class="cta-desc">
-        From concept to final delivery, our team is ready to transform your ideas into breathtaking motion graphics, engaging animations, and unforgettable visual experiences tailored to your brand.
-      </p>
-      
-      <!-- Animated Counters -->
-      <div class="cta-counters">
-        <div class="cta-stat">
-          <span class="counter neon-text" data-target="500">0</span><span>+</span>
-          <p>Brands Transformed</p>
-        </div>
-        <div class="cta-stat">
-          <span class="counter neon-text" data-target="99">0</span><span>%</span>
-          <p>Client Satisfaction</p>
-        </div>
-      </div>
-
-      <!-- Morphing Gradient Buttons -->
-      <div class="cta-buttons">
-        <a href="404page.html" class="morphing-btn primary-btn">
-          <span class="btn-icon">🚀</span> Start Your Project
-        </a>
-        <a href="404page.html" class="morphing-btn secondary-btn">
-          <span class="btn-icon">📅</span> Book a Free Consultation
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-    
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-col footer-fade-in">
-                <div class="logo">
-                    <a href="index.html"><img src="./asset/stackly-logo (1).webp" alt="logo"></a>
-                </div>
-                <p class="footer-desc">
-                    CreativeMotion Studio transforms ideas into stunning visual stories through premium motion graphics, 2D & 3D animation, explainer videos, and cinematic brand content. We help businesses captivate audiences with innovative, high-impact animations that inspire, engage, and deliver lasting results.
-                </p>
-                <div class="social-icons">
-                    <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="404page.html"><i class="fab fa-twitter"></i></a>
-                    <a href="404page.html"><i class="fab fa-instagram"></i></a>
-                    <a href="404page.html"><i class="fab fa-youtube"></i></a>
-                    <a href="404page.html"><i class="fab fa-discord"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-col footer-fade-in" style="transition-delay: 0.1s;">
-                <h4>Explore</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-                    <li><a href="service.html"><i class="fas fa-chevron-right"></i> Service</a></li>
-                    <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
-                    <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
-                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col footer-fade-in" style="transition-delay: 0.2s;">
-                <h4>Resources</h4>
-                <ul class="footer-links">
-    <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Motion Graphics</a></li>
-    <li><a href="404page.html"><i class="fas fa-chevron-right"></i> 2D & 3D Animation</a></li>
-    <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Portfolio Showcase</a></li>
-    <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Creative Blog</a></li>
-    <li><a href="404page.html"><i class="fas fa-chevron-right"></i> Contact & Support</a></li>
-</ul>
-            </div>
-
-            <div class="footer-col footer-fade-in" style="transition-delay: 0.3s;">
-                <h4>Connect</h4>
-                <ul class="footer-contact">
-    <li><i class="fas fa-envelope"></i> stackly@motioncraftagency.com</li>
-    <li><i class="fas fa-phone-alt"></i> +91 9876543210</li>
-    <li><i class="fas fa-map-marker-alt"></i> MMR Complex, Chinna Thirupathi,<br>Salem, NY 10001</li>
-    <li><i class="fas fa-clock"></i> Monday – Friday: 9:00 AM – 7:00 PM<br>Global Client Support Available</li>
-</ul>
-                
-
-
-            </div>
-        </div>
-
-        <div class="footer-bottom footer-fade-in" style="transition-delay: 0.4s;">
-            <p>&copy; 2026 CreativeMotion Studio. All rights reserved. Bringing Stories to Life Through Animation.</p>
-            <div class="footer-bottom-links">
-                <a href="404page.html">Privacy Policy</a>
-                <a href="404page.html">Terms of Service</a>
-                <a href="404page.html">Cookie Policy</a>
-                <a href="404page.html">Accessibility</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-  const steps = document.querySelectorAll('.journey-step');
-  const images = document.querySelectorAll('.journey-img');
-
-  // Set up the Intersection Observer
-  const observerOptions = {
-    root: null,
-    rootMargin: '-50% 0px -50% 0px', // Triggers when the step is in the middle of the screen
-    threshold: 0
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // 1. Get the step number from data-step
-        const stepNum = entry.target.getAttribute('data-step');
-        
-        // 2. Remove active class from all steps and images
-        steps.forEach(step => step.classList.remove('active'));
-        images.forEach(img => img.classList.remove('active'));
-        
-        // 3. Add active class to current step and corresponding image
-        entry.target.classList.add('active');
-        const targetImage = document.getElementById(`journey-img-${stepNum}`);
-        if (targetImage) {
-          targetImage.classList.add('active');
-        }
-      }
-    });
-  }, observerOptions);
-
-  // Observe each step
-  steps.forEach(step => {
-    observer.observe(step);
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  
-  const cards = document.querySelectorAll('.showcase-card');
-
-  cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      // 1. Calculate Mouse Position relative to the card
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left; // x position within the element
-      const y = e.clientY - rect.top;  // y position within the element
-      
-      // 2. Set Spotlight CSS Variables
-      card.style.setProperty('--mouse-x', `${x}px`);
-      card.style.setProperty('--mouse-y', `${y}px`);
-
-      // 3. Calculate 3D Rotation (Disable on mobile screens < 768px)
-      if (window.innerWidth > 768) {
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        
-        // Intensity of the tilt (Higher number = less tilt)
-        const tiltX = (y - centerY) / 15; 
-        const tiltY = (centerX - x) / 15;
-        
-        card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02, 1.02, 1.02)`;
-      }
-    });
-
-    // Reset card when mouse leaves
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = `rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-    });
-  });
-
-  // --- Magnetic CTA Button Effect ---
-  const magneticBtns = document.querySelectorAll('.magnetic-btn');
-  
-  magneticBtns.forEach(btn => {
-    btn.addEventListener('mousemove', (e) => {
-      const rect = btn.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      
-      // Slight pull towards mouse
-      btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
-    });
-    
-    btn.addEventListener('mouseleave', () => {
-      // Reset position
-      btn.style.transform = `translate(0px, 0px)`;
-    });
-  });
-
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  const counters = document.querySelectorAll('.counter');
-  
-  // Options for Intersection Observer
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5 // Starts animation when 50% of the stat box is visible
-  };
-
-  const counterObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const counter = entry.target;
-        const target = +counter.getAttribute('data-target'); // Get target number
-        const duration = 2000; // Total animation time in milliseconds
-        
-        // Determine if target is a decimal (e.g., 2.5) or integer (e.g., 300)
-        const isDecimal = target % 1 !== 0;
-        
-        let start = null;
-        
-        const step = (timestamp) => {
-          if (!start) start = timestamp;
-          const progress = Math.min((timestamp - start) / duration, 1);
-          
-          // Easing function for smooth slowdown at the end
-          const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-          const currentCount = easeOutQuart * target;
-          
-          if (isDecimal) {
-            counter.innerText = currentCount.toFixed(1); // Keep 1 decimal place
-          } else {
-            counter.innerText = Math.ceil(currentCount); // Whole numbers
-          }
-          
-          if (progress < 1) {
-            window.requestAnimationFrame(step);
-          } else {
-            // Ensure exact target is reached at the end
-            counter.innerText = target; 
-          }
-        };
-        
-        window.requestAnimationFrame(step);
-        
-        // Stop observing once animated
-        observer.unobserve(counter);
-      }
-    });
-  }, observerOptions);
-
-  counters.forEach(counter => {
-    counterObserver.observe(counter);
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  // 1. Scroll Animations (Intersection Observer)
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        
-        // Trigger counter animation only when stats section is visible
-        if (entry.target.classList.contains("stats-grid")) {
-          startCounters();
-        }
-      }
-    });
-  }, { threshold: 0.2 }); // Triggers when 20% of element is visible
-
-  const hiddenElements = document.querySelectorAll('.scroll-animate');
-  hiddenElements.forEach((el) => observer.observe(el));
-
-  // 2. Animated Counters Logic
-  let countersStarted = false;
-
-  function startCounters() {
-    if (countersStarted) return; // Prevent re-running
-    countersStarted = true;
-
-    const counters = document.querySelectorAll('.counter');
-    const speed = 100; // Lower is faster
-
-    counters.forEach(counter => {
-      const updateCount = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        const inc = target / speed;
-
-        if (count < target) {
-          counter.innerText = Math.ceil(count + inc);
-          setTimeout(updateCount, 20);
-        } else {
-          counter.innerText = target;
-        }
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const steps = document.querySelectorAll('.journey-step');
+      const images = document.querySelectorAll('.journey-img');
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '-50% 0px -50% 0px',
+        threshold: 0
       };
-      updateCount();
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const stepNum = entry.target.getAttribute('data-step');
+
+            steps.forEach(step => step.classList.remove('active'));
+            images.forEach(img => img.classList.remove('active'));
+
+            entry.target.classList.add('active');
+            const targetImage = document.getElementById(`journey-img-${stepNum}`);
+            if (targetImage) {
+              targetImage.classList.add('active');
+            }
+          }
+        });
+      }, observerOptions);
+
+      steps.forEach(step => {
+        observer.observe(step);
+      });
     });
-  }
-});
-    </script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 3,
-    },
-  },
-});
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const ctaSection = document.getElementById("cta");
-  const spotlight = document.getElementById("cta-spotlight");
+    document.addEventListener("DOMContentLoaded", function () {
 
-  if (ctaSection && spotlight) {
-    ctaSection.addEventListener("mousemove", (e) => {
-      // Get the bounding rectangle of the section
-      const rect = ctaSection.getBoundingClientRect();
-      
-      // Calculate mouse position relative to the section
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+      const cards = document.querySelectorAll('.showcase-card');
 
-      // Update CSS variables for the spotlight
-      spotlight.style.setProperty("--mouse-x", `${x}px`);
-      spotlight.style.setProperty("--mouse-y", `${y}px`);
+      cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          card.style.setProperty('--mouse-x', `${x}px`);
+          card.style.setProperty('--mouse-y', `${y}px`);
+
+          if (window.innerWidth > 768) {
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const tiltX = (y - centerY) / 15;
+            const tiltY = (centerX - x) / 15;
+
+            card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02, 1.02, 1.02)`;
+          }
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = `rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+        });
+      });
+
+      const magneticBtns = document.querySelectorAll('.magnetic-btn');
+
+      magneticBtns.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+          const rect = btn.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+
+          btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+
+          btn.style.transform = `translate(0px, 0px)`;
+        });
+      });
+
     });
-  }
-});
-    </script>
 
-    </body>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const counters = document.querySelectorAll('.counter');
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+      };
+
+      const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = +counter.getAttribute('data-target');
+            const duration = 2000;
+
+            const isDecimal = target % 1 !== 0;
+
+            let start = null;
+
+            const step = (timestamp) => {
+              if (!start) start = timestamp;
+              const progress = Math.min((timestamp - start) / duration, 1);
+
+              const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+              const currentCount = easeOutQuart * target;
+
+              if (isDecimal) {
+                counter.innerText = currentCount.toFixed(1);
+              } else {
+                counter.innerText = Math.ceil(currentCount);
+              }
+
+              if (progress < 1) {
+                window.requestAnimationFrame(step);
+              } else {
+                counter.innerText = target;
+              }
+            };
+
+            window.requestAnimationFrame(step);
+
+            observer.unobserve(counter);
+          }
+        });
+      }, observerOptions);
+
+      counters.forEach(counter => {
+        counterObserver.observe(counter);
+      });
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+
+            if (entry.target.classList.contains("stats-grid")) {
+              startCounters();
+            }
+          }
+        });
+      }, { threshold: 0.2 });
+
+      const hiddenElements = document.querySelectorAll('.scroll-animate');
+      hiddenElements.forEach((el) => observer.observe(el));
+
+      let countersStarted = false;
+
+      function startCounters() {
+        if (countersStarted) return;
+        countersStarted = true;
+
+        const counters = document.querySelectorAll('.counter');
+        const speed = 100;
+
+        counters.forEach(counter => {
+          const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const inc = target / speed;
+
+            if (count < target) {
+              counter.innerText = Math.ceil(count + inc);
+              setTimeout(updateCount, 20);
+            } else {
+              counter.innerText = target;
+            }
+          };
+          updateCount();
+        });
+      }
+    });
+  </script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const ctaSection = document.getElementById("cta");
+      const spotlight = document.getElementById("cta-spotlight");
+
+      if (ctaSection && spotlight) {
+        ctaSection.addEventListener("mousemove", (e) => {
+
+          const rect = ctaSection.getBoundingClientRect();
+
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          spotlight.style.setProperty("--mouse-x", `${x}px`);
+          spotlight.style.setProperty("--mouse-y", `${y}px`);
+        });
+      }
+    });
+  </script>
+
+</body>
 
 </html>

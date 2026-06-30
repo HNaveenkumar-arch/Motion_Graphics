@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            /* Motion Graphics Agency Theme Variables */
-            /* --bg-color: #0a192f; */
             --glass-bg: rgba(10, 25, 47, 0.75);
             --primary-orange: #ff7300;
             --orange-glow: rgba(255, 115, 0, 0.4);
@@ -27,14 +25,14 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        body, html {
+        body,
+        html {
             height: 100%;
             width: 100%;
             overflow-x: hidden;
             background-color: var(--bg-color);
         }
 
-        /* Background Video */
         .video-wrapper {
             position: fixed;
             top: 0;
@@ -50,7 +48,6 @@
             object-fit: cover;
         }
 
-        /* Deep Navy Blue Tint Overlay */
         .overlay {
             position: fixed;
             top: 0;
@@ -61,7 +58,6 @@
             z-index: -1;
         }
 
-        /* Back Button - Desktop Default (Absolute) */
         .back-home-btn {
             position: absolute;
             top: 25px;
@@ -90,7 +86,6 @@
             box-shadow: 0 5px 15px var(--orange-glow);
         }
 
-        /* Premium Glassmorphism Register Container */
         .register-container {
             background-color: var(--glass-bg);
             backdrop-filter: blur(16px);
@@ -103,7 +98,6 @@
             border-radius: 24px;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 
-            /* Entry Animation */
             opacity: 0;
             transform: translateY(50px) scale(0.95);
             transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
@@ -114,7 +108,6 @@
             transform: translateY(0) scale(1);
         }
 
-        /* Header Elements */
         .header {
             text-align: center;
             margin-bottom: 20px;
@@ -123,7 +116,7 @@
         .logo {
             width: 140px;
             margin-bottom: 10px;
-            filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
         }
 
         .header h1 {
@@ -147,7 +140,6 @@
             font-size: 0.95rem;
         }
 
-        /* Role Selector */
         .role-selector {
             display: flex;
             background: rgba(0, 0, 0, 0.3);
@@ -184,7 +176,6 @@
             box-shadow: 0 4px 10px var(--orange-glow);
         }
 
-        /* Form Inputs */
         .input-group {
             margin-bottom: 15px;
             position: relative;
@@ -252,7 +243,6 @@
             font-weight: 500;
         }
 
-        /* Submit Button */
         .submit-btn {
             width: 100%;
             padding: 14px;
@@ -274,7 +264,6 @@
             background-color: #ff8c33;
         }
 
-        /* Social Login */
         .social-login {
             text-align: center;
             margin-top: 25px;
@@ -297,8 +286,13 @@
             background: var(--border-light);
         }
 
-        .social-login p::before { left: 0; }
-        .social-login p::after { right: 0; }
+        .social-login p::before {
+            left: 0;
+        }
+
+        .social-login p::after {
+            right: 0;
+        }
 
         .icons-container {
             display: flex;
@@ -329,7 +323,6 @@
             box-shadow: 0 10px 20px var(--orange-glow);
         }
 
-        /* Navigation Links */
         .go-to-login {
             text-align: center;
             margin-top: 25px;
@@ -350,9 +343,7 @@
             text-decoration: underline;
         }
 
-        /* --- 100% Mobile Responsiveness --- */
         @media screen and (max-width: 768px) {
-            /* Fix for Back Button overlapping in Mobile */
             .back-home-btn {
                 position: relative;
                 top: 0;
@@ -373,7 +364,7 @@
             .header h1 {
                 font-size: 24px;
             }
-            
+
             .role-btn {
                 padding: 10px;
                 font-size: 0.95rem;
@@ -406,7 +397,7 @@
         </div>
 
         <p class="role">Select your Role</p>
-        
+
         <div class="role-selector">
             <button class="role-btn active" onclick="setRole('admin', this)">
                 <i class="fa-solid fa-user-shield"></i> Admin
@@ -474,14 +465,12 @@
     </div>
 
     <script>
-        // Smooth slide-up entry animation
         window.onload = () => {
             setTimeout(() => {
                 document.getElementById('registerBox').classList.add('show');
             }, 150);
         };
 
-        // Role Selector Function
         let currentRole = 'admin';
         function setRole(role, btnElement) {
             currentRole = role;
@@ -498,7 +487,6 @@
             }
         }
 
-        // Toggle Password Visibility
         function toggleVisibility(inputId, iconId) {
             const pwdInput = document.getElementById(inputId);
             const eyeIcon = document.getElementById(iconId);
@@ -514,7 +502,6 @@
             }
         }
 
-        // Validate Form Fields
         function validateForm(e) {
             e.preventDefault();
 
@@ -574,7 +561,6 @@
                 confirmError.style.display = 'none';
             }
 
-            // Redirect on success
             if (isValid) {
                 window.location.href = 'login.html';
             }

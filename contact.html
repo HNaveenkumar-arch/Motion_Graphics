@@ -472,19 +472,17 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
 
-  // 2. Generate Floating Motion Particles
   const container = document.getElementById('particles-container');
-  const particleCount = 25; // Number of particles
+  const particleCount = 25; 
 
   for (let i = 0; i < particleCount; i++) {
     const particle = document.createElement('div');
     particle.classList.add('particle');
     
-    // Randomize styling for natural look
-    const size = Math.random() * 4 + 2; // Size between 2px and 6px
-    const left = Math.random() * 100; // Random X position
-    const duration = Math.random() * 10 + 5; // Animation length 5s - 15s
-    const delay = Math.random() * 5; // Initial delay
+    const size = Math.random() * 4 + 2; 
+    const left = Math.random() * 100; 
+    const duration = Math.random() * 10 + 5; 
+    const delay = Math.random() * 5; 
 
     particle.style.width = `${size}px`;
     particle.style.height = `${size}px`;
@@ -495,10 +493,8 @@
     container.appendChild(particle);
   }
 
-  // 3. Fade-Up Reveal Animation on Load
   const fadeElements = document.querySelectorAll('.fade-up');
   
-  // Trigger animation slightly after page loads
   setTimeout(() => {
     fadeElements.forEach(el => {
       el.classList.add('visible');
@@ -510,9 +506,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   
-  // Existing Hero Animations Code...
-
-  // --- Scroll Reveal for Section 2 (Intersection Observer) ---
   const scrollElements = document.querySelectorAll('.fade-up-scroll');
 
   const elementInView = (el, dividend = 1) => {
@@ -526,17 +519,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const handleScrollAnimation = () => {
     scrollElements.forEach((el) => {
-      // 1.15 means the animation triggers when the element is 15% from the bottom of viewport
       if (elementInView(el, 1.15)) { 
         displayScrollElement(el);
       }
     })
   }
 
-  // Trigger once on load in case elements are already in view
   handleScrollAnimation();
 
-  // Listen for scroll events
   window.addEventListener('scroll', () => {
     handleScrollAnimation();
   });
@@ -549,14 +539,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   
-  // --- Section 3: Premium Form Validation ---
   const contactForm = document.getElementById('premiumContactForm');
   const successMsg = document.getElementById('successMsg');
   const submitBtn = document.querySelector('.submit-btn');
   const fileInput = document.getElementById('referenceFile');
   const fileText = document.querySelector('.file-text');
 
-  // Change file name text when file is selected
   if(fileInput) {
     fileInput.addEventListener('change', function(e) {
       if(e.target.files.length > 0) {
@@ -569,7 +557,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Allow only exactly 10 digits for phone during typing
   const phoneInput = document.getElementById('phone');
   if(phoneInput) {
     phoneInput.addEventListener('input', function(e) {
@@ -577,14 +564,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Form Submission Event
   if(contactForm) {
     contactForm.addEventListener('submit', function(e) {
-      e.preventDefault(); // Prevent page reload
+      e.preventDefault(); 
       
       let isValid = true;
       
-      // 1. Validate Full Name (Letters only, MINIMUM 3 CHARACTERS)
       const nameField = document.getElementById('fullName');
       const nameRegex = /^[A-Za-z\s]+$/;
       const nameValue = nameField.value.trim();
@@ -596,7 +581,6 @@ document.addEventListener("DOMContentLoaded", () => {
         removeError(nameField);
       }
 
-      // 2. Validate Email
       const emailField = document.getElementById('email');
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailField.value.trim() || !emailRegex.test(emailField.value)) {
@@ -606,7 +590,6 @@ document.addEventListener("DOMContentLoaded", () => {
         removeError(emailField);
       }
 
-      // 3. Validate Phone (Exactly 10 digits)
       const phoneRegex = /^\d{10}$/;
       if (!phoneInput.value.trim() || !phoneRegex.test(phoneInput.value)) {
         setError(phoneInput);
@@ -615,7 +598,6 @@ document.addEventListener("DOMContentLoaded", () => {
         removeError(phoneInput);
       }
 
-      // 4. Validate Dropdowns & Date
       const requiredFields = ['service', 'budget', 'deadline'];
       requiredFields.forEach(id => {
         const field = document.getElementById(id);
@@ -627,7 +609,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-      // 5. Validate Description (MINIMUM 10 CHARACTERS)
       const descField = document.getElementById('description');
       if (!descField.value.trim() || descField.value.trim().length < 10) {
         setError(descField);
@@ -636,7 +617,6 @@ document.addEventListener("DOMContentLoaded", () => {
         removeError(descField);
       }
 
-      // 6. Validate Checkbox
       const termsBox = document.getElementById('terms');
       if (!termsBox.checked) {
         termsBox.closest('.checkbox-group').classList.add('invalid');
@@ -645,35 +625,29 @@ document.addEventListener("DOMContentLoaded", () => {
         termsBox.closest('.checkbox-group').classList.remove('invalid');
       }
 
-      // Handle Success or Error
       if (isValid) {
-        // Morph button to show loading/success
         const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = 'Sending...';
         submitBtn.style.opacity = '0.8';
         submitBtn.style.pointerEvents = 'none';
 
-        // Simulate API call (Wait for 2 seconds)
         setTimeout(() => {
-          contactForm.reset(); // Clear form
-          fileText.textContent = 'Upload Reference File (Optional)'; // Reset file text
+          contactForm.reset();
+          fileText.textContent = 'Upload Reference File (Optional)'; 
           submitBtn.innerHTML = originalText;
           submitBtn.style.opacity = '1';
           submitBtn.style.pointerEvents = 'auto';
           
-          // Redirect to 404 page as requested
           window.location.href = '404page.html';
         }, 2000);
       }
     });
   }
 
-  // Helper functions for errors
   function setError(inputElement) {
     const group = inputElement.closest('.input-group');
     group.classList.add('invalid');
     group.classList.add('shake');
-    // Remove shake class after animation ends so it can shake again next time
     setTimeout(() => {
       group.classList.remove('shake');
     }, 400);
@@ -684,7 +658,6 @@ document.addEventListener("DOMContentLoaded", () => {
     group.classList.remove('invalid');
   }
 
-  // Remove error style when user starts typing
   const allInputs = document.querySelectorAll('.input-group input, .input-group select, .input-group textarea');
   allInputs.forEach(input => {
     input.addEventListener('input', () => {
@@ -706,7 +679,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   
-  // --- Section 4: Scroll Animation Logic using Intersection Observer ---
   const scrollElements = document.querySelectorAll(".fade-up-scroll");
 
   const elementInView = (el, dividend = 1) => {
@@ -728,10 +700,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // Trigger once on load
   handleScrollAnimation();
 
-  // Trigger on scroll
   window.addEventListener("scroll", () => { 
     handleScrollAnimation();
   });
@@ -741,7 +711,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   
-  // --- Section 5: Cursor Follow Spotlight ---
   const ctaSection = document.getElementById('cta');
   if (ctaSection) {
     ctaSection.addEventListener('mousemove', (e) => {
@@ -749,17 +718,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
       
-      // Update CSS variables for the radial gradient center
       ctaSection.style.setProperty('--mouse-x', `${x}px`);
       ctaSection.style.setProperty('--mouse-y', `${y}px`);
     });
   }
 
-  // --- Section 5: Animated Project Counters ---
   const counters = document.querySelectorAll('.counter-number');
-  const speed = 100; // The lower the slower
+  const speed = 100; 
 
-  // Create an Intersection Observer specifically for counters
   const counterObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -769,23 +735,21 @@ document.addEventListener("DOMContentLoaded", () => {
           const target = +counter.getAttribute('data-target');
           const count = +counter.innerText;
           
-          // Calculate increment
           const inc = target / speed;
           
-          // Check if target is reached and increment
           if (count < target) {
             counter.innerText = Math.ceil(count + inc);
-            setTimeout(updateCount, 20); // 20ms update interval
+            setTimeout(updateCount, 20); 
           } else {
-            counter.innerText = target + (target > 100 ? "+" : ""); // Add '+' symbol if target is big
+            counter.innerText = target + (target > 100 ? "+" : ""); 
           }
         };
         
         updateCount();
-        observer.unobserve(counter); // Run only once
+        observer.unobserve(counter); 
       }
     });
-  }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+  }, { threshold: 0.5 }); 
 
   counters.forEach(counter => {
     counterObserver.observe(counter);

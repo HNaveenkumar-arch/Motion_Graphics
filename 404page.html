@@ -15,17 +15,15 @@
 
     <style>
         :root {
-            /* Navy Blue & Orange Theme */
             --primary-orange: #f97316;
             --hover-orange: #ea580c;
             --navy-dark: #020617;
-            /* Deep Navy Background */
             --navy-card: rgba(15, 23, 42, 0.75);
-            /* Glass Navy */
+
             --text-light: #f8fafc;
             --text-gray: #94a3b8;
             --glass-border: rgba(249, 115, 22, 0.3);
-            /* Orange tinted border */
+
         }
 
         * {
@@ -46,7 +44,6 @@
             perspective: 1500px;
         }
 
-        /* Ambient Orange Glow */
         .error-bg-glow {
             position: absolute;
             width: 150vw;
@@ -74,7 +71,6 @@
             }
         }
 
-        /* 3D Scrolling Grid (Motion Graphics Vibe) */
         .scrolling-grid {
             position: absolute;
             top: 10%;
@@ -103,7 +99,6 @@
             }
         }
 
-        /* Main Glass Card */
         .error-container {
             position: relative;
             z-index: 10;
@@ -164,7 +159,6 @@
             animation: floatingText 6s ease-in-out infinite;
         }
 
-        /* Floating 3D Cube for Animation Theme */
         .flying-cube {
             position: absolute;
             top: -10px;
@@ -218,7 +212,6 @@
             font-weight: 500;
         }
 
-        /* Buttons with Hover Effects */
         .error-actions {
             display: flex;
             justify-content: center;
@@ -282,7 +275,6 @@
             transition: transform 0.3s ease;
         }
 
-        /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .error-code {
                 font-size: 7rem;
@@ -371,7 +363,6 @@
     </div>
 
     <script>
-        // 3D Parallax effect for desktop users
         const container = document.getElementById('errorContainer');
         const glow = document.getElementById('orangeGlow');
 
@@ -380,7 +371,7 @@
                 const halfW = window.innerWidth / 2;
                 const halfH = window.innerHeight / 2;
 
-                const xVal = (halfW - e.pageX) / 50; // Adjusted for slightly more pop
+                const xVal = (halfW - e.pageX) / 50;
                 const yVal = (halfH - e.pageY) / 50;
 
                 container.style.transform = `rotateY(${xVal * -1}deg) rotateX(${yVal}deg) translateY(-5px)`;
